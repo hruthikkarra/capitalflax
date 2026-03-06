@@ -17,7 +17,7 @@ export default function Navbar() {
                     <Link href="/" className={pathname === '/' ? 'active' : ''}>Home</Link>
                     <Link href="/services" className={pathname === '/services' ? 'active' : ''}>Services</Link>
                     <Link href="/professionals" className={pathname === '/professionals' ? 'active' : ''}>Professionals</Link>
-                    <Link href="#" className={pathname === '/about' ? 'active' : ''}>About</Link>
+                    <Link href="/" className={pathname === '/about' ? 'active' : ''}>About</Link>
                 </nav>
                 <Link href="/apply" className="btn btn-apply">APPLY NOW</Link>
             </div>
