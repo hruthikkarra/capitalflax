@@ -37,7 +37,7 @@ export default function Footer() {
                 {/* Top grid */}
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: '2fr 1fr 1fr 1fr',
+                    gridTemplateColumns: '2fr 1fr 1fr 1fr 1fr',
                     gap: '2.5rem',
                     marginBottom: '3rem',
                 }}>
@@ -111,6 +111,17 @@ export default function Footer() {
                             {['About Us', 'Contact', 'Careers'].map(l => (
                                 <li key={l}><Link href="#" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>{l}</Link></li>
                             ))}
+                        </ul>
+                    </div>
+
+                    {/* Resources */}
+                    <div>
+                        <div style={{ fontWeight: 800, fontSize: '0.82rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#0F172A', marginBottom: '1.25rem' }}>Resources</div>
+                        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
+                            <li><Link href="/blog" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>Blog & Guides</Link></li>
+                            <li><Link href="/blog/cibil-score-guide-improve-credit-score-better-loan-rates" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>CIBIL Score Guide</Link></li>
+                            <li><Link href="/blog/home-loan-vs-mortgage-loan-which-is-right-for-you" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>Home Loan vs LAP</Link></li>
+                            <li><Link href="/apply" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>Apply Now</Link></li>
                         </ul>
                     </div>
                 </div>

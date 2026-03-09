@@ -6,6 +6,7 @@ import BusinessLoanDetail from '../components/BusinessLoanDetail';
 import PersonalLoanDetail from '../components/PersonalLoanDetail';
 import EligibilityCriteria from '../components/EligibilityCriteria';
 import ServicesCTA from '../components/ServicesCTA';
+import FAQSection from '../components/FAQSection';
 
 const loans = [
     {
@@ -208,6 +209,23 @@ export default function ServicesPage() {
 
             {/* ELIGIBILITY CRITERIA ACCORDION */}
             <EligibilityCriteria />
+
+            {/* LOAN FAQS WITH SCHEMA */}
+            <FAQSection
+                title="Frequently Asked Questions — Loans"
+                subtitle="Everything you need to know before applying"
+                background="#F8FAFC"
+                faqs={[
+                    { question: 'What is the minimum credit score required to get a loan from CapitalFlax?', answer: 'We prefer a CIBIL score of 700 or above for the best interest rates. However, applicants with scores between 650-700 may still qualify with slightly higher rates. We evaluate each application holistically.' },
+                    { question: 'How fast can I get loan approval from CapitalFlax?', answer: 'CapitalFlax offers 72-hour approval for most loan products. For gold loans, approval can happen in as little as 30 minutes. Business loans for urgent needs can be approved within 48 hours.' },
+                    { question: 'Does CapitalFlax charge any processing fee?', answer: 'Home loans for qualified professionals come with 0% processing fee. Business loans carry 1% and personal loans 2%. Gold loans are 0.5%. Professional loans have 0% processing fee.' },
+                    { question: 'What documents are generally required to apply for a loan?', answer: 'Standard documents include: Aadhaar Card, PAN Card, last 6 months bank statements, last 2 years ITR (for self-employed), salary slips for the last 3 months (for salaried), and property documents (for secured loans).' },
+                    { question: 'Can I apply for a loan if I am self-employed?', answer: 'Absolutely! CapitalFlax specializes in self-employed professional loans for doctors, CAs, architects, and business owners. We accept flexible income documentation.' },
+                    { question: 'How many bank partners does CapitalFlax work with?', answer: 'CapitalFlax partners with 15+ banks and NBFCs including HDFC, ICICI, SBI, Axis Bank, and Kotak Mahindra, ensuring you get the best rate matched to your profile.' },
+                    { question: 'Is my data safe with CapitalFlax?', answer: 'Yes. All your personal and financial data is protected with 256-bit SSL encryption. We never share your information with third parties without your explicit consent.' },
+                    { question: 'What is the maximum loan amount I can get?', answer: 'Home and mortgage loans are available up to ₹20 Crore. Business and gold loans up to ₹1 Crore. Personal loans up to ₹50 Lakhs. Professional loans up to ₹75 Lakhs. Actual amounts depend on income, credit score, and property value.' },
+                ]}
+            />
 
             {/* SERVICES CTA */}
             <ServicesCTA />

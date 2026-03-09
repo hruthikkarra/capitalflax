@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Heart, Calculator, Building2, Check } from 'lucide-react';
+import FAQSection from '../components/FAQSection';
 
 export default function ProfessionalsPage() {
     return (
@@ -143,6 +144,22 @@ export default function ProfessionalsPage() {
                     </div>
                 </div>
             </section>
+
+            {/* CTA Banner */}
+            {/* PROFESSIONAL LOAN FAQS */}
+            <FAQSection
+                title="Professional Loan — Frequently Asked Questions"
+                subtitle="Answers to common questions from doctors, CAs, and architects"
+                background="#F8FAFC"
+                faqs={[
+                    { question: 'Who qualifies as a professional for these loans?', answer: 'We serve MBBS/MD/MS doctors, Chartered Accountants (CA/CMA), Architects, Lawyers (LLB/LLM), Engineers, MBA graduates, and other qualified professionals with verifiable income.' },
+                    { question: 'Can a newly qualified doctor or CA get a professional loan?', answer: 'Yes, freshly qualified professionals may be eligible with a strong CIBIL score (700+). We evaluate the potential earning capacity of your profession in addition to current income.' },
+                    { question: 'What makes professional loans different from regular personal loans?', answer: 'Professional loans are tailored to the income patterns of qualified professionals — higher loan amounts, more flexible documentation, lower interest rates, and income assessment based on professional credentials rather than just salary slips.' },
+                    { question: 'Can I use a professional loan to set up my clinic or office?', answer: 'Absolutely. Professional loans can be used for clinic setup, office interior, medical equipment, IT infrastructure, practice expansion, or any professional establishment purpose.' },
+                    { question: 'Is there any restriction on how I use the loan amount?', answer: 'No. Professional loans from CapitalFlax have no end-use restriction. You can use the funds for practice setup, home purchase, personal use, or business expansion — whatever your professional need.' },
+                    { question: 'Do I need a co-applicant for a professional loan?', answer: 'Generally, no. Most professional loans are standalone. However, adding a co-applicant with additional income can enhance your loan eligibility and may unlock better interest rates.' },
+                ]}
+            />
 
             {/* CTA Banner */}
             <section style={{ padding: '4rem 1rem', background: '#1E3A8A', textAlign: 'center' }}>
