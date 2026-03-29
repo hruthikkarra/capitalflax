@@ -47,8 +47,8 @@ export default function ProfessionalsPage() {
                                 <span>Special rates for MBBS, MD, MS qualified</span>
                             </li>
                         </ul>
-                        <Link href="/apply" className="prof-link red-link">
-                            APPLY NOW <ArrowRight className="link-icon" />
+                        <Link href="/professionals/doctors" className="prof-link red-link">
+                            LEARN MORE <ArrowRight className="link-icon" />
                         </Link>
                     </div>
 
@@ -77,8 +77,8 @@ export default function ProfessionalsPage() {
                                 <span>Tax benefits consultation included</span>
                             </li>
                         </ul>
-                        <Link href="/apply" className="prof-link blue-link">
-                            APPLY NOW <ArrowRight className="link-icon" />
+                        <Link href="/professionals/chartered-accountants" className="prof-link blue-link">
+                            LEARN MORE <ArrowRight className="link-icon" />
                         </Link>
                     </div>
 
@@ -107,8 +107,8 @@ export default function ProfessionalsPage() {
                                 <span>Flexible EMI during project gaps</span>
                             </li>
                         </ul>
-                        <Link href="/apply" className="prof-link green-link">
-                            APPLY NOW <ArrowRight className="link-icon" />
+                        <Link href="/professionals/architects" className="prof-link green-link">
+                            LEARN MORE <ArrowRight className="link-icon" />
                         </Link>
                     </div>
                 </div>

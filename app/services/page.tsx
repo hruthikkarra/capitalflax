@@ -12,6 +12,7 @@ const loans = [
     {
         icon: HomeIcon,
         title: 'Home Loans',
+        href: '/services/home-loans',
         category: 'YOUR DREAM HOME',
         amount: 'Up to ₹20 Cr',
         rate: '7.3% onwards',
@@ -25,6 +26,7 @@ const loans = [
     {
         icon: Briefcase,
         title: 'Business Loans',
+        href: '/services/business-loans',
         category: 'FUEL YOUR GROWTH',
         amount: 'Up to ₹1 Cr',
         rate: '14% onwards',
@@ -38,6 +40,7 @@ const loans = [
     {
         icon: User,
         title: 'Personal Loans',
+        href: '/services/personal-loans',
         category: 'QUICK CASH ACCESS',
         amount: 'Up to ₹50 L',
         rate: '10.5% onwards',
@@ -51,6 +54,7 @@ const loans = [
     {
         icon: CircleDollarSign,
         title: 'Gold Loans',
+        href: '/services/gold-loans',
         category: 'AGAINST YOUR GOLD',
         amount: 'Up to ₹1 Cr',
         rate: '7.5% onwards',
@@ -64,6 +68,7 @@ const loans = [
     {
         icon: Landmark,
         title: 'Mortgage Loans',
+        href: '/services/mortgage-loans',
         category: 'PROPERTY AS COLLATERAL',
         amount: 'Up to ₹20 Cr',
         rate: '10% onwards',
@@ -77,6 +82,7 @@ const loans = [
     {
         icon: GraduationCap,
         title: 'Professional Loans',
+        href: '/services/professional-loans',
         category: 'FOR YOUR PRACTICE',
         amount: 'Up to ₹75 L',
         rate: '9.0% onwards',
@@ -144,7 +150,7 @@ export default function ServicesPage() {
 
                                 <p className="solution-desc">{loan.desc}</p>
 
-                                <Link href="#" className={`prof-link ${loan.linkClass}`}>
+                                <Link href={loan.href} className={`prof-link ${loan.linkClass}`}>
                                     LEARN MORE <ArrowRight className="link-icon" />
                                 </Link>
                             </div>

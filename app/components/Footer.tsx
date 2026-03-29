@@ -88,8 +88,14 @@ export default function Footer() {
                     <div>
                         <div style={{ fontWeight: 800, fontSize: '0.82rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#0F172A', marginBottom: '1.25rem' }}>Services</div>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
-                            {['Home Loans', 'Personal Loans', 'Business Loans', 'Gold Loans', 'Mortgage Loans'].map(l => (
-                                <li key={l}><Link href="#services" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>{l}</Link></li>
+                            {[
+                                { label: 'Home Loans', href: '/services/home-loans' },
+                                { label: 'Personal Loans', href: '/services/personal-loans' },
+                                { label: 'Business Loans', href: '/services/business-loans' },
+                                { label: 'Gold Loans', href: '/services/gold-loans' },
+                                { label: 'Mortgage Loans', href: '/services/mortgage-loans' }
+                            ].map(l => (
+                                <li key={l.label}><Link href={l.href} style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>{l.label}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -98,8 +104,12 @@ export default function Footer() {
                     <div>
                         <div style={{ fontWeight: 800, fontSize: '0.82rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#0F172A', marginBottom: '1.25rem' }}>Professionals</div>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
-                            {['For Doctors', 'For CAs', 'For Architects'].map(l => (
-                                <li key={l}><Link href="#professionals" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>{l}</Link></li>
+                            {[
+                                { label: 'For Doctors', href: '/professionals/doctors' },
+                                { label: 'For CAs', href: '/professionals/chartered-accountants' },
+                                { label: 'For Architects', href: '/professionals/architects' }
+                            ].map(l => (
+                                <li key={l.label}><Link href={l.href} style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>{l.label}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -108,8 +118,8 @@ export default function Footer() {
                     <div>
                         <div style={{ fontWeight: 800, fontSize: '0.82rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#0F172A', marginBottom: '1.25rem' }}>Company</div>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
-                            {['About Us', 'Contact', 'Careers'].map(l => (
-                                <li key={l}><Link href="#" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>{l}</Link></li>
+                            {[{ label: 'About Us', href: '/about' }, { label: 'Contact', href: '/contact' }, { label: 'Careers', href: '/careers' }].map(l => (
+                                <li key={l.label}><Link href={l.href} style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>{l.label}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -119,7 +129,7 @@ export default function Footer() {
                         <div style={{ fontWeight: 800, fontSize: '0.82rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#0F172A', marginBottom: '1.25rem' }}>Resources</div>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
                             <li><Link href="/blog" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>Blog & Guides</Link></li>
-                            <li><Link href="/blog/cibil-score-guide-improve-credit-score-better-loan-rates" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>CIBIL Score Guide</Link></li>
+                            <li><Link href="/cibil-score-guide" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>CIBIL Score Guide</Link></li>
                             <li><Link href="/blog/home-loan-vs-mortgage-loan-which-is-right-for-you" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>Home Loan vs LAP</Link></li>
                             <li><Link href="/apply" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>Apply Now</Link></li>
                         </ul>
@@ -145,8 +155,8 @@ export default function Footer() {
                         <a href="#" aria-label="Facebook" style={iconStyle}><FacebookIcon /></a>
                     </div>
                     <div style={{ display: 'flex', gap: '1.5rem' }}>
-                        <Link href="#" style={{ fontSize: '0.85rem', color: '#64748B', textDecoration: 'none', fontWeight: 600 }}>PRIVACY POLICY</Link>
-                        <Link href="#" style={{ fontSize: '0.85rem', color: '#64748B', textDecoration: 'none', fontWeight: 600 }}>TERMS OF SERVICE</Link>
+                        <Link href="/privacy" style={{ fontSize: '0.85rem', color: '#64748B', textDecoration: 'none', fontWeight: 600 }}>PRIVACY POLICY</Link>
+                        <Link href="/terms" style={{ fontSize: '0.85rem', color: '#64748B', textDecoration: 'none', fontWeight: 600 }}>TERMS OF SERVICE</Link>
                     </div>
                 </div>
             </div>

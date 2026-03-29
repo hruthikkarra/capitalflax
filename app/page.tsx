@@ -23,10 +23,10 @@ export default function Home() {
               <span className="fw-700 text-dark">approval</span>.
             </p>
             <div className="hero-buttons">
-              <Link href="#" className="btn btn-primary">
-                GET FREE CONSULTATION <ArrowRight className="icon-sm" />
+              <Link href="/contact" className="btn btn-primary">
+                GET FREE CONSULTATION
               </Link>
-              <Link href="#" className="btn btn-outline">
+              <Link href="/apply" className="btn btn-outline">
                 CHECK ELIGIBILITY
               </Link>
             </div>
@@ -120,8 +120,8 @@ export default function Home() {
         </div>
 
         {/* Scrolling Marquee Container */}
-        <div className="marquee-wrapper">
-          <div className="marquee">
+        <div className="marquee-wrapper" style={{ overflow: 'hidden', pointerEvents: 'none', msOverflowStyle: 'none', scrollbarWidth: 'none' }}>
+          <div className="marquee" style={{ overflow: 'hidden' }}>
             {/* Group 1 */}
             <div className="bank-card">
               <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg" alt="HDFC Bank" className="bank-logo-img" />
