@@ -93,7 +93,9 @@ export default function Footer() {
                                 { label: 'Personal Loans', href: '/services/personal-loans' },
                                 { label: 'Business Loans', href: '/services/business-loans' },
                                 { label: 'Gold Loans', href: '/services/gold-loans' },
-                                { label: 'Mortgage Loans', href: '/services/mortgage-loans' }
+                                { label: 'Mortgage Loans', href: '/services/mortgage-loans' },
+                                { label: 'Education Loans', href: '/services/education-loans' },
+                                { label: 'Vehicle Loans', href: '/services/vehicle-loans' }
                             ].map(l => (
                                 <li key={l.label}><Link href={l.href} style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>{l.label}</Link></li>
                             ))}

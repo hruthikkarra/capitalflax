@@ -13,7 +13,7 @@ const stats = [
   { value: '15+', label: 'Bank Partners', icon: <Building2 size={22} /> },
   { value: '72 Hrs', label: 'Avg. Approval Time', icon: <Clock size={22} /> },
   { value: '4.9 / 5', label: 'Customer Rating', icon: <Star size={22} /> },
-  { value: '2020', label: 'Founded In', icon: <Award size={22} /> },
+  { value: '2017', label: 'Founded In', icon: <Award size={22} /> },
 ];
 
 const values = [
@@ -83,7 +83,7 @@ const team = [
 ];
 
 const milestones = [
-  { year: '2020', title: 'Founded in Hyderabad', desc: 'Started with a vision to simplify loans for India\'s professionals.' },
+  { year: '2017', title: 'Founded in Hyderabad', desc: 'Started with a vision to simplify loans for India\'s professionals.' },
   { year: '2021', title: '1,000 Loans Disbursed', desc: 'Reached our first milestone serving doctors, CAs and engineers.' },
   { year: '2022', title: 'Pan-India Expansion', desc: 'Expanded to Mumbai, Delhi, Bangalore, Chennai and Pune.' },
   { year: '2023', title: '10 Bank Partnerships', desc: 'Partnered with 10+ banks to offer the widest range of rates.' },
@@ -105,7 +105,7 @@ export default function AboutPage() {
           letterSpacing: '1.5px', borderRadius: '999px', padding: '0.4rem 1.1rem',
           marginBottom: '1.5rem', textTransform: 'uppercase',
         }}>
-          <Award size={13} /> Est. 2020 · Hyderabad, India
+          <Award size={13} /> Est. 2017 · Hyderabad, India
         </span>
 
         <h1 style={{
@@ -120,7 +120,7 @@ export default function AboutPage() {
           color: '#64748B', fontSize: '1.1rem', lineHeight: 1.75,
           maxWidth: '600px', margin: '0 auto 2.5rem',
         }}>
-          CapitalFlax was founded with one belief — India&apos;s professionals deserve
+          Founded by Raj Kumar Samudhrala (M.B.A), CapitalFlax was built on one belief — India&apos;s professionals deserve
           better financial products, faster approvals, and zero runaround.
           We&apos;re here to make that a reality.
         </p>
@@ -383,9 +383,9 @@ export default function AboutPage() {
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               {[
-                { icon: <MapPin size={18} />, label: 'Address', value: 'CapitalFlax Financial Services, Banjara Hills, Hyderabad — 500034, Telangana, India' },
-                { icon: <Phone size={18} />, label: 'Phone', value: '+91-40-00000000' },
-                { icon: <Mail size={18} />, label: 'Email', value: 'hello@capitalflax.com' },
+                { icon: <MapPin size={18} />, label: 'Address', value: 'Flat # 1604/A 16th Floor Babukhan Estate, Basheerbagh Hyderabad - 500001' },
+                { icon: <Phone size={18} />, label: 'Phone', value: '+91 9985681944 , +91-9989245304' },
+                { icon: <Mail size={18} />, label: 'Email', value: 'capitalflaxin@gmail.com' },
               ].map((item, i) => (
                 <div key={i} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                   <div style={{ width: 40, height: 40, borderRadius: '10px', background: '#EFF6FF', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1E3A8A', flexShrink: 0 }}>

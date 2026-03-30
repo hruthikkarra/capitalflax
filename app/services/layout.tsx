@@ -39,6 +39,8 @@ export default function ServicesLayout({ children }: { children: ReactNode }) {
             { '@type': 'ListItem', position: 4, name: 'Gold Loan', url: 'https://www.capitalflax.com/services#gold-loan', description: 'Up to ₹1 Crore at 7.5% p.a.' },
             { '@type': 'ListItem', position: 5, name: 'Mortgage Loan', url: 'https://www.capitalflax.com/services#mortgage-loan', description: 'Up to ₹20 Crore at 10% p.a.' },
             { '@type': 'ListItem', position: 6, name: 'Professional Loan', url: 'https://www.capitalflax.com/services#professional-loan', description: 'Up to ₹75 Lakh at 9% p.a.' },
+            { '@type': 'ListItem', position: 7, name: 'Education Loan', url: 'https://www.capitalflax.com/services#education-loan', description: 'Up to ₹1.5 Crore at 8.5% p.a.' },
+            { '@type': 'ListItem', position: 8, name: 'Vehicle Loan', url: 'https://www.capitalflax.com/services#vehicle-loan', description: '100% On-Road Financing at 8.75% p.a.' },
         ],
     };
 

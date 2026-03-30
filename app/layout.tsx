@@ -76,9 +76,9 @@ const organizationSchema = {
   logo: `${BASE_URL}/logo.png`,
   description:
     "Premium loan solutions for doctors, chartered accountants, architects and salaried professionals across India. Home loans, business loans, personal loans, mortgage loans and more.",
-  telephone: "+91-40-00000000",
-  email: "info@capitalflax.com",
-  foundingDate: "2020",
+  telephone: "+91-9985681944",
+  email: "capitalflaxin@gmail.com",
+  foundingDate: "2017",
   areaServed: [
     { "@type": "City", name: "Hyderabad" },
     { "@type": "City", name: "Mumbai" },

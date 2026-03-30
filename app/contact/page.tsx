@@ -24,21 +24,21 @@ export default function ContactPage() {
                                 <div style={{ background: '#EFF6FF', padding: '1rem', borderRadius: '12px' }}><Phone size={24} color="#1E3A8A" /></div>
                                 <div>
                                     <h3 style={{ fontSize: '1.1rem', fontWeight: 700, margin: '0 0 0.25rem' }}>Call Us</h3>
-                                    <p style={{ margin: 0, color: '#475569' }}>1800-123-4567<br/><span style={{ fontSize: '0.85rem' }}>Mon-Sat: 9AM to 7PM</span></p>
+                                    <p style={{ margin: 0, color: '#475569' }}>+91 9985681944 , +91-9989245304<br/><span style={{ fontSize: '0.85rem' }}>Mon-Sat: 9AM to 7PM</span></p>
                                 </div>
                             </div>
                             <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                                 <div style={{ background: '#EFF6FF', padding: '1rem', borderRadius: '12px' }}><Mail size={24} color="#1E3A8A" /></div>
                                 <div>
                                     <h3 style={{ fontSize: '1.1rem', fontWeight: 700, margin: '0 0 0.25rem' }}>Email Us</h3>
-                                    <p style={{ margin: 0, color: '#475569' }}>support@capitalflax.com<br/><span style={{ fontSize: '0.85rem' }}>We reply within 2 hours</span></p>
+                                    <p style={{ margin: 0, color: '#475569' }}>capitalflaxin@gmail.com<br/><span style={{ fontSize: '0.85rem' }}>We reply within 2 hours</span></p>
                                 </div>
                             </div>
                             <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                                 <div style={{ background: '#EFF6FF', padding: '1rem', borderRadius: '12px' }}><MapPin size={24} color="#1E3A8A" /></div>
                                 <div>
                                     <h3 style={{ fontSize: '1.1rem', fontWeight: 700, margin: '0 0 0.25rem' }}>Headquarters</h3>
-                                    <p style={{ margin: 0, color: '#475569' }}>12/A, Financial District,<br/>Gachibowli, Hyderabad,<br/>Telangana 500032</p>
+                                    <p style={{ margin: 0, color: '#475569', lineHeight: 1.5 }}>Flat # 1604/A 16th Floor Babukhan Estate,<br/>Basheerbagh Hyderabad - 500001</p>
                                 </div>
                             </div>
                         </div>

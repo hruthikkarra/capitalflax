@@ -5,7 +5,7 @@ import { Briefcase, ArrowRight, HeartPulse, GraduationCap, Laptop, ChevronRight 
 const positions = [
     { title: 'Credit Analyst - Mortgages', dept: 'Credit & Risk', exp: '3-5 years', location: 'Hyderabad / Remote' },
     { title: 'Senior Relationship Manager', dept: 'Sales', exp: '5+ years', location: 'Bengaluru / Hybrid' },
-    { title: 'Full Stack Engineer (Next.js)', dept: 'Engineering', exp: '2-4 years', location: 'Remote' },
+
     { title: 'Operations Lead - Gold Loans', dept: 'Operations', exp: '4-7 years', location: 'Chennai' },
 ];
 

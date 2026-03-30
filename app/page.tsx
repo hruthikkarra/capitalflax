@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, CheckCircle, Clock, Landmark, Heart, Calculator, Building2, Check, Home as HomeIcon, Briefcase, User, CircleDollarSign, GraduationCap } from 'lucide-react';
+import { ArrowRight, TrendingUp, CheckCircle, Clock, Landmark, Heart, Calculator, Building2, Check, Home as HomeIcon, Briefcase, User, CircleDollarSign, GraduationCap, Car, BookOpen } from 'lucide-react';
 import ProcessSection from './components/ProcessSection';
 import Testimonials from './components/Testimonials';
 
@@ -108,76 +108,18 @@ export default function Home() {
       </section>
 
       {/* PARTNERS SECTION */}
-      <section className="partners-section">
+      <section className="partners-section" style={{ overflow: 'hidden', width: '100vw', maxWidth: '100%' }}>
         <div className="partners-header">
           <span className="section-label">OUR PARTNERS</span>
           <h2 className="partners-title">
-            Partnered with India's <span className="text-secondary-blue">Leading Banks</span>
+            Partnered with India's <span className="text-secondary-blue">Leading Banks and NBFCs</span>
           </h2>
           <p className="partners-subtitle">
             Access competitive rates from 15+ premier banking institutions
           </p>
         </div>
 
-        {/* Scrolling Marquee Container */}
-        <div className="marquee-wrapper" style={{ overflow: 'hidden', pointerEvents: 'none', msOverflowStyle: 'none', scrollbarWidth: 'none' }}>
-          <div className="marquee" style={{ overflow: 'hidden' }}>
-            {/* Group 1 */}
-            <div className="bank-card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg" alt="HDFC Bank" className="bank-logo-img" />
-            </div>
-            <div className="bank-card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg" alt="ICICI Bank" className="bank-logo-img" />
-            </div>
-            <div className="bank-card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/SBI-logo.svg" alt="SBI Bank" className="bank-logo-img" style={{ height: '45px' }} />
-            </div>
-            <div className="bank-card">
-              <img src="/axis-bank.png" alt="Axis Bank" className="bank-logo-img" />
-            </div>
-            <div className="bank-card">
-              <img src="/kotak-mahindra.png" alt="Kotak Mahindra Bank" className="bank-logo-img" />
-            </div>
 
-            {/* Group 2 (Duplicate for seamless loop) */}
-            <div className="bank-card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg" alt="HDFC Bank" className="bank-logo-img" />
-            </div>
-            <div className="bank-card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg" alt="ICICI Bank" className="bank-logo-img" />
-            </div>
-            <div className="bank-card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/SBI-logo.svg" alt="SBI Bank" className="bank-logo-img" style={{ height: '45px' }} />
-            </div>
-            <div className="bank-card">
-              <img src="/axis-bank.png" alt="Axis Bank" className="bank-logo-img" />
-            </div>
-            <div className="bank-card">
-              <img src="/kotak-mahindra.png" alt="Kotak Mahindra Bank" className="bank-logo-img" />
-            </div>
-
-            {/* Group 3 (Duplicate for safety on wide screens) */}
-            <div className="bank-card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg" alt="HDFC Bank" className="bank-logo-img" />
-            </div>
-            <div className="bank-card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg" alt="ICICI Bank" className="bank-logo-img" />
-            </div>
-            <div className="bank-card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/SBI-logo.svg" alt="SBI Bank" className="bank-logo-img" style={{ height: '45px' }} />
-            </div>
-            <div className="bank-card">
-              <img src="/axis-bank.png" alt="Axis Bank" className="bank-logo-img" />
-            </div>
-            <div className="bank-card">
-              <img src="/kotak-mahindra.png" alt="Kotak Mahindra Bank" className="bank-logo-img" />
-            </div>
-          </div>
-
-          {/* Gradient Overlays for smooth fade effect at edges */}
-          <div className="marquee-gradient-left"></div>
-          <div className="marquee-gradient-right"></div>
-        </div>
 
         <div className="rbi-badge-container">
           <div className="rbi-badge">
@@ -400,6 +342,70 @@ export default function Home() {
               LEARN MORE <ArrowRight className="link-icon" />
             </Link>
           </div>
+
+          {/* Education Loans Card */}
+          <div className="solution-card">
+            <div className="solution-icon-wrapper" style={{ background: '#E0F2FE' }}>
+              <BookOpen className="solution-icon" style={{ color: '#0284C7' }} />
+            </div>
+            <h3 className="solution-title">Education Loans</h3>
+            <p className="solution-category">FUND YOUR FUTURE</p>
+
+            <div className="solution-details">
+              <div className="detail-row">
+                <span className="detail-label">Amount:</span>
+                <span className="detail-value text-dark fw-700">Up to ₹1.5 Cr</span>
+              </div>
+              <div className="detail-row">
+                <span className="detail-label">Rate:</span>
+                <span className="detail-value text-dark fw-700">8.5% onwards</span>
+              </div>
+              <div className="detail-row">
+                <span className="detail-label">Key Feature:</span>
+                <span className="detail-value fw-700" style={{ color: '#0284C7' }}>100% Financing</span>
+              </div>
+            </div>
+
+            <p className="solution-desc">
+              Study abroad or in India with flexible EMI options and high unsecured limits for top institutions.
+            </p>
+
+            <Link href="/services/education-loans" className="prof-link" style={{ color: '#0284C7' }}>
+              LEARN MORE <ArrowRight className="link-icon" />
+            </Link>
+          </div>
+
+          {/* Vehicle Loans Card */}
+          <div className="solution-card">
+            <div className="solution-icon-wrapper" style={{ background: '#FFE4E6' }}>
+              <Car className="solution-icon" style={{ color: '#E11D48' }} />
+            </div>
+            <h3 className="solution-title">Vehicle Loans</h3>
+            <p className="solution-category">DRIVE YOUR DREAM</p>
+
+            <div className="solution-details">
+              <div className="detail-row">
+                <span className="detail-label">Amount:</span>
+                <span className="detail-value text-dark fw-700">100% On-Road</span>
+              </div>
+              <div className="detail-row">
+                <span className="detail-label">Rate:</span>
+                <span className="detail-value text-dark fw-700">8.75% onwards</span>
+              </div>
+              <div className="detail-row">
+                <span className="detail-label">Key Feature:</span>
+                <span className="detail-value fw-700" style={{ color: '#E11D48' }}>Pre-approved Offers</span>
+              </div>
+            </div>
+
+            <p className="solution-desc">
+              Get the best rates for new or used cars with instant approval and minimal documentation.
+            </p>
+
+            <Link href="/services/vehicle-loans" className="prof-link" style={{ color: '#E11D48' }}>
+              LEARN MORE <ArrowRight className="link-icon" />
+            </Link>
+          </div>
         </div>
 
         <div className="section-footer-alt">
@@ -434,6 +440,8 @@ export default function Home() {
                   { type: 'Gold Loans', amount: 'Up to ₹1 Cr', rate: '7.5% onwards', tenure: 'Up to 3 years', feature: 'Instant Approval', featureColor: '#F59E0B' },
                   { type: 'Mortgage Loans', amount: 'Up to ₹20 Cr', rate: '10% onwards', tenure: 'Up to 20 years', feature: 'Highest LTV', featureColor: '#8B5CF6' },
                   { type: 'Professional Loans', amount: 'Up to ₹75 L', rate: '9.0% onwards', tenure: 'Up to 10 years', feature: 'No Collateral', featureColor: '#6366F1' },
+                  { type: 'Education Loans', amount: 'Up to ₹1.5 Cr', rate: '8.5% onwards', tenure: 'Up to 15 years', feature: '100% Financing', featureColor: '#0284C7' },
+                  { type: 'Vehicle Loans', amount: '100% On-Road', rate: '8.75% onwards', tenure: 'Up to 7 years', feature: 'Pre-approved Offers', featureColor: '#E11D48' },
                 ].map((row, i) => (
                   <tr key={i} style={{ borderBottom: '1px solid #F8FAFC', transition: 'background 0.2s' }}
                     onMouseEnter={e => (e.currentTarget as HTMLTableRowElement).style.background = '#F8FAFC'}

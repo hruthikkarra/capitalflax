@@ -33,7 +33,7 @@ export default function AboutLayout({ children }: { children: ReactNode }) {
     mainEntity: {
       '@type': 'FinancialService',
       name: 'CapitalFlax Financial Services',
-      foundingDate: '2020',
+      foundingDate: '2017',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Hyderabad',

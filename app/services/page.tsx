@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link';
-import { ArrowRight, Home as HomeIcon, Briefcase, User, CircleDollarSign, Landmark, GraduationCap } from 'lucide-react';
+import { ArrowRight, Home as HomeIcon, Briefcase, User, CircleDollarSign, Landmark, GraduationCap, Car, BookOpen } from 'lucide-react';
 import HomeLoanDetail from '../components/HomeLoanDetail';
 import BusinessLoanDetail from '../components/BusinessLoanDetail';
 import PersonalLoanDetail from '../components/PersonalLoanDetail';
@@ -93,6 +93,42 @@ const loans = [
         wrapperClass: 'solution-icon-wrapper indigo-bg-light',
         iconClass: 'solution-icon indigo-icon',
     },
+    {
+        icon: BookOpen,
+        title: 'Education Loans',
+        href: '/services/education-loans',
+        category: 'FUND YOUR FUTURE',
+        amount: 'Up to ₹1.5 Cr',
+        rate: '8.5% onwards',
+        feature: '100% Financing',
+        featureClass: '',
+        desc: 'Study abroad or in India with flexible EMI options and high unsecured limits for top institutions.',
+        linkClass: '',
+        wrapperClass: 'solution-icon-wrapper',
+        iconClass: 'solution-icon',
+        linkStyle: { color: '#0284C7' },
+        wrapperStyle: { background: '#E0F2FE' },
+        iconStyle: { color: '#0284C7' },
+        featureStyle: { color: '#0284C7' }
+    },
+    {
+        icon: Car,
+        title: 'Vehicle Loans',
+        href: '/services/vehicle-loans',
+        category: 'DRIVE YOUR DREAM',
+        amount: '100% On-Road',
+        rate: '8.75% onwards',
+        feature: 'Pre-approved Offers',
+        featureClass: '',
+        desc: 'Get the best rates for new or used cars with instant approval and minimal zero-downpayment options.',
+        linkClass: '',
+        wrapperClass: 'solution-icon-wrapper',
+        iconClass: 'solution-icon',
+        linkStyle: { color: '#E11D48' },
+        wrapperStyle: { background: '#FFE4E6' },
+        iconStyle: { color: '#E11D48' },
+        featureStyle: { color: '#E11D48' }
+    },
 ];
 
 const comparison = [
@@ -102,6 +138,8 @@ const comparison = [
     { type: 'Gold Loans', amount: 'Up to ₹1 Cr', rate: '7.5% onwards', tenure: 'Up to 3 years', feature: 'Instant Approval', featureColor: '#F59E0B' },
     { type: 'Mortgage Loans', amount: 'Up to ₹20 Cr', rate: '10% onwards', tenure: 'Up to 20 years', feature: 'Highest LTV', featureColor: '#8B5CF6' },
     { type: 'Professional Loans', amount: 'Up to ₹75 L', rate: '9.0% onwards', tenure: 'Up to 10 years', feature: 'No Collateral', featureColor: '#6366F1' },
+    { type: 'Education Loans', amount: 'Up to ₹1.5 Cr', rate: '8.5% onwards', tenure: 'Up to 15 years', feature: '100% Financing', featureColor: '#0284C7' },
+    { type: 'Vehicle Loans', amount: '100% On-Road', rate: '8.75% onwards', tenure: 'Up to 7 years', feature: 'Pre-approved Offers', featureColor: '#E11D48' },
 ];
 
 export default function ServicesPage() {
@@ -125,10 +163,11 @@ export default function ServicesPage() {
                 <div className="solutions-grid">
                     {loans.map((loan) => {
                         const Icon = loan.icon;
+                        const l = loan as any;
                         return (
                             <div key={loan.title} className="solution-card">
-                                <div className={loan.wrapperClass}>
-                                    <Icon className={loan.iconClass} />
+                                <div className={loan.wrapperClass} style={l.wrapperStyle || {}}>
+                                    <Icon className={loan.iconClass} style={l.iconStyle || {}} />
                                 </div>
                                 <h3 className="solution-title">{loan.title}</h3>
                                 <p className="solution-category">{loan.category}</p>
@@ -144,13 +183,13 @@ export default function ServicesPage() {
                                     </div>
                                     <div className="detail-row">
                                         <span className="detail-label">Key Feature:</span>
-                                        <span className={`detail-value ${loan.featureClass} fw-700`}>{loan.feature}</span>
+                                        <span className={`detail-value ${loan.featureClass} fw-700`} style={l.featureStyle || {}}>{loan.feature}</span>
                                     </div>
                                 </div>
 
                                 <p className="solution-desc">{loan.desc}</p>
 
-                                <Link href={loan.href} className={`prof-link ${loan.linkClass}`}>
+                                <Link href={loan.href} className={`prof-link ${loan.linkClass}`} style={l.linkStyle || {}}>
                                     LEARN MORE <ArrowRight className="link-icon" />
                                 </Link>
                             </div>
