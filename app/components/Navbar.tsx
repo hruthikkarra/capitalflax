@@ -9,10 +9,9 @@ export default function Navbar() {
     return (
         <header className="navbar-wrapper">
             <div className="navbar">
-                <div className="logo">
-                    <div className="logo-icon">CF</div>
-                    <span className="logo-text">Capital<span className="text-orange">Flax</span></span>
-                </div>
+                <Link href="/" className="logo" style={{ textDecoration: 'none', background: '#0F172A', padding: '0.4rem 0.8rem', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
+                    <img src="/logo.png" alt="CapitalFlax Logo" style={{ height: '36px', width: 'auto' }} />
+                </Link>
                 <nav className="nav-links">
                     <Link href="/" className={pathname === '/' ? 'active' : ''}>Home</Link>
                     <Link href="/services" className={pathname === '/services' ? 'active' : ''}>Services</Link>

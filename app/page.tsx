@@ -173,7 +173,7 @@ export default function Home() {
               Balance transfer and top-up options available.
             </p>
 
-            <Link href="#" className="prof-link blue-link">
+            <Link href="/services/home-loans" className="prof-link blue-link">
               LEARN MORE <ArrowRight className="link-icon" />
             </Link>
           </div>
@@ -206,7 +206,7 @@ export default function Home() {
               facilities. Minimal documentation required.
             </p>
 
-            <Link href="#" className="prof-link orange-link-alt">
+            <Link href="/services/business-loans" className="prof-link orange-link-alt">
               LEARN MORE <ArrowRight className="link-icon" />
             </Link>
           </div>
@@ -239,7 +239,7 @@ export default function Home() {
               any personal need or emergency.
             </p>
 
-            <Link href="#" className="prof-link green-link-alt">
+            <Link href="/services/personal-loans" className="prof-link green-link-alt">
               LEARN MORE <ArrowRight className="link-icon" />
             </Link>
           </div>
@@ -272,7 +272,7 @@ export default function Home() {
               repayment tenure. Get funds in 30 minutes.
             </p>
 
-            <Link href="#" className="prof-link gold-link">
+            <Link href="/services/gold-loans" className="prof-link gold-link">
               LEARN MORE <ArrowRight className="link-icon" />
             </Link>
           </div>
@@ -305,7 +305,7 @@ export default function Home() {
               Use funds for any purpose. Competitive rates.
             </p>
 
-            <Link href="#" className="prof-link purple-link">
+            <Link href="/services/mortgage-loans" className="prof-link purple-link">
               LEARN MORE <ArrowRight className="link-icon" />
             </Link>
           </div>
@@ -338,7 +338,7 @@ export default function Home() {
               Tailored for doctors, CAs, architects.
             </p>
 
-            <Link href="#" className="prof-link indigo-link">
+            <Link href="/services/professional-loans" className="prof-link indigo-link">
               LEARN MORE <ArrowRight className="link-icon" />
             </Link>
           </div>
@@ -409,7 +409,7 @@ export default function Home() {
         </div>
 
         <div className="section-footer-alt">
-          <Link href="#" className="btn-view-all">
+          <Link href="/services" className="btn-view-all">
             VIEW ALL SERVICES <ArrowRight className="icon-sm" />
           </Link>
         </div>

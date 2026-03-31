@@ -46,27 +46,13 @@ export default function Footer() {
                         <Link href="/" style={{
                             display: 'inline-flex',
                             alignItems: 'center',
-                            gap: '0.5rem',
-                            fontWeight: 800,
-                            fontSize: '1.25rem',
-                            color: '#0F172A',
                             textDecoration: 'none',
                             marginBottom: '1rem',
+                            background: '#0F172A',
+                            padding: '0.4rem 0.8rem',
+                            borderRadius: '8px'
                         }}>
-                            <span style={{
-                                background: '#1E3A8A',
-                                color: '#fff',
-                                width: 36,
-                                height: 36,
-                                borderRadius: 8,
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                fontWeight: 900,
-                                fontSize: '0.85rem',
-                                letterSpacing: '-1px',
-                            }}>CF</span>
-                            <span>Capital<span style={{ color: '#F59E0B' }}>Flax</span></span>
+                            <img src="/logo.png" alt="CapitalFlax Logo" style={{ height: '36px', width: 'auto' }} />
                         </Link>
                         <p style={{ color: '#64748B', fontSize: '0.9rem', lineHeight: 1.65, margin: '0 0 1.25rem' }}>
                             Premium financial solutions for India's top professionals.

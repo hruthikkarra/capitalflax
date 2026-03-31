@@ -53,6 +53,11 @@ const faqs = [
     { q: 'How is the EMI calculated?', a: 'EMI consists of the principal and interest components calculated using the reducing balance method. Use our EMI calculator above to estimate your monthly payments based on loan amount, tenure, and rate.' },
 ];
 
+const loanTypes = [
+    { type: 'Car Loans', icon: '🚙', desc: 'Financing for hatchbacks, sedans, SUVs, and luxury cars for personal use. Both new and pre-owned cars covered with up to 100% on-road funding.', features: ['Zero Downpayment Options', 'Instant Approvals', 'Tenures up to 7 Years'] },
+    { type: 'Commercial Vehicle Loans', icon: '🚚', desc: 'Funding for trucks, buses, taxis, and heavy commercial vehicles. Designed for fleet operators, logistics businesses, and single-truck owners.', features: ['Up to 100% Chassis Funding', 'Customized EMI Structuring', 'Refinance & Top-up Options'] },
+];
+
 export default function VehicleLoansPage() {
     const [loanAmount, setLoanAmount] = useState(1000000);
     const [tenure, setTenure] = useState(5);
@@ -121,8 +126,37 @@ export default function VehicleLoansPage() {
                 </div>
             </section>
 
-            {/* EMI CALCULATOR */}
+            {/* TYPES OF VEHICLE LOANS */}
             <section style={{ padding: '5rem 1.5rem', background: '#F8FAFC' }}>
+                <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                        <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#E11D48', letterSpacing: '2px', textTransform: 'uppercase' }}>LOAN SEGMENTS</span>
+                        <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 0', letterSpacing: '-1px' }}>Types of Vehicle Loans</h2>
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+                        {loanTypes.map((t, i) => (
+                            <div key={i} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: '20px', padding: '2.5rem', boxShadow: '0 10px 30px -10px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', transition: 'all 0.3s' }}
+                                onMouseEnter={e => { const d = e.currentTarget as HTMLDivElement; d.style.boxShadow = '0 16px 40px -8px rgba(225,29,72,0.12)'; d.style.borderColor = '#FECDD3'; d.style.transform = 'translateY(-4px)'; }}
+                                onMouseLeave={e => { const d = e.currentTarget as HTMLDivElement; d.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.05)'; d.style.borderColor = '#E2E8F0'; d.style.transform = 'translateY(0)'; }}>
+                                <div style={{ fontSize: '3rem', marginBottom: '1.25rem' }}>{t.icon}</div>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.75rem' }}>{t.type}</h3>
+                                <p style={{ color: '#64748B', fontSize: '1rem', lineHeight: 1.6, marginBottom: '2rem', flex: 1 }}>{t.desc}</p>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', paddingTop: '1.5rem', borderTop: '1px solid #F1F5F9' }}>
+                                    {t.features.map((f, j) => (
+                                        <div key={j} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                                            <CheckCircle size={18} style={{ color: '#E11D48', flexShrink: 0 }} />
+                                            <span style={{ fontSize: '0.95rem', fontWeight: 600, color: '#475569' }}>{f}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* EMI CALCULATOR */}
+            <section style={{ padding: '5rem 1.5rem', background: '#fff' }}>
                 <div style={{ maxWidth: '900px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#E11D48', letterSpacing: '2px', textTransform: 'uppercase' }}>EMI CALCULATOR</span>
@@ -175,7 +209,7 @@ export default function VehicleLoansPage() {
             </section>
 
             {/* ELIGIBILITY */}
-            <section style={{ padding: '5rem 1.5rem', background: '#fff' }}>
+            <section style={{ padding: '5rem 1.5rem', background: '#F8FAFC' }}>
                 <div style={{ maxWidth: '900px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#E11D48', letterSpacing: '2px', textTransform: 'uppercase' }}>ELIGIBILITY</span>
@@ -196,7 +230,7 @@ export default function VehicleLoansPage() {
             </section>
 
             {/* DOCUMENTS */}
-            <section style={{ padding: '4rem 1.5rem', background: '#F8FAFC' }}>
+            <section style={{ padding: '4rem 1.5rem', background: '#fff' }}>
                 <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
                     <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#E11D48', letterSpacing: '2px', textTransform: 'uppercase' }}>DOCUMENTS</span>
                     <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 2.5rem', letterSpacing: '-1px' }}>What You'll Need</h2>
@@ -212,7 +246,7 @@ export default function VehicleLoansPage() {
             </section>
 
             {/* PROCESS */}
-            <section style={{ padding: '5rem 1.5rem', background: '#fff' }}>
+            <section style={{ padding: '5rem 1.5rem', background: '#F8FAFC' }}>
                 <div style={{ maxWidth: '900px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#E11D48', letterSpacing: '2px', textTransform: 'uppercase' }}>HOW IT WORKS</span>
@@ -230,7 +264,7 @@ export default function VehicleLoansPage() {
             </section>
 
             {/* FAQ */}
-            <section style={{ padding: '5rem 1.5rem', background: '#F8FAFC' }}>
+            <section style={{ padding: '5rem 1.5rem', background: '#fff' }}>
                 <div style={{ maxWidth: '760px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#E11D48', letterSpacing: '2px', textTransform: 'uppercase' }}>FAQ</span>
