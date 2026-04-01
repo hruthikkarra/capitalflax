@@ -257,6 +257,24 @@ body {
   transform: translateY(-1px);
 }
 
+/* IMAGE STABILITY & GLITCH FIXES */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.professional-hero-collage img,
+.card-img {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Prevent layout jump during hydration */
+.slide {
+  transition: opacity 0.5s ease-in-out;
+}
+
 .icon-sm {
   width: 18px;
   height: 18px;
@@ -552,7 +570,67 @@ body {
   }
 }
 
-/* PROFESSIONALS SECTION */
+/* Professional Showcase Row */
+.profession-showcase-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profession-showcase-row.reversed {
+  direction: ltr; /* Ensure text remains LTR */
+}
+
+@media (min-width: 993px) {
+  .profession-showcase-row.reversed .showcase-content {
+    order: 1;
+  }
+  .profession-showcase-row.reversed .showcase-image-wrapper {
+    order: 2;
+  }
+}
+
+.showcase-image-wrapper {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  height: 450px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.showcase-image-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.showcase-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.showcase-content {
+  padding: 1rem;
+}
+
+@media (max-width: 992px) {
+  .profession-showcase-row {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .showcase-image-wrapper {
+    height: 350px;
+    order: 1 !important;
+  }
+
+  .showcase-content {
+    order: 2 !important;
+  }
+}
+
+/* PROFESSIONALS SECTION (Cards fallback if needed) */
 .professionals-section {
   max-width: 1440px;
   margin: 0 auto;
@@ -837,8 +915,63 @@ body {
   padding: 2.5rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.professional-hero-collage {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.professional-hero-collage:hover {
+  transform: scale(1.01);
+}
+
+.professional-hero-collage > div {
+  transition: flex 0.5s ease, filter 0.3s ease;
+}
+
+.professional-hero-collage > div:hover {
+  flex: 1.25;
+  filter: saturate(1.1);
+}
+
+.solution-card {
+  background: var(--white);
+  border: 1px solid #F3F4F6;
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  /* Prevent layout shift */
+  min-height: 400px; 
+}
+
+.card-image-wrapper {
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.solution-card:hover .card-img {
+  transform: scale(1.08);
+}
+
+.card-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.2));
+  z-index: 1;
 }
 
 .solution-card:hover {
@@ -856,8 +989,8 @@ body {
   justify-content: center;
   margin-bottom: 1.5rem;
   background: var(--white);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  /* Soft shadow for icons */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 /* Base icon colors */

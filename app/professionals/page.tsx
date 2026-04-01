@@ -6,116 +6,179 @@ export default function ProfessionalsPage() {
     return (
         <div style={{ paddingTop: '5rem' }}>
 
-            {/* Hero Header */}
-            <section style={{ background: 'linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%)', padding: '5rem 1rem 4rem', textAlign: 'center' }}>
-                <span className="section-label">TAILORED FOR YOUR PROFESSION</span>
-                <h1 className="section-title" style={{ marginTop: '0.75rem' }}>
-                    Built for <span className="text-primary-blue">Professionals</span>
-                </h1>
-                <p className="section-subtitle">
-                    We understand your unique income patterns and professional requirements. Get<br />
-                    loans designed specifically for your profession.
-                </p>
+            {/* Premium Hero Header with Professional Composite Background */}
+            <section style={{ 
+                position: 'relative',
+                padding: '8.5rem 1rem 7.5rem', 
+                textAlign: 'center',
+                overflow: 'hidden',
+                color: '#fff',
+                background: '#0F172A'
+            }}>
+                {/* Background Image: A sophisticated, wide professional workspace */}
+                <div style={{ 
+                    position: 'absolute', 
+                    inset: 0, 
+                    backgroundImage: 'url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2069&auto=format&fit=crop")', // Stable Modern Office
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    opacity: '0.4'
+                }}></div>
+                
+                {/* Secondary Background Layer for 'Composite' Feel (Architectural/Detail) */}
+                <div style={{ 
+                    position: 'absolute', 
+                    inset: 0, 
+                    backgroundImage: 'url("https://images.unsplash.com/photo-1503387762-592dea58ef23?q=80&w=2070&auto=format&fit=crop")', // Architect vibe
+                    backgroundSize: '40% auto',
+                    backgroundPosition: 'right bottom',
+                    backgroundRepeat: 'no-repeat',
+                    opacity: '0.15',
+                    filter: 'grayscale(100%)'
+                }}></div>
+
+                {/* Dark Gradient Overlay */}
+                <div style={{ 
+                    position: 'absolute', 
+                    inset: 0, 
+                    background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.4) 100%)'
+                }}></div>
+
+                <div style={{ maxWidth: '900px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+                    <span className="section-label" style={{ color: '#BFDBFE', border: '1px solid rgba(191, 219, 254, 0.4)', background: 'rgba(59, 130, 246, 0.1)' }}>TAILORED FOR THE BRAVEST & BRIGHTEST</span>
+                    <h1 className="section-title" style={{ marginTop: '1.5rem', fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', color: '#fff', letterSpacing: '-2px' }}>
+                        Built for <span style={{ color: '#60A5FA' }}>Elite Professionals</span>
+                    </h1>
+                    <p className="section-subtitle" style={{ fontSize: '1.25rem', color: '#CBD5E1', maxWidth: '700px', margin: '0 auto', lineHeight: 1.6 }}>
+                        Specialized financial pathways for Doctors, CAs, and Architects. Get preferential interest rates and 72-hour fast-track approval.
+                    </p>
+                </div>
             </section>
 
-            {/* Profession Cards */}
-            <section className="professionals-section" style={{ background: '#fff' }}>
-                <div className="cards-grid">
+
+
+            {/* Profession Cards — Services-style layout */}
+            <section className="solutions-section" style={{ background: '#fff' }}>
+                <div className="solutions-grid">
 
                     {/* Doctors Card */}
-                    <div className="prof-card">
-                        <div className="icon-badge red-badge">
-                            <Heart className="prof-icon red-icon" />
+                    <div className="solution-card" style={{ padding: 0 }}>
+                        <div className="card-image-wrapper">
+                            <img
+                                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2070&auto=format&fit=crop"
+                                alt="Doctors"
+                                className="card-img"
+                            />
+                            <div className="card-img-overlay"></div>
+                            <div className="solution-icon-wrapper" style={{ background: '#FEE2E2', position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                                <Heart className="solution-icon" style={{ color: '#DC2626' }} />
+                            </div>
                         </div>
-                        <h3 className="prof-title">Doctors</h3>
-                        <p className="prof-category">HEALTHCARE PROFESSIONALS</p>
-                        <ul className="prof-features">
-                            <li>
-                                <div className="check-circle red-bg"><Check className="check-icon" /></div>
-                                <span>Flexible documentation for private practice income</span>
-                            </li>
-                            <li>
-                                <div className="check-circle red-bg"><Check className="check-icon" /></div>
-                                <span>Higher loan amounts based on specialization</span>
-                            </li>
-                            <li>
-                                <div className="check-circle red-bg"><Check className="check-icon" /></div>
-                                <span>Fast-track approval for medical professionals</span>
-                            </li>
-                            <li>
-                                <div className="check-circle red-bg"><Check className="check-icon" /></div>
-                                <span>Special rates for MBBS, MD, MS qualified</span>
-                            </li>
-                        </ul>
-                        <Link href="/professionals/doctors" className="prof-link red-link">
-                            LEARN MORE <ArrowRight className="link-icon" />
-                        </Link>
+                        <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+                            <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Doctors</h3>
+                            <p className="solution-category">HEALTHCARE EXPERTS</p>
+                            <div className="solution-details">
+                                <div className="detail-row">
+                                    <span className="detail-label">Loan Up To:</span>
+                                    <span className="detail-value text-dark fw-700">₹75 Lakhs</span>
+                                </div>
+                                <div className="detail-row">
+                                    <span className="detail-label">Rate:</span>
+                                    <span className="detail-value text-dark fw-700">9.0% onwards</span>
+                                </div>
+                                <div className="detail-row">
+                                    <span className="detail-label">Key Feature:</span>
+                                    <span className="detail-value fw-700" style={{ color: '#DC2626' }}>0% Processing Fee</span>
+                                </div>
+                            </div>
+                            <p className="solution-desc">Special rates for MBBS, MD & MS qualified doctors. Fast-track 72-hour approval with flexible documentation for private practices.</p>
+                            <Link href="/professionals/doctors" className="prof-link red-link" style={{ fontWeight: 800 }}>
+                                LEARN MORE <ArrowRight className="link-icon" />
+                            </Link>
+                        </div>
                     </div>
 
                     {/* CAs Card */}
-                    <div className="prof-card">
-                        <div className="icon-badge blue-badge">
-                            <Calculator className="prof-icon blue-icon" />
+                    <div className="solution-card" style={{ padding: 0 }}>
+                        <div className="card-image-wrapper">
+                            <img
+                                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2072&auto=format&fit=crop"
+                                alt="Chartered Accountants"
+                                className="card-img"
+                            />
+                            <div className="card-img-overlay"></div>
+                            <div className="solution-icon-wrapper" style={{ background: '#DBEAFE', position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                                <Calculator className="solution-icon" style={{ color: '#2563EB' }} />
+                            </div>
                         </div>
-                        <h3 className="prof-title">Chartered Accountants</h3>
-                        <p className="prof-category">FINANCIAL EXPERTS</p>
-                        <ul className="prof-features">
-                            <li>
-                                <div className="check-circle blue-bg"><Check className="check-icon" /></div>
-                                <span>Loan assessment based on firm revenue</span>
-                            </li>
-                            <li>
-                                <div className="check-circle blue-bg"><Check className="check-icon" /></div>
-                                <span>Minimal documentation for established CAs</span>
-                            </li>
-                            <li>
-                                <div className="check-circle blue-bg"><Check className="check-icon" /></div>
-                                <span>Overdraft facilities for working capital</span>
-                            </li>
-                            <li>
-                                <div className="check-circle blue-bg"><Check className="check-icon" /></div>
-                                <span>Tax benefits consultation included</span>
-                            </li>
-                        </ul>
-                        <Link href="/professionals/chartered-accountants" className="prof-link blue-link">
-                            LEARN MORE <ArrowRight className="link-icon" />
-                        </Link>
+                        <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+                            <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Chartered Accountants</h3>
+                            <p className="solution-category">FINANCIAL EXPERTS</p>
+                            <div className="solution-details">
+                                <div className="detail-row">
+                                    <span className="detail-label">Loan Up To:</span>
+                                    <span className="detail-value text-dark fw-700">₹75 Lakhs</span>
+                                </div>
+                                <div className="detail-row">
+                                    <span className="detail-label">Rate:</span>
+                                    <span className="detail-value text-dark fw-700">9.5% onwards</span>
+                                </div>
+                                <div className="detail-row">
+                                    <span className="detail-label">Key Feature:</span>
+                                    <span className="detail-value fw-700" style={{ color: '#2563EB' }}>No Collateral</span>
+                                </div>
+                            </div>
+                            <p className="solution-desc">Loan assessment based on professional credentials & firm revenue. Overdraft facilities for working capital with minimal documentation.</p>
+                            <Link href="/professionals/chartered-accountants" className="prof-link blue-link" style={{ fontWeight: 800, color: '#2563EB' }}>
+                                LEARN MORE <ArrowRight className="link-icon" />
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Architects Card */}
-                    <div className="prof-card">
-                        <div className="icon-badge green-badge">
-                            <Building2 className="prof-icon green-icon" />
+                    <div className="solution-card" style={{ padding: 0 }}>
+                        <div className="card-image-wrapper">
+                            <img
+                                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop"
+                                alt="Architects"
+                                className="card-img"
+                            />
+                            <div className="card-img-overlay"></div>
+                            <div className="solution-icon-wrapper" style={{ background: '#D1FAE5', position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                                <Building2 className="solution-icon" style={{ color: '#059669' }} />
+                            </div>
                         </div>
-                        <h3 className="prof-title">Architects</h3>
-                        <p className="prof-category">DESIGN PROFESSIONALS</p>
-                        <ul className="prof-features">
-                            <li>
-                                <div className="check-circle green-bg"><Check className="check-icon" /></div>
-                                <span>Project-based income assessment accepted</span>
-                            </li>
-                            <li>
-                                <div className="check-circle green-bg"><Check className="check-icon" /></div>
-                                <span>Collateral-free loans up to ₹50L</span>
-                            </li>
-                            <li>
-                                <div className="check-circle green-bg"><Check className="check-icon" /></div>
-                                <span>Equipment finance options available</span>
-                            </li>
-                            <li>
-                                <div className="check-circle green-bg"><Check className="check-icon" /></div>
-                                <span>Flexible EMI during project gaps</span>
-                            </li>
-                        </ul>
-                        <Link href="/professionals/architects" className="prof-link green-link">
-                            LEARN MORE <ArrowRight className="link-icon" />
-                        </Link>
+                        <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+                            <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Architects</h3>
+                            <p className="solution-category">DESIGN VISIONARIES</p>
+                            <div className="solution-details">
+                                <div className="detail-row">
+                                    <span className="detail-label">Loan Up To:</span>
+                                    <span className="detail-value text-dark fw-700">₹50 Lakhs</span>
+                                </div>
+                                <div className="detail-row">
+                                    <span className="detail-label">Rate:</span>
+                                    <span className="detail-value text-dark fw-700">10.0% onwards</span>
+                                </div>
+                                <div className="detail-row">
+                                    <span className="detail-label">Key Feature:</span>
+                                    <span className="detail-value fw-700" style={{ color: '#059669' }}>Project-Based Income</span>
+                                </div>
+                            </div>
+                            <p className="solution-desc">Project-based income assessment with collateral-free loans up to ₹50L. Equipment finance and practice setup options available.</p>
+                            <Link href="/professionals/architects" className="prof-link green-link" style={{ fontWeight: 800, color: '#059669' }}>
+                                LEARN MORE <ArrowRight className="link-icon" />
+                            </Link>
+                        </div>
                     </div>
-                </div>
 
-                <div className="section-footer">
-                    <p>Don&#39;t see your profession listed? We serve all high-income professionals.</p>
-                    <Link href="/apply" className="footer-link">
+                </div>
+            </section>
+
+            <section style={{ background: '#fff', padding: '0 1rem 5rem' }}>
+                <div className="section-footer" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                    <p style={{ color: '#64748B', marginBottom: '1.5rem' }}>Don&#39;t see your profession listed? We serve all high-income professionals.</p>
+                    <Link href="/apply" className="footer-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#1E3A8A', fontWeight: 800, textDecoration: 'none' }}>
                         Apply Now <ArrowRight className="link-icon" />
                     </Link>
                 </div>

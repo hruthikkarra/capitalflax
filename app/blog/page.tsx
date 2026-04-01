@@ -61,34 +61,58 @@ export default function BlogPage() {
       />
 
       <main className="blog-page">
-        {/* Hero */}
-        <section className="blog-hero">
-          <div className="blog-hero-inner">
-            <div className="blog-hero-badge">
-              <span className="blog-hero-dot" />
+        {/* Premium Hero with Background */}
+        <section className="blog-hero" style={{ 
+            position: 'relative',
+            padding: '7rem 1.5rem 6rem',
+            textAlign: 'center',
+            color: '#fff',
+            background: '#0F172A',
+            overflow: 'hidden'
+        }}>
+          {/* Background Image */}
+          <div style={{ 
+              position: 'absolute', 
+              inset: 0, 
+              backgroundImage: 'url("https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070&auto=format&fit=crop")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              opacity: '0.35'
+          }}></div>
+          
+          {/* Overlay */}
+          <div style={{ 
+              position: 'absolute', 
+              inset: 0, 
+              background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.5) 100%)'
+          }}></div>
+
+          <div className="blog-hero-inner" style={{ position: 'relative', zIndex: 1, maxWidth: '1000px', margin: '0 auto' }}>
+            <div className="blog-hero-badge" style={{ color: '#BFDBFE', border: '1px solid rgba(191, 219, 254, 0.3)', background: 'rgba(59, 130, 246, 0.1)', display: 'inline-flex', padding: '0.4rem 1rem', borderRadius: '50px', fontSize: '0.75rem', fontWeight: 800, marginBottom: '2rem' }}>
+              <span className="blog-hero-dot" style={{ width: '8px', height: '8px', background: '#3B82F6', borderRadius: '50%', marginRight: '8px', marginTop: '3px' }} />
               FINANCIAL INSIGHTS
             </div>
-            <h1 className="blog-hero-title">
-              Expert Guides for <span className="text-primary-blue">Smart Borrowers</span>
+            <h1 className="blog-hero-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, color: '#fff', marginBottom: '1.5rem' }}>
+              Expert Guides for <span style={{ color: '#60A5FA' }}>Smart Borrowers</span>
             </h1>
-            <p className="blog-hero-subtitle">
+            <p className="blog-hero-subtitle" style={{ fontSize: '1.25rem', color: '#CBD5E1', maxWidth: '750px', margin: '0 auto 3rem', lineHeight: 1.6 }}>
               In-depth articles on home loans, business loans, CIBIL scores, and financial planning —
-              crafted specifically for India's top professionals.
+              crafted specifically for India&#39;s top professionals.
             </p>
-            <div className="blog-hero-stats">
+            <div className="blog-hero-stats" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
               <div className="blog-stat">
-                <span className="blog-stat-value">8</span>
-                <span className="blog-stat-label">Expert Articles</span>
+                <span className="blog-stat-value" style={{ display: 'block', fontSize: '2rem', fontWeight: 800, color: '#60A5FA' }}>8</span>
+                <span className="blog-stat-label" style={{ fontSize: '0.85rem', color: '#94A3B8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>Expert Articles</span>
               </div>
-              <div className="blog-stat-divider" />
+              <div className="blog-stat-divider" style={{ width: '1px', height: '40px', background: 'rgba(255,255,255,0.1)' }} />
               <div className="blog-stat">
-                <span className="blog-stat-value">5</span>
-                <span className="blog-stat-label">Categories</span>
+                <span className="blog-stat-value" style={{ display: 'block', fontSize: '2rem', fontWeight: 800, color: '#60A5FA' }}>5</span>
+                <span className="blog-stat-label" style={{ fontSize: '0.85rem', color: '#94A3B8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>Categories</span>
               </div>
-              <div className="blog-stat-divider" />
+              <div className="blog-stat-divider" style={{ width: '1px', height: '40px', background: 'rgba(255,255,255,0.1)' }} />
               <div className="blog-stat">
-                <span className="blog-stat-value">10,000+</span>
-                <span className="blog-stat-label">Professionals Helped</span>
+                <span className="blog-stat-value" style={{ display: 'block', fontSize: '2rem', fontWeight: 800, color: '#60A5FA' }}>10,000+</span>
+                <span className="blog-stat-label" style={{ fontSize: '0.85rem', color: '#94A3B8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>Professionals Helped</span>
               </div>
             </div>
           </div>

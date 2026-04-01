@@ -83,265 +83,313 @@ export default function Home() {
 
         <div className="solutions-grid">
           {/* Home Loans Card */}
-          <div className="solution-card">
-            <div className="solution-icon-wrapper">
-              <HomeIcon className="solution-icon blue-icon" />
-            </div>
-            <h3 className="solution-title">Home Loans</h3>
-            <p className="solution-category">YOUR DREAM HOME</p>
-
-            <div className="solution-details">
-              <div className="detail-row">
-                <span className="detail-label">Amount:</span>
-                <span className="detail-value text-dark fw-700">Up to ₹20 Cr</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Rate:</span>
-                <span className="detail-value text-dark fw-700">7.3% onwards</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Key Feature:</span>
-                <span className="detail-value blue-text fw-700">0% Processing Fee</span>
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="/hero_home.png" alt="Home Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <HomeIcon className="solution-icon blue-icon" />
               </div>
             </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Home Loans</h3>
+              <p className="solution-category">YOUR DREAM HOME</p>
 
-            <p className="solution-desc">
-              Flexible documentation for private practice income.
-              Balance transfer and top-up options available.
-            </p>
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹20 Cr</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">7.3% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value blue-text fw-700">0% Processing Fee</span>
+                </div>
+              </div>
 
-            <Link href="/services/home-loans" className="prof-link blue-link">
-              LEARN MORE <ArrowRight className="link-icon" />
-            </Link>
+              <p className="solution-desc">
+                Flexible documentation for private practice income.
+                Balance transfer and top-up options available.
+              </p>
+
+              <Link href="/services/home-loans" className="prof-link blue-link">
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
           </div>
 
           {/* Business Loans Card */}
-          <div className="solution-card">
-            <div className="solution-icon-wrapper">
-              <Briefcase className="solution-icon orange-icon-alt" />
-            </div>
-            <h3 className="solution-title">Business Loans</h3>
-            <p className="solution-category">FUEL YOUR GROWTH</p>
-
-            <div className="solution-details">
-              <div className="detail-row">
-                <span className="detail-label">Amount:</span>
-                <span className="detail-value text-dark fw-700">Up to ₹1 Cr</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Rate:</span>
-                <span className="detail-value text-dark fw-700">14% onwards</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Key Feature:</span>
-                <span className="detail-value orange-text-alt fw-700">48-Hour Approval</span>
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="/hero_business.png" alt="Business Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <Briefcase className="solution-icon orange-icon-alt" />
               </div>
             </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Business Loans</h3>
+              <p className="solution-category">FUEL YOUR GROWTH</p>
 
-            <p className="solution-desc">
-              Working capital, equipment finance, and overdraft
-              facilities. Minimal documentation required.
-            </p>
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹1 Cr</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">14% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value orange-text-alt fw-700">48-Hour Approval</span>
+                </div>
+              </div>
 
-            <Link href="/services/business-loans" className="prof-link orange-link-alt">
-              LEARN MORE <ArrowRight className="link-icon" />
-            </Link>
+              <p className="solution-desc">
+                Working capital, equipment finance, and overdraft
+                facilities. Minimal documentation required.
+              </p>
+
+              <Link href="/services/business-loans" className="prof-link orange-link-alt">
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
           </div>
 
           {/* Personal Loans Card */}
-          <div className="solution-card">
-            <div className="solution-icon-wrapper">
-              <User className="solution-icon green-icon-alt" />
-            </div>
-            <h3 className="solution-title">Personal Loans</h3>
-            <p className="solution-category">QUICK CASH ACCESS</p>
-
-            <div className="solution-details">
-              <div className="detail-row">
-                <span className="detail-label">Amount:</span>
-                <span className="detail-value text-dark fw-700">Up to ₹50 L</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Rate:</span>
-                <span className="detail-value text-dark fw-700">10.5% onwards</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Key Feature:</span>
-                <span className="detail-value green-text-alt fw-700">Same-Day Disbursal</span>
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop" alt="Personal Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <User className="solution-icon green-icon-alt" />
               </div>
             </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Personal Loans</h3>
+              <p className="solution-category">QUICK CASH ACCESS</p>
 
-            <p className="solution-desc">
-              No collateral required. Flexible EMI options. Use for
-              any personal need or emergency.
-            </p>
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹50 L</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">10.5% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value green-text-alt fw-700">Same-Day Disbursal</span>
+                </div>
+              </div>
 
-            <Link href="/services/personal-loans" className="prof-link green-link-alt">
-              LEARN MORE <ArrowRight className="link-icon" />
-            </Link>
+              <p className="solution-desc">
+                No collateral required. Flexible EMI options. Use for
+                any personal need or emergency.
+              </p>
+
+              <Link href="/services/personal-loans" className="prof-link green-link-alt">
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
           </div>
 
           {/* Gold Loans Card */}
-          <div className="solution-card">
-            <div className="solution-icon-wrapper gold-bg-light">
-              <CircleDollarSign className="solution-icon gold-icon" />
-            </div>
-            <h3 className="solution-title">Gold Loans</h3>
-            <p className="solution-category">AGAINST YOUR GOLD</p>
-
-            <div className="solution-details">
-              <div className="detail-row">
-                <span className="detail-label">Amount:</span>
-                <span className="detail-value text-dark fw-700">Up to ₹1 Cr</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Rate:</span>
-                <span className="detail-value text-dark fw-700">7.5% onwards</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Key Feature:</span>
-                <span className="detail-value gold-text fw-700">Instant Approval</span>
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?q=80&w=2070&auto=format&fit=crop" alt="Gold Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper gold-bg-light" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <CircleDollarSign className="solution-icon gold-icon" />
               </div>
             </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Gold Loans</h3>
+              <p className="solution-category">AGAINST YOUR GOLD</p>
 
-            <p className="solution-desc">
-              Secure loans against your gold jewelry. Flexible
-              repayment tenure. Get funds in 30 minutes.
-            </p>
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹1 Cr</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">7.5% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value gold-text fw-700">Instant Approval</span>
+                </div>
+              </div>
 
-            <Link href="/services/gold-loans" className="prof-link gold-link">
-              LEARN MORE <ArrowRight className="link-icon" />
-            </Link>
+              <p className="solution-desc">
+                Secure loans against your gold jewelry. Flexible
+                repayment tenure. Get funds in 30 minutes.
+              </p>
+
+              <Link href="/services/gold-loans" className="prof-link gold-link">
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
           </div>
 
           {/* Mortgage Loans Card */}
-          <div className="solution-card">
-            <div className="solution-icon-wrapper purple-bg-light">
-              <Landmark className="solution-icon purple-icon" />
-            </div>
-            <h3 className="solution-title">Mortgage Loans</h3>
-            <p className="solution-category">PROPERTY AS COLLATERAL</p>
-
-            <div className="solution-details">
-              <div className="detail-row">
-                <span className="detail-label">Amount:</span>
-                <span className="detail-value text-dark fw-700">Up to ₹20 Cr</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Rate:</span>
-                <span className="detail-value text-dark fw-700">10% onwards</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Key Feature:</span>
-                <span className="detail-value purple-text fw-700">Highest LTV</span>
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop" alt="Mortgage Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper purple-bg-light" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <Landmark className="solution-icon purple-icon" />
               </div>
             </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Mortgage Loans</h3>
+              <p className="solution-category">PROPERTY AS COLLATERAL</p>
 
-            <p className="solution-desc">
-              Loan against residential or commercial property.
-              Use funds for any purpose. Competitive rates.
-            </p>
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹20 Cr</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">10% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value purple-text fw-700">Highest LTV</span>
+                </div>
+              </div>
 
-            <Link href="/services/mortgage-loans" className="prof-link purple-link">
-              LEARN MORE <ArrowRight className="link-icon" />
-            </Link>
+              <p className="solution-desc">
+                Loan against residential or commercial property.
+                Use funds for any purpose. Competitive rates.
+              </p>
+
+              <Link href="/services/mortgage-loans" className="prof-link purple-link">
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
           </div>
 
           {/* Professional Loans Card */}
-          <div className="solution-card">
-            <div className="solution-icon-wrapper indigo-bg-light">
-              <GraduationCap className="solution-icon indigo-icon" />
-            </div>
-            <h3 className="solution-title">Professional Loans</h3>
-            <p className="solution-category">FOR YOUR PRACTICE</p>
-
-            <div className="solution-details">
-              <div className="detail-row">
-                <span className="detail-label">Amount:</span>
-                <span className="detail-value text-dark fw-700">Up to ₹75 L</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Rate:</span>
-                <span className="detail-value text-dark fw-700">9.0% onwards</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Key Feature:</span>
-                <span className="detail-value indigo-text fw-700">No Collateral</span>
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="/hero_professional.png" alt="Professional Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper indigo-bg-light" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <GraduationCap className="solution-icon indigo-icon" />
               </div>
             </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Professional Loans</h3>
+              <p className="solution-category">FOR YOUR PRACTICE</p>
 
-            <p className="solution-desc">
-              Equipment finance, practice setup, or expansion.
-              Tailored for doctors, CAs, architects.
-            </p>
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹75 L</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">9.0% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value indigo-text fw-700">No Collateral</span>
+                </div>
+              </div>
 
-            <Link href="/services/professional-loans" className="prof-link indigo-link">
-              LEARN MORE <ArrowRight className="link-icon" />
-            </Link>
+              <p className="solution-desc">
+                Equipment finance, practice setup, or expansion.
+                Tailored for doctors, CAs, architects.
+              </p>
+
+              <Link href="/services/professional-loans" className="prof-link indigo-link">
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
           </div>
 
           {/* Education Loans Card */}
-          <div className="solution-card">
-            <div className="solution-icon-wrapper" style={{ background: '#E0F2FE' }}>
-              <BookOpen className="solution-icon" style={{ color: '#0284C7' }} />
-            </div>
-            <h3 className="solution-title">Education Loans</h3>
-            <p className="solution-category">FUND YOUR FUTURE</p>
-
-            <div className="solution-details">
-              <div className="detail-row">
-                <span className="detail-label">Amount:</span>
-                <span className="detail-value text-dark fw-700">Up to ₹1.5 Cr</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Rate:</span>
-                <span className="detail-value text-dark fw-700">8.5% onwards</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Key Feature:</span>
-                <span className="detail-value fw-700" style={{ color: '#0284C7' }}>100% Financing</span>
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1523050335392-93851179ae22?q=80&w=2070&auto=format&fit=crop" alt="Education Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper" style={{ background: '#E0F2FE', position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <BookOpen className="solution-icon" style={{ color: '#0284C7' }} />
               </div>
             </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Education Loans</h3>
+              <p className="solution-category">FUND YOUR FUTURE</p>
 
-            <p className="solution-desc">
-              Study abroad or in India with flexible EMI options and high unsecured limits for top institutions.
-            </p>
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹1.5 Cr</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">8.5% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value fw-700" style={{ color: '#0284C7' }}>100% Financing</span>
+                </div>
+              </div>
 
-            <Link href="/services/education-loans" className="prof-link" style={{ color: '#0284C7' }}>
-              LEARN MORE <ArrowRight className="link-icon" />
-            </Link>
+              <p className="solution-desc">
+                Study abroad or in India with flexible EMI options and high unsecured limits for top institutions.
+              </p>
+
+              <Link href="/services/education-loans" className="prof-link" style={{ color: '#0284C7' }}>
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
           </div>
 
           {/* Vehicle Loans Card */}
-          <div className="solution-card">
-            <div className="solution-icon-wrapper" style={{ background: '#FFE4E6' }}>
-              <Car className="solution-icon" style={{ color: '#E11D48' }} />
-            </div>
-            <h3 className="solution-title">Vehicle Loans</h3>
-            <p className="solution-category">DRIVE YOUR DREAM</p>
-
-            <div className="solution-details">
-              <div className="detail-row">
-                <span className="detail-label">Amount:</span>
-                <span className="detail-value text-dark fw-700">100% On-Road</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Rate:</span>
-                <span className="detail-value text-dark fw-700">8.75% onwards</span>
-              </div>
-              <div className="detail-row">
-                <span className="detail-label">Key Feature:</span>
-                <span className="detail-value fw-700" style={{ color: '#E11D48' }}>Pre-approved Offers</span>
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="/hero_vehicle.png" alt="Vehicle Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper" style={{ background: '#FFE4E6', position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <Car className="solution-icon" style={{ color: '#E11D48' }} />
               </div>
             </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Vehicle Loans</h3>
+              <p className="solution-category">DRIVE YOUR DREAM</p>
 
-            <p className="solution-desc">
-              Get the best rates for new or used cars with instant approval and minimal documentation.
-            </p>
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">100% On-Road</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">8.75% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value fw-700" style={{ color: '#E11D48' }}>Pre-approved Offers</span>
+                </div>
+              </div>
 
-            <Link href="/services/vehicle-loans" className="prof-link" style={{ color: '#E11D48' }}>
-              LEARN MORE <ArrowRight className="link-icon" />
-            </Link>
+              <p className="solution-desc">
+                Get the best rates for new or used cars with instant approval and minimal zero-downpayment options.
+              </p>
+
+              <Link href="/services/vehicle-loans" className="prof-link" style={{ color: '#E11D48' }}>
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
           </div>
         </div>
 

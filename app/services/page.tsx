@@ -22,6 +22,7 @@ const loans = [
         linkClass: 'blue-link',
         wrapperClass: 'solution-icon-wrapper',
         iconClass: 'solution-icon blue-icon',
+        image: '/hero_home.png'
     },
     {
         icon: Briefcase,
@@ -36,6 +37,7 @@ const loans = [
         linkClass: 'orange-link-alt',
         wrapperClass: 'solution-icon-wrapper',
         iconClass: 'solution-icon orange-icon-alt',
+        image: '/hero_business.png'
     },
     {
         icon: User,
@@ -50,6 +52,7 @@ const loans = [
         linkClass: 'green-link-alt',
         wrapperClass: 'solution-icon-wrapper',
         iconClass: 'solution-icon green-icon-alt',
+        image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop'
     },
     {
         icon: CircleDollarSign,
@@ -64,6 +67,7 @@ const loans = [
         linkClass: 'gold-link',
         wrapperClass: 'solution-icon-wrapper gold-bg-light',
         iconClass: 'solution-icon gold-icon',
+        image: 'https://images.unsplash.com/photo-1610375461246-83df859d849d?q=80&w=2070&auto=format&fit=crop'
     },
     {
         icon: Landmark,
@@ -78,6 +82,7 @@ const loans = [
         linkClass: 'purple-link',
         wrapperClass: 'solution-icon-wrapper purple-bg-light',
         iconClass: 'solution-icon purple-icon',
+        image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop'
     },
     {
         icon: GraduationCap,
@@ -92,6 +97,7 @@ const loans = [
         linkClass: 'indigo-link',
         wrapperClass: 'solution-icon-wrapper indigo-bg-light',
         iconClass: 'solution-icon indigo-icon',
+        image: '/hero_professional.png'
     },
     {
         icon: BookOpen,
@@ -109,7 +115,8 @@ const loans = [
         linkStyle: { color: '#0284C7' },
         wrapperStyle: { background: '#E0F2FE' },
         iconStyle: { color: '#0284C7' },
-        featureStyle: { color: '#0284C7' }
+        featureStyle: { color: '#0284C7' },
+        image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop'
     },
     {
         icon: Car,
@@ -127,7 +134,8 @@ const loans = [
         linkStyle: { color: '#E11D48' },
         wrapperStyle: { background: '#FFE4E6' },
         iconStyle: { color: '#E11D48' },
-        featureStyle: { color: '#E11D48' }
+        featureStyle: { color: '#E11D48' },
+        image: '/hero_vehicle.png'
     },
 ];
 
@@ -146,16 +154,38 @@ export default function ServicesPage() {
     return (
         <div style={{ paddingTop: '5rem' }}>
 
-            {/* Hero Header */}
-            <section style={{ background: 'linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%)', padding: '5rem 1rem 4rem', textAlign: 'center' }}>
-                <span className="section-label">OUR SERVICES</span>
-                <h1 className="section-title" style={{ marginTop: '0.75rem' }}>
-                    Comprehensive Loan <span className="text-primary-blue">Solutions</span>
-                </h1>
-                <p className="section-subtitle">
-                    Tailored financial products for every professional need. Compare, choose, and apply<br />
-                    for the loan that fits your goals.
-                </p>
+            {/* Premium Hero Header with Financial Background */}
+            <section style={{ 
+                position: 'relative',
+                padding: '7.5rem 1rem 6.5rem', 
+                textAlign: 'center',
+                overflow: 'hidden',
+                color: '#fff',
+                background: '#0F172A'
+            }}>
+                <div style={{ 
+                    position: 'absolute', 
+                    inset: 0, 
+                    backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop")',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    opacity: '0.4'
+                }}></div>
+                <div style={{ 
+                    position: 'absolute', 
+                    inset: 0, 
+                    background: 'linear-gradient(to bottom, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.5) 100%)'
+                }}></div>
+
+                <div style={{ maxWidth: '850px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+                    <span className="section-label" style={{ color: '#BFDBFE', border: '1px solid rgba(191, 219, 254, 0.3)', background: 'rgba(59, 130, 246, 0.1)' }}>OUR SERVICES</span>
+                    <h1 className="section-title" style={{ marginTop: '1.5rem', fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: '#fff' }}>
+                        Comprehensive Loan <span style={{ color: '#60A5FA' }}>Solutions</span>
+                    </h1>
+                    <p className="section-subtitle" style={{ fontSize: '1.2rem', color: '#CBD5E1', maxWidth: '650px', margin: '0 auto' }}>
+                        Providing specialized financial assistance for India&#39;s top professionals with competitive rates and fast approval times.
+                    </p>
+                </div>
             </section>
 
             {/* Loan Cards Grid */}
@@ -165,33 +195,49 @@ export default function ServicesPage() {
                         const Icon = loan.icon;
                         const l = loan as any;
                         return (
-                            <div key={loan.title} className="solution-card">
-                                <div className={loan.wrapperClass} style={l.wrapperStyle || {}}>
-                                    <Icon className={loan.iconClass} style={l.iconStyle || {}} />
-                                </div>
-                                <h3 className="solution-title">{loan.title}</h3>
-                                <p className="solution-category">{loan.category}</p>
-
-                                <div className="solution-details">
-                                    <div className="detail-row">
-                                        <span className="detail-label">Amount:</span>
-                                        <span className="detail-value text-dark fw-700">{loan.amount}</span>
-                                    </div>
-                                    <div className="detail-row">
-                                        <span className="detail-label">Rate:</span>
-                                        <span className="detail-value text-dark fw-700">{loan.rate}</span>
-                                    </div>
-                                    <div className="detail-row">
-                                        <span className="detail-label">Key Feature:</span>
-                                        <span className={`detail-value ${loan.featureClass} fw-700`} style={l.featureStyle || {}}>{loan.feature}</span>
+                            <div key={loan.title} className="solution-card" style={{ padding: 0 }}>
+                                <div className="card-image-wrapper">
+                                    <img 
+                                        src={loan.image} 
+                                        alt={loan.title} 
+                                        className="card-img"
+                                    />
+                                    <div className="card-img-overlay"></div>
+                                    <div className={loan.wrapperClass} style={{ 
+                                        ...(l.wrapperStyle || {}), 
+                                        position: 'absolute', 
+                                        bottom: '-24px', 
+                                        left: '24px', 
+                                        zIndex: 2
+                                    }}>
+                                        <Icon className={loan.iconClass} style={l.iconStyle || {}} />
                                     </div>
                                 </div>
+                                <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+                                    <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>{loan.title}</h3>
+                                    <p className="solution-category">{loan.category}</p>
 
-                                <p className="solution-desc">{loan.desc}</p>
+                                    <div className="solution-details">
+                                        <div className="detail-row">
+                                            <span className="detail-label">Amount:</span>
+                                            <span className="detail-value text-dark fw-700">{loan.amount}</span>
+                                        </div>
+                                        <div className="detail-row">
+                                            <span className="detail-label">Rate:</span>
+                                            <span className="detail-value text-dark fw-700">{loan.rate}</span>
+                                        </div>
+                                        <div className="detail-row">
+                                            <span className="detail-label">Key Feature:</span>
+                                            <span className={`detail-value ${loan.featureClass} fw-700`} style={l.featureStyle || {}}>{loan.feature}</span>
+                                        </div>
+                                    </div>
 
-                                <Link href={loan.href} className={`prof-link ${loan.linkClass}`} style={l.linkStyle || {}}>
-                                    LEARN MORE <ArrowRight className="link-icon" />
-                                </Link>
+                                    <p className="solution-desc">{loan.desc}</p>
+
+                                    <Link href={loan.href} className={`prof-link ${loan.linkClass}`} style={l.linkStyle || {}}>
+                                        LEARN MORE <ArrowRight className="link-icon" />
+                                    </Link>
+                                </div>
                             </div>
                         );
                     })}
