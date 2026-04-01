@@ -1,77 +1,14 @@
 "use client";
 import Link from 'next/link';
 import { ArrowRight, TrendingUp, CheckCircle, Clock, Landmark, Heart, Calculator, Building2, Check, Home as HomeIcon, Briefcase, User, CircleDollarSign, GraduationCap, Car, BookOpen } from 'lucide-react';
+import HeroSlider from './components/HeroSlider';
 import ProcessSection from './components/ProcessSection';
 import Testimonials from './components/Testimonials';
 
 export default function Home() {
   return (
     <>
-      <div className="background-wrapper">
-        <main className="hero-container">
-          <section className="hero-left">
-            <div className="trust-badge">
-              <span className="dot"></span> TRUSTED BY 10,000+ PROFESSIONALS
-            </div>
-            <h1 className="hero-title">
-              <span className="text-dark">Premium Financial</span><br />
-              <span className="text-primary-blue">Sol</span><span className="text-secondary-blue">utions</span>
-            </h1>
-            <p className="hero-subtitle">
-              Specialized loan services for Doctors, CAs, and<br />
-              Architects with <span className="fw-700 text-dark">preferential rates</span> and <span className="fw-700 text-dark">72-hour</span><br />
-              <span className="fw-700 text-dark">approval</span>.
-            </p>
-            <div className="hero-buttons">
-              <Link href="/contact" className="btn btn-primary">
-                GET FREE CONSULTATION
-              </Link>
-              <Link href="/apply" className="btn btn-outline">
-                CHECK ELIGIBILITY
-              </Link>
-            </div>
-          </section>
-
-          <section className="hero-right">
-            <div className="feature-card">
-              <div className="badge-float">LIVE ANALYSIS</div>
-              <div className="card-header">
-                <div className="card-header-text">
-                  <span className="label">CURRENT STATUS</span>
-                  <div className="card-title-group">
-                    <h2 className="card-title">#1 Choice</h2>
-                  </div>
-                  <p className="card-subtitle">For Professional Loans</p>
-                </div>
-                <div className="icon-trend">
-                  <TrendingUp className="trend-icon" />
-                </div>
-              </div>
-
-              <div className="stats-grid">
-                <div className="stat-box">
-                  <div className="icon-wrapper green-text">
-                    <CheckCircle className="stat-icon min-icon" />
-                  </div>
-                  <div className="stat-content-box">
-                    <span className="stat-value">98%</span>
-                    <span className="stat-label">APPROVAL RATE</span>
-                  </div>
-                </div>
-                <div className="stat-box">
-                  <div className="icon-wrapper orange-text">
-                    <Clock className="stat-icon min-icon" />
-                  </div>
-                  <div className="stat-content-box">
-                    <span className="stat-value">72 Hours</span>
-                    <span className="stat-label">AVG PROCESSING TIME</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
+      <HeroSlider />
 
       <section className="stats-banner-wrapper">
         <div className="stats-banner">
