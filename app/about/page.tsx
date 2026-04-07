@@ -306,7 +306,7 @@ export default function AboutPage() {
               {[
                 { icon: <MapPin size={18} />, label: 'Address', value: 'Flat # 1604/A 16th Floor Babukhan Estate, Basheerbagh Hyderabad - 500001' },
                 { icon: <Phone size={18} />, label: 'Phone', value: '+91 9985681944 , +91-9989245304' },
-                { icon: <Mail size={18} />, label: 'Email', value: 'capitalflaxin@gmail.com' },
+                { icon: <Mail size={18} />, label: 'Email', value: 'support@capitalflax.in' },
               ].map((item, i) => (
                 <div key={i} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                   <div style={{ width: 40, height: 40, borderRadius: '10px', background: '#EFF6FF', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1E3A8A', flexShrink: 0 }}>

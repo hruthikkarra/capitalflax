@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
 
                     <section>
                         <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0F172A', marginBottom: '1rem' }}>5. Your Legal Rights</h2>
-                        <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to request access, correction, erasure, restriction, transfer, and the right to withdraw consent. To exercise any of these rights, please contact our Data Protection Officer at privacy@capitalflax.com.</p>
+                        <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to request access, correction, erasure, restriction, transfer, and the right to withdraw consent. To exercise any of these rights, please contact our Data Protection Officer at support@capitalflax.in.</p>
                     </section>
                 </div>
             </div>

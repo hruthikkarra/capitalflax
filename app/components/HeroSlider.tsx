@@ -6,15 +6,6 @@ import { ArrowRight } from "lucide-react";
 
 const slides = [
   {
-    id: 1,
-    title: "Premium Loans for Professionals",
-    subtitle: "Specialized financial solutions for Doctors, CAs, and Architects with 72-hour approval.",
-    image: "/prof.jpg",
-    cta: "Apply Now",
-    link: "/apply",
-    badge: "Professional Loans"
-  },
-  {
     id: 2,
     title: "Your Dream Home, Our Premium Rates",
     subtitle: "Home loans from 7.3% p.a. Up to ₹20 Cr with zero processing fees for select professionals.",
