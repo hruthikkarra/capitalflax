@@ -56,6 +56,8 @@ const milestones = [
   { year: '2025', title: 'AI-Powered Matching', desc: 'Launched AI eligibility check for instant pre-approval decisions.' },
 ];
 
+const partnerBanks = ['HDFC Bank', 'ICICI Bank', 'SBI', 'Axis Bank', 'Kotak Mahindra', 'Bajaj Finserv', 'Tata Capital', 'Aditya Birla Finance', 'RBI Registered'];
+
 // ── Page ───────────────────────────────────────────────────────────────────
 
 export default function AboutPage() {
@@ -270,21 +272,18 @@ export default function AboutPage() {
       {/* ── PARTNERS TRUST ── */}
       <section style={{ padding: '4rem 1rem', background: '#fff', borderTop: '1px solid #F1F5F9' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ color: '#94A3B8', fontWeight: 700, fontSize: '0.78rem', letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '2rem' }}>
-            Licenced &amp; Partnered With
-          </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', alignItems: 'center' }}>
-            {['HDFC Bank', 'ICICI Bank', 'SBI', 'Axis Bank', 'Kotak Mahindra', 'RBI Registered'].map((name, i) => (
-              <span key={i} style={{
-                display: 'inline-flex', alignItems: 'center',
-                padding: '0.6rem 1.25rem', borderRadius: '999px',
-                border: '1.5px solid #E2E8F0', background: '#F8FAFC',
-                fontWeight: 700, fontSize: '0.85rem', color: '#475569',
-              }}>
-                {name === 'RBI Registered' ? <Shield size={14} style={{ color: '#10B981', marginRight: '0.4rem' }} /> : null}
-                {name}
-              </span>
-            ))}
+          <h2 style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', fontWeight: 800, color: '#0F172A', letterSpacing: '-0.75px', margin: '0 0 2rem' }}>
+            We are officially associated with all leading banks and <span style={{ color: '#3B82F6' }}>NBFC&apos;S</span>
+          </h2>
+          <div className="about-bank-marquee">
+            <div className="about-bank-marquee-track">
+              {[...partnerBanks, ...partnerBanks].map((name, i) => (
+                <span key={`${name}-${i}`} className="about-bank-pill">
+                  {name === 'RBI Registered' ? <Shield size={14} style={{ color: '#10B981', marginRight: '0.45rem' }} /> : null}
+                  {name}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

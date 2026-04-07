@@ -52,7 +52,7 @@ const loans = [
         linkClass: 'indigo-link',
         wrapperClass: 'solution-icon-wrapper indigo-bg-light',
         iconClass: 'solution-icon indigo-icon',
-        image: '/hero_professional.png'
+        image: '/prof.jpg'
     },
     {
         icon: User,

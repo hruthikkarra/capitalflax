@@ -9,7 +9,7 @@ const slides = [
     id: 1,
     title: "Premium Loans for Professionals",
     subtitle: "Specialized financial solutions for Doctors, CAs, and Architects with 72-hour approval.",
-    image: "/hero_professional.png",
+    image: "/prof.jpg",
     cta: "Apply Now",
     link: "/apply",
     badge: "Professional Loans"

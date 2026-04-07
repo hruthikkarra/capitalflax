@@ -163,7 +163,7 @@ export default function Home() {
           {/* Professional Loans Card */}
           <div className="solution-card" style={{ padding: 0 }}>
             <div className="card-image-wrapper">
-              <img src="/hero_professional.png" alt="Professional Loans" className="card-img" />
+              <img src="/prof.jpg" alt="Professional Loans" className="card-img" />
               <div className="card-img-overlay"></div>
               <div className="solution-icon-wrapper indigo-bg-light" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
                 <GraduationCap className="solution-icon indigo-icon" />

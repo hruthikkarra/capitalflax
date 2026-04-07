@@ -19,7 +19,7 @@ const FacebookIcon = () => (
 );
 
 const iconStyle: React.CSSProperties = {
-    color: '#94A3B8',
+    color: '#CBD5E1',
     cursor: 'pointer',
     transition: 'color 0.2s',
 };
@@ -27,8 +27,8 @@ const iconStyle: React.CSSProperties = {
 export default function Footer() {
     return (
         <footer style={{
-            background: '#fff',
-            borderTop: '1px solid #F1F5F9',
+            background: 'linear-gradient(135deg, #020617 0%, #0F172A 55%, #111827 100%)',
+            borderTop: '1px solid #1E293B',
             padding: '4rem 1rem 2rem',
             fontFamily: 'inherit',
         }}>
@@ -46,15 +46,14 @@ export default function Footer() {
                         <Link href="/" style={{
                             display: 'inline-flex',
                             alignItems: 'center',
+                            gap: '0.4rem',
                             textDecoration: 'none',
                             marginBottom: '1rem',
-                            background: '#0F172A',
-                            padding: '0.4rem 0.8rem',
-                            borderRadius: '8px'
+                            padding: '0.2rem 0',
                         }}>
-                            <img src="/logo.png" alt="CapitalFlax Logo" style={{ height: '36px', width: 'auto' }} />
+                            <img src="/capital-logo-Photoroom.png?v=2" alt="CapitalFlax Symbol" style={{ height: '84px', width: 'auto', objectFit: 'contain' }} />
                         </Link>
-                        <p style={{ color: '#64748B', fontSize: '0.9rem', lineHeight: 1.65, margin: '0 0 1.25rem' }}>
+                        <p style={{ color: '#94A3B8', fontSize: '0.9rem', lineHeight: 1.65, margin: '0 0 1.25rem' }}>
                             Premium financial solutions for India's top professionals.
                         </p>
                         <span style={{
@@ -72,7 +71,7 @@ export default function Footer() {
 
                     {/* Services */}
                     <div>
-                        <div style={{ fontWeight: 800, fontSize: '0.82rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#0F172A', marginBottom: '1.25rem' }}>Services</div>
+                        <div style={{ fontWeight: 800, fontSize: '0.82rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#E2E8F0', marginBottom: '1.25rem' }}>Services</div>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
                             {[
                                 { label: 'Home Loans', href: '/services/home-loans' },
@@ -83,50 +82,50 @@ export default function Footer() {
                                 { label: 'Education Loans', href: '/services/education-loans' },
                                 { label: 'Vehicle Loans', href: '/services/vehicle-loans' }
                             ].map(l => (
-                                <li key={l.label}><Link href={l.href} style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>{l.label}</Link></li>
+                                <li key={l.label}><Link href={l.href} style={{ color: '#CBD5E1', fontSize: '0.9rem', textDecoration: 'none' }}>{l.label}</Link></li>
                             ))}
                         </ul>
                     </div>
 
                     {/* Professionals */}
                     <div>
-                        <div style={{ fontWeight: 800, fontSize: '0.82rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#0F172A', marginBottom: '1.25rem' }}>Professionals</div>
+                        <div style={{ fontWeight: 800, fontSize: '0.82rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#E2E8F0', marginBottom: '1.25rem' }}>Professionals</div>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
                             {[
                                 { label: 'For Doctors', href: '/professionals/doctors' },
                                 { label: 'For CAs', href: '/professionals/chartered-accountants' },
                                 { label: 'For Architects', href: '/professionals/architects' }
                             ].map(l => (
-                                <li key={l.label}><Link href={l.href} style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>{l.label}</Link></li>
+                                <li key={l.label}><Link href={l.href} style={{ color: '#CBD5E1', fontSize: '0.9rem', textDecoration: 'none' }}>{l.label}</Link></li>
                             ))}
                         </ul>
                     </div>
 
                     {/* Company */}
                     <div>
-                        <div style={{ fontWeight: 800, fontSize: '0.82rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#0F172A', marginBottom: '1.25rem' }}>Company</div>
+                        <div style={{ fontWeight: 800, fontSize: '0.82rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#E2E8F0', marginBottom: '1.25rem' }}>Company</div>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
                             {[{ label: 'About Us', href: '/about' }, { label: 'Contact', href: '/contact' }, { label: 'Careers', href: '/careers' }].map(l => (
-                                <li key={l.label}><Link href={l.href} style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>{l.label}</Link></li>
+                                <li key={l.label}><Link href={l.href} style={{ color: '#CBD5E1', fontSize: '0.9rem', textDecoration: 'none' }}>{l.label}</Link></li>
                             ))}
                         </ul>
                     </div>
 
                     {/* Resources */}
                     <div>
-                        <div style={{ fontWeight: 800, fontSize: '0.82rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#0F172A', marginBottom: '1.25rem' }}>Resources</div>
+                        <div style={{ fontWeight: 800, fontSize: '0.82rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#E2E8F0', marginBottom: '1.25rem' }}>Resources</div>
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
-                            <li><Link href="/blog" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>Blog & Guides</Link></li>
-                            <li><Link href="/cibil-score-guide" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>CIBIL Score Guide</Link></li>
-                            <li><Link href="/blog/home-loan-vs-mortgage-loan-which-is-right-for-you" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>Home Loan vs LAP</Link></li>
-                            <li><Link href="/apply" style={{ color: '#64748B', fontSize: '0.9rem', textDecoration: 'none' }}>Apply Now</Link></li>
+                            <li><Link href="/blog" style={{ color: '#CBD5E1', fontSize: '0.9rem', textDecoration: 'none' }}>Blog & Guides</Link></li>
+                            <li><Link href="/cibil-score-guide" style={{ color: '#CBD5E1', fontSize: '0.9rem', textDecoration: 'none' }}>CIBIL Score Guide</Link></li>
+                            <li><Link href="/blog/home-loan-vs-mortgage-loan-which-is-right-for-you" style={{ color: '#CBD5E1', fontSize: '0.9rem', textDecoration: 'none' }}>Home Loan vs LAP</Link></li>
+                            <li><Link href="/apply" style={{ color: '#CBD5E1', fontSize: '0.9rem', textDecoration: 'none' }}>Apply Now</Link></li>
                         </ul>
                     </div>
                 </div>
 
                 {/* Bottom bar */}
                 <div style={{
-                    borderTop: '1px solid #F1F5F9',
+                    borderTop: '1px solid #1E293B',
                     paddingTop: '2rem',
                     display: 'flex',
                     alignItems: 'center',
@@ -135,7 +134,7 @@ export default function Footer() {
                     gap: '1rem',
                 }}>
                     <p style={{ margin: 0, fontSize: '0.85rem', color: '#94A3B8' }}>
-                        © 2025 <a href="#" style={{ color: '#3B82F6', textDecoration: 'none' }}>CapitalFlax Financial Services.</a> All rights reserved.
+                        © 2025 <a href="#" style={{ color: '#60A5FA', textDecoration: 'none' }}>CapitalFlax Financial Services.</a> All rights reserved.
                     </p>
                     <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>
                         <a href="#" aria-label="LinkedIn" style={iconStyle}><LinkedinIcon /></a>
@@ -143,8 +142,8 @@ export default function Footer() {
                         <a href="#" aria-label="Facebook" style={iconStyle}><FacebookIcon /></a>
                     </div>
                     <div style={{ display: 'flex', gap: '1.5rem' }}>
-                        <Link href="/privacy" style={{ fontSize: '0.85rem', color: '#64748B', textDecoration: 'none', fontWeight: 600 }}>PRIVACY POLICY</Link>
-                        <Link href="/terms" style={{ fontSize: '0.85rem', color: '#64748B', textDecoration: 'none', fontWeight: 600 }}>TERMS OF SERVICE</Link>
+                        <Link href="/privacy" style={{ fontSize: '0.85rem', color: '#CBD5E1', textDecoration: 'none', fontWeight: 600 }}>PRIVACY POLICY</Link>
+                        <Link href="/terms" style={{ fontSize: '0.85rem', color: '#CBD5E1', textDecoration: 'none', fontWeight: 600 }}>TERMS OF SERVICE</Link>
                     </div>
                 </div>
             </div>

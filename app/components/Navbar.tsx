@@ -15,8 +15,8 @@ export default function Navbar() {
     return (
         <header className={`navbar-wrapper${isHome ? ' navbar-wrapper--home' : ''}`}>
             <div className={`navbar${isHome ? ' navbar--home' : ''}`}>
-                <Link href="/" className="logo" style={{ textDecoration: 'none', background: '#0F172A', padding: '0.4rem 0.8rem', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
-                    <img src="/logo.png" alt="CapitalFlax Logo" style={{ height: '36px', width: 'auto' }} />
+                <Link href="/" className="logo nav-logo" style={{ textDecoration: 'none' }}>
+                    <img src="/capital-logo-Photoroom.png?v=2" alt="CapitalFlax Symbol" className="nav-logo-image" />
                 </Link>
                 <nav className="nav-links">
                     <Link href="/" className={pathname === '/' ? 'active' : ''}>Home</Link>
