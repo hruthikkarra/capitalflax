@@ -81,7 +81,14 @@ export default function VehicleLoansPage() {
             <style>{`.car-thumb::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#E11D48;cursor:pointer;border:2px solid #fff;box-shadow:0 0 0 2px #E11D48;}.car-thumb::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#E11D48;cursor:pointer;border:2px solid #fff;}`}</style>
 
             {/* HERO */}
-            <section style={{ background: 'linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 60%, #FFF1F2 100%)', padding: '5rem 1.5rem 4rem', textAlign: 'center' }}>
+            <section style={{
+                position: 'relative',
+                padding: '5rem 1.5rem 4rem',
+                textAlign: 'center',
+                backgroundImage: 'linear-gradient(135deg, rgba(255,241,242,0.94) 0%, rgba(255,228,230,0.92) 60%, rgba(255,241,242,0.94) 100%), url(/car.jpg.jpeg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}>
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#fff', border: '1px solid #FECDD3', borderRadius: '50px', padding: '0.4rem 1.2rem', marginBottom: '1.5rem' }}>
                     <Car size={14} style={{ color: '#E11D48' }} />
                     <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#BE123C', letterSpacing: '1.5px', textTransform: 'uppercase' }}>Drive Your Dream</span>

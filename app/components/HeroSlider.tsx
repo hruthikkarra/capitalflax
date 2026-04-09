@@ -1,89 +1,109 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const slides = [
   {
     id: 1,
-    title: "Premium Loans for Professionals",
-    subtitle: "Specialized financial solutions for Doctors, CAs, and Architects with 72-hour approval.",
-    image: "/hero_professional.png",
-    cta: "Apply Now",
-    link: "/apply",
-    badge: "Professional Loans"
+    title: "Your Dream Home, Our Best Rates",
+    subtitle: "Home loans starting at 7.3% p.a. Up to ₹20 Cr with zero processing fees for select professionals.",
+    image: "/home.jpg.jpeg",
+    cta: "Check Eligibility",
+    link: "/services/home-loans",
+    badge: "Home Loans",
+    accent: "#3B82F6",
   },
   {
     id: 2,
-    title: "Your Dream Home, Our Premium Rates",
-    subtitle: "Home loans from 7.3% p.a. Up to ₹20 Cr with zero processing fees for select professionals.",
-    image: "/hero_home.png",
-    cta: "Check Eligibility",
-    link: "/services/home-loans",
-    badge: "Home Loans"
+    title: "Instant Personal Loans for Every Need",
+    subtitle: "Up to ₹50 Lakhs. No collateral required. Same-day disbursal for salaried professionals.",
+    image: "/hero_personal.png?v=2",
+    cta: "Apply Now",
+    link: "/services/personal-loans",
+    badge: "Personal Loans",
+    accent: "#10B981",
   },
   {
     id: 3,
-    title: "Fuel Your Business Growth",
-    subtitle: "Unsecured business loans up to ₹1 Cr. Minimal documentation and fast-track processing.",
-    image: "/hero_business.png",
-    cta: "Get Consultation",
-    link: "/services/business-loans",
-    badge: "Business Loans"
+    title: "Unlock the Value of Your Gold",
+    subtitle: "Get up to ₹1 Crore against your gold jewellery at the lowest interest rates. Instant approval.",
+    image: "/hero_gold.png",
+    cta: "Get Gold Loan",
+    link: "/services/gold-loans",
+    badge: "Gold Loans",
+    accent: "#F59E0B",
   },
   {
     id: 4,
-    title: "Drive Your Dreams Today",
-    subtitle: "100% on-road funding for luxury and commercial vehicles with instant pre-approved offers.",
-    image: "/hero_vehicle.png",
-    cta: "View Offers",
-    link: "/services/vehicle-loans",
-    badge: "Vehicle Loans"
-  }
+    title: "Invest in Your Future Today",
+    subtitle: "Education loans up to ₹1.5 Cr for top colleges in India & abroad. Flexible repayment options.",
+    image: "/hero_education.png",
+    cta: "Explore Education Loans",
+    link: "/services/education-loans",
+    badge: "Education Loans",
+    accent: "#60A5FA",
+  },
+  {
+    id: 5,
+    title: "Exclusive Loans for Professionals",
+    subtitle: "Doctors, CAs, architects & engineers — get preferential rates up to ₹50 Lakhs, no collateral.",
+    image: "/hero_professional.png",
+    cta: "View Professional Loans",
+    link: "/services/professional-loans",
+    badge: "Professional Loans",
+    accent: "#A78BFA",
+  },
 ];
 
-export default function HeroSlider() {
+type HeroSliderProps = {
+  className?: string;
+};
+
+const AUTO_ADVANCE_MS = 5500;
+
+export default function HeroSlider({ className }: HeroSliderProps) {
   const [current, setCurrent] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  const nextSlide = useCallback(() => {
-    setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  }, []);
-
-  const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
 
   useEffect(() => {
-    if (isPaused) return;
-    const timer = setInterval(nextSlide, 6000);
-    return () => clearInterval(timer);
-  }, [nextSlide, isPaused]);
+    const id = setInterval(() => {
+      if (typeof document !== "undefined" && document.hidden) return;
+      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, AUTO_ADVANCE_MS);
+    return () => clearInterval(id);
+  }, []);
+
+  const slide = slides[current];
 
   return (
-    <section 
-      className="hero-slider-wrapper"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-    >
+    <section className={["hero-slider-wrapper", className].filter(Boolean).join(" ")}>
       <div className="slider-container">
-        {slides.map((slide, index) => (
-          <div 
-            key={slide.id} 
-            className={`slide ${index === current ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${slide.image})` }}
+        {slides.map((s, index) => (
+          <div
+            key={s.id}
+            className={`slide ${index === current ? "active" : ""}`}
+            style={{ backgroundImage: `url(${s.image})` }}
           >
             <div className="slide-overlay">
               <div className="slide-content">
-                <div className="slide-badge">{slide.badge}</div>
-                <h1 className="slide-title">{slide.title}</h1>
-                <p className="slide-subtitle">{slide.subtitle}</p>
+                <div
+                  className="slide-badge"
+                  style={{ background: `${s.accent}22`, color: s.accent, border: `1px solid ${s.accent}55` }}
+                >
+                  {s.badge}
+                </div>
+                <h1 className="slide-title">{s.title}</h1>
+                <p className="slide-subtitle">{s.subtitle}</p>
                 <div className="slide-buttons">
-                  <Link href={slide.link} className="btn-slider-primary">
-                    {slide.cta} <ArrowRight className="btn-icon" />
+                  <Link
+                    href={s.link}
+                    className="btn-slider-primary"
+                    style={{ background: `linear-gradient(135deg, ${s.accent}, ${s.accent}cc)` }}
+                  >
+                    {s.cta} <ArrowRight className="btn-icon" />
                   </Link>
-                  <Link href="/contact" className="btn-slider-outline">
+                  <Link href="/apply" className="btn-slider-outline">
                     Talk to Expert
                   </Link>
                 </div>
@@ -93,23 +113,52 @@ export default function HeroSlider() {
         ))}
       </div>
 
-      {/* Navigation Arrows */}
-      <button className="slider-nav-btn prev" onClick={prevSlide} aria-label="Previous slide">
-        <ChevronLeft size={24} />
-      </button>
-      <button className="slider-nav-btn next" onClick={nextSlide} aria-label="Next slide">
-        <ChevronRight size={24} />
-      </button>
-
-      {/* Indicators */}
+      {/* Dot Indicators */}
       <div className="slider-indicators">
-        {slides.map((_, index) => (
+        {slides.map((s, index) => (
           <button
             key={index}
-            className={`indicator ${index === current ? 'active' : ''}`}
+            className={`indicator ${index === current ? "active" : ""}`}
             onClick={() => setCurrent(index)}
             aria-label={`Go to slide ${index + 1}`}
+            style={index === current ? { background: slide.accent, width: "28px" } : {}}
           />
+        ))}
+      </div>
+
+      {/* Side label strip */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "4.5rem",
+          right: "2rem",
+          display: "flex",
+          flexDirection: "column",
+          gap: "0.5rem",
+          zIndex: 10,
+        }}
+      >
+        {slides.map((s, i) => (
+          <button
+            key={s.id}
+            onClick={() => setCurrent(i)}
+            style={{
+              background: i === current ? `${s.accent}33` : "rgba(0,0,0,0.4)",
+              border: `1px solid ${i === current ? s.accent : "rgba(255,255,255,0.15)"}`,
+              color: i === current ? "#fff" : "rgba(255,255,255,0.5)",
+              padding: "0.3rem 0.75rem",
+              borderRadius: "50px",
+              fontSize: "0.68rem",
+              fontWeight: 700,
+              cursor: "pointer",
+              letterSpacing: "0.5px",
+              whiteSpace: "nowrap",
+              backdropFilter: "blur(6px)",
+              transition: "all 0.3s",
+            }}
+          >
+            {s.badge}
+          </button>
         ))}
       </div>
     </section>

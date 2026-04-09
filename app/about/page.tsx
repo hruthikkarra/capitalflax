@@ -47,41 +47,6 @@ const values = [
   },
 ];
 
-const team = [
-  {
-    name: 'Raghav Sharma',
-    role: 'Founder & CEO',
-    exp: '18+ years in banking & financial services',
-    prev: 'Ex-HDFC Bank, IIM Ahmedabad',
-    initial: 'RS',
-    color: '#1E3A8A',
-  },
-  {
-    name: 'Priya Menon',
-    role: 'Chief Operations Officer',
-    exp: '14 years in NBFC and loan processing',
-    prev: 'Ex-Bajaj Finserv, BITS Pilani',
-    initial: 'PM',
-    color: '#10B981',
-  },
-  {
-    name: 'Arjun Reddy',
-    role: 'Head of Professional Loans',
-    exp: '12 years specializing in professional finance',
-    prev: 'Ex-ICICI Bank, CA by qualification',
-    initial: 'AR',
-    color: '#F59E0B',
-  },
-  {
-    name: 'Sneha Kapoor',
-    role: 'Head of Technology',
-    exp: '10 years in fintech & digital lending',
-    prev: 'Ex-Razorpay, IIT Delhi',
-    initial: 'SK',
-    color: '#8B5CF6',
-  },
-];
-
 const milestones = [
   { year: '2017', title: 'Founded in Hyderabad', desc: 'Started with a vision to simplify loans for India\'s professionals.' },
   { year: '2021', title: '1,000 Loans Disbursed', desc: 'Reached our first milestone serving doctors, CAs and engineers.' },
@@ -90,6 +55,8 @@ const milestones = [
   { year: '2024', title: '₹500 Cr Disbursed', desc: '10,000+ professionals served, ₹500 Crore in loans disbursed.' },
   { year: '2025', title: 'AI-Powered Matching', desc: 'Launched AI eligibility check for instant pre-approval decisions.' },
 ];
+
+const partnerBanks = ['HDFC Bank', 'ICICI Bank', 'SBI', 'Axis Bank', 'Kotak Mahindra', 'Bajaj Finserv', 'Tata Capital', 'Aditya Birla Finance', 'RBI Registered'];
 
 // ── Page ───────────────────────────────────────────────────────────────────
 
@@ -183,6 +150,7 @@ export default function AboutPage() {
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
               {[
+                'We are partnered with all leading banks and NBFCs',
                 'RBI-registered financial advisory services',
                 'Partnered with 15+ leading banks & NBFCs',
                 'Zero conflict of interest — we work for you',
@@ -302,67 +270,21 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── LEADERSHIP TEAM ── */}
-      <section style={{ padding: '5rem 1rem', background: '#F8FAFC' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <span style={{ display: 'inline-block', background: '#EFF6FF', color: '#1E3A8A', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '1.5px', borderRadius: '999px', padding: '0.4rem 1rem', marginBottom: '1rem', textTransform: 'uppercase' }}>
-              Leadership
-            </span>
-            <h2 style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', fontWeight: 800, color: '#0F172A', letterSpacing: '-0.75px', margin: 0 }}>
-              Meet the <span style={{ color: '#3B82F6' }}>Team</span>
-            </h2>
-            <p style={{ color: '#64748B', fontSize: '0.95rem', marginTop: '0.75rem' }}>
-              Ex-bankers, fintech veterans and domain experts — united by one mission.
-            </p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
-            {team.map((member, i) => (
-              <div key={i} style={{
-                background: '#fff', borderRadius: '16px', padding: '2rem',
-                border: '1px solid #E2E8F0', textAlign: 'center',
-                boxShadow: '0 4px 20px -4px rgba(0,0,0,0.05)',
-              }}>
-                {/* Avatar */}
-                <div style={{
-                  width: 72, height: 72, borderRadius: '50%',
-                  background: member.color, color: '#fff',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontWeight: 800, fontSize: '1.3rem', margin: '0 auto 1.25rem',
-                  boxShadow: `0 8px 24px -4px ${member.color}55`,
-                }}>
-                  {member.initial}
-                </div>
-                <h3 style={{ fontWeight: 800, fontSize: '1.05rem', color: '#0F172A', margin: '0 0 0.3rem' }}>{member.name}</h3>
-                <div style={{ fontWeight: 700, fontSize: '0.82rem', color: member.color, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>
-                  {member.role}
-                </div>
-                <p style={{ color: '#64748B', fontSize: '0.88rem', lineHeight: 1.65, margin: '0 0 0.5rem' }}>{member.exp}</p>
-                <p style={{ color: '#94A3B8', fontSize: '0.82rem', margin: 0, fontStyle: 'italic' }}>{member.prev}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── PARTNERS TRUST ── */}
       <section style={{ padding: '4rem 1rem', background: '#fff', borderTop: '1px solid #F1F5F9' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ color: '#94A3B8', fontWeight: 700, fontSize: '0.78rem', letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '2rem' }}>
-            Licenced &amp; Partnered With
-          </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', alignItems: 'center' }}>
-            {['HDFC Bank', 'ICICI Bank', 'SBI', 'Axis Bank', 'Kotak Mahindra', 'RBI Registered'].map((name, i) => (
-              <span key={i} style={{
-                display: 'inline-flex', alignItems: 'center',
-                padding: '0.6rem 1.25rem', borderRadius: '999px',
-                border: '1.5px solid #E2E8F0', background: '#F8FAFC',
-                fontWeight: 700, fontSize: '0.85rem', color: '#475569',
-              }}>
-                {name === 'RBI Registered' ? <Shield size={14} style={{ color: '#10B981', marginRight: '0.4rem' }} /> : null}
-                {name}
-              </span>
-            ))}
+          <h2 style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', fontWeight: 800, color: '#0F172A', letterSpacing: '-0.75px', margin: '0 0 2rem' }}>
+            We are officially associated with all leading banks and <span style={{ color: '#3B82F6' }}>NBFC&apos;S</span>
+          </h2>
+          <div className="about-bank-marquee">
+            <div className="about-bank-marquee-track">
+              {[...partnerBanks, ...partnerBanks].map((name, i) => (
+                <span key={`${name}-${i}`} className="about-bank-pill">
+                  {name === 'RBI Registered' ? <Shield size={14} style={{ color: '#10B981', marginRight: '0.45rem' }} /> : null}
+                  {name}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -385,7 +307,7 @@ export default function AboutPage() {
               {[
                 { icon: <MapPin size={18} />, label: 'Address', value: 'Flat # 1604/A 16th Floor Babukhan Estate, Basheerbagh Hyderabad - 500001' },
                 { icon: <Phone size={18} />, label: 'Phone', value: '+91 9985681944 , +91-9989245304' },
-                { icon: <Mail size={18} />, label: 'Email', value: 'capitalflaxin@gmail.com' },
+                { icon: <Mail size={18} />, label: 'Email', value: 'support@capitalflax.in' },
               ].map((item, i) => (
                 <div key={i} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                   <div style={{ width: 40, height: 40, borderRadius: '10px', background: '#EFF6FF', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1E3A8A', flexShrink: 0 }}>

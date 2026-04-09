@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SocialFixedBar from "./components/SocialFixedBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -77,7 +78,7 @@ const organizationSchema = {
   description:
     "Premium loan solutions for doctors, chartered accountants, architects and salaried professionals across India. Home loans, business loans, personal loans, mortgage loans and more.",
   telephone: "+91-9985681944",
-  email: "capitalflaxin@gmail.com",
+  email: "support@capitalflax.in",
   foundingDate: "2017",
   areaServed: [
     { "@type": "City", name: "Hyderabad" },
@@ -129,6 +130,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`} suppressHydrationWarning={true}>
         <Navbar />
         {children}
+        <SocialFixedBar />
         <Footer />
       </body>
     </html>

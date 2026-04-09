@@ -8,7 +8,7 @@ import Testimonials from './components/Testimonials';
 export default function Home() {
   return (
     <>
-      <HeroSlider />
+      <HeroSlider className="hero-slider--fixed-nav-offset" />
 
       <section className="stats-banner-wrapper">
         <div className="stats-banner">
@@ -82,10 +82,49 @@ export default function Home() {
         </div>
 
         <div className="solutions-grid">
+          {/* Business Loans Card */}
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="/bus.jpeg" alt="Business Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <Briefcase className="solution-icon orange-icon-alt" />
+              </div>
+            </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Business Loans</h3>
+              <p className="solution-category">FUEL YOUR GROWTH</p>
+
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹1 Cr</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">14% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value orange-text-alt fw-700">48-Hour Approval</span>
+                </div>
+              </div>
+
+              <p className="solution-desc">
+                Working capital, equipment finance, and overdraft
+                facilities. Minimal documentation required.
+              </p>
+
+              <Link href="/services/business-loans" className="prof-link orange-link-alt">
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
+          </div>
+
           {/* Home Loans Card */}
           <div className="solution-card" style={{ padding: 0 }}>
             <div className="card-image-wrapper">
-              <img src="/hero_home.png" alt="Home Loans" className="card-img" />
+              <img src="/home.jpg.jpeg" alt="Home Loans" className="card-img" />
               <div className="card-img-overlay"></div>
               <div className="solution-icon-wrapper" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
                 <HomeIcon className="solution-icon blue-icon" />
@@ -121,40 +160,40 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Business Loans Card */}
+          {/* Professional Loans Card */}
           <div className="solution-card" style={{ padding: 0 }}>
             <div className="card-image-wrapper">
-              <img src="/hero_business.png" alt="Business Loans" className="card-img" />
+              <img src="/prof.jpg" alt="Professional Loans" className="card-img" />
               <div className="card-img-overlay"></div>
-              <div className="solution-icon-wrapper" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
-                <Briefcase className="solution-icon orange-icon-alt" />
+              <div className="solution-icon-wrapper indigo-bg-light" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <GraduationCap className="solution-icon indigo-icon" />
               </div>
             </div>
             <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
-              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Business Loans</h3>
-              <p className="solution-category">FUEL YOUR GROWTH</p>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Professional Loans</h3>
+              <p className="solution-category">FOR YOUR PRACTICE</p>
 
               <div className="solution-details">
                 <div className="detail-row">
                   <span className="detail-label">Amount:</span>
-                  <span className="detail-value text-dark fw-700">Up to ₹1 Cr</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹75 L</span>
                 </div>
                 <div className="detail-row">
                   <span className="detail-label">Rate:</span>
-                  <span className="detail-value text-dark fw-700">14% onwards</span>
+                  <span className="detail-value text-dark fw-700">9.0% onwards</span>
                 </div>
                 <div className="detail-row">
                   <span className="detail-label">Key Feature:</span>
-                  <span className="detail-value orange-text-alt fw-700">48-Hour Approval</span>
+                  <span className="detail-value indigo-text fw-700">No Collateral</span>
                 </div>
               </div>
 
               <p className="solution-desc">
-                Working capital, equipment finance, and overdraft
-                facilities. Minimal documentation required.
+                Equipment finance, practice setup, or expansion.
+                Tailored for doctors, CAs, architects.
               </p>
 
-              <Link href="/services/business-loans" className="prof-link orange-link-alt">
+              <Link href="/services/professional-loans" className="prof-link indigo-link">
                 LEARN MORE <ArrowRight className="link-icon" />
               </Link>
             </div>
@@ -277,49 +316,15 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Professional Loans Card */}
-          <div className="solution-card" style={{ padding: 0 }}>
-            <div className="card-image-wrapper">
-              <img src="/hero_professional.png" alt="Professional Loans" className="card-img" />
-              <div className="card-img-overlay"></div>
-              <div className="solution-icon-wrapper indigo-bg-light" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
-                <GraduationCap className="solution-icon indigo-icon" />
-              </div>
-            </div>
-            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
-              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Professional Loans</h3>
-              <p className="solution-category">FOR YOUR PRACTICE</p>
-
-              <div className="solution-details">
-                <div className="detail-row">
-                  <span className="detail-label">Amount:</span>
-                  <span className="detail-value text-dark fw-700">Up to ₹75 L</span>
-                </div>
-                <div className="detail-row">
-                  <span className="detail-label">Rate:</span>
-                  <span className="detail-value text-dark fw-700">9.0% onwards</span>
-                </div>
-                <div className="detail-row">
-                  <span className="detail-label">Key Feature:</span>
-                  <span className="detail-value indigo-text fw-700">No Collateral</span>
-                </div>
-              </div>
-
-              <p className="solution-desc">
-                Equipment finance, practice setup, or expansion.
-                Tailored for doctors, CAs, architects.
-              </p>
-
-              <Link href="/services/professional-loans" className="prof-link indigo-link">
-                LEARN MORE <ArrowRight className="link-icon" />
-              </Link>
-            </div>
-          </div>
-
           {/* Education Loans Card */}
           <div className="solution-card" style={{ padding: 0 }}>
             <div className="card-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1523050335392-93851179ae22?q=80&w=2070&auto=format&fit=crop" alt="Education Loans" className="card-img" />
+              <img
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
+                alt="Education Loans"
+                className="card-img"
+                loading="lazy"
+              />
               <div className="card-img-overlay"></div>
               <div className="solution-icon-wrapper" style={{ background: '#E0F2FE', position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
                 <BookOpen className="solution-icon" style={{ color: '#0284C7' }} />
@@ -357,7 +362,7 @@ export default function Home() {
           {/* Vehicle Loans Card */}
           <div className="solution-card" style={{ padding: 0 }}>
             <div className="card-image-wrapper">
-              <img src="/hero_vehicle.png" alt="Vehicle Loans" className="card-img" />
+              <img src="/car.jpg.jpeg" alt="Vehicle Loans" className="card-img" />
               <div className="card-img-overlay"></div>
               <div className="solution-icon-wrapper" style={{ background: '#FFE4E6', position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
                 <Car className="solution-icon" style={{ color: '#E11D48' }} />
@@ -419,12 +424,12 @@ export default function Home() {
               </thead>
               <tbody>
                 {[
-                  { type: 'Home Loans', amount: 'Up to ₹20 Cr', rate: '7.3% onwards', tenure: 'Up to 30 years', feature: '0% Processing Fee', featureColor: '#3B82F6' },
                   { type: 'Business Loans', amount: 'Up to ₹1 Cr', rate: '14% onwards', tenure: 'Up to 7 years', feature: '48-Hour Approval', featureColor: '#F59E0B' },
+                  { type: 'Home Loans', amount: 'Up to ₹20 Cr', rate: '7.3% onwards', tenure: 'Up to 30 years', feature: '0% Processing Fee', featureColor: '#3B82F6' },
+                  { type: 'Professional Loans', amount: 'Up to ₹75 L', rate: '9.0% onwards', tenure: 'Up to 10 years', feature: 'No Collateral', featureColor: '#6366F1' },
                   { type: 'Personal Loans', amount: 'Up to ₹50 L', rate: '10.5% onwards', tenure: 'Up to 5 years', feature: 'Same-Day Disbursal', featureColor: '#10B981' },
                   { type: 'Gold Loans', amount: 'Up to ₹1 Cr', rate: '7.5% onwards', tenure: 'Up to 3 years', feature: 'Instant Approval', featureColor: '#F59E0B' },
                   { type: 'Mortgage Loans', amount: 'Up to ₹20 Cr', rate: '10% onwards', tenure: 'Up to 20 years', feature: 'Highest LTV', featureColor: '#8B5CF6' },
-                  { type: 'Professional Loans', amount: 'Up to ₹75 L', rate: '9.0% onwards', tenure: 'Up to 10 years', feature: 'No Collateral', featureColor: '#6366F1' },
                   { type: 'Education Loans', amount: 'Up to ₹1.5 Cr', rate: '8.5% onwards', tenure: 'Up to 15 years', feature: '100% Financing', featureColor: '#0284C7' },
                   { type: 'Vehicle Loans', amount: '100% On-Road', rate: '8.75% onwards', tenure: 'Up to 7 years', feature: 'Pre-approved Offers', featureColor: '#E11D48' },
                 ].map((row, i) => (

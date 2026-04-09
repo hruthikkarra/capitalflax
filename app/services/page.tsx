@@ -10,21 +10,6 @@ import FAQSection from '../components/FAQSection';
 
 const loans = [
     {
-        icon: HomeIcon,
-        title: 'Home Loans',
-        href: '/services/home-loans',
-        category: 'YOUR DREAM HOME',
-        amount: 'Up to ₹20 Cr',
-        rate: '7.3% onwards',
-        feature: '0% Processing Fee',
-        featureClass: 'blue-text',
-        desc: 'Flexible documentation for private practice income. Balance transfer and top-up options available.',
-        linkClass: 'blue-link',
-        wrapperClass: 'solution-icon-wrapper',
-        iconClass: 'solution-icon blue-icon',
-        image: '/hero_home.png'
-    },
-    {
         icon: Briefcase,
         title: 'Business Loans',
         href: '/services/business-loans',
@@ -37,7 +22,37 @@ const loans = [
         linkClass: 'orange-link-alt',
         wrapperClass: 'solution-icon-wrapper',
         iconClass: 'solution-icon orange-icon-alt',
-        image: '/hero_business.png'
+        image: '/bus.jpeg'
+    },
+    {
+        icon: HomeIcon,
+        title: 'Home Loans',
+        href: '/services/home-loans',
+        category: 'YOUR DREAM HOME',
+        amount: 'Up to ₹20 Cr',
+        rate: '7.3% onwards',
+        feature: '0% Processing Fee',
+        featureClass: 'blue-text',
+        desc: 'Flexible documentation for private practice income. Balance transfer and top-up options available.',
+        linkClass: 'blue-link',
+        wrapperClass: 'solution-icon-wrapper',
+        iconClass: 'solution-icon blue-icon',
+        image: '/home.jpg.jpeg'
+    },
+    {
+        icon: GraduationCap,
+        title: 'Professional Loans',
+        href: '/services/professional-loans',
+        category: 'FOR YOUR PRACTICE',
+        amount: 'Up to ₹75 L',
+        rate: '9.0% onwards',
+        feature: 'No Collateral',
+        featureClass: 'indigo-text',
+        desc: 'Equipment finance, practice setup, or expansion. Tailored for doctors, CAs, architects.',
+        linkClass: 'indigo-link',
+        wrapperClass: 'solution-icon-wrapper indigo-bg-light',
+        iconClass: 'solution-icon indigo-icon',
+        image: '/prof.jpg'
     },
     {
         icon: User,
@@ -85,21 +100,6 @@ const loans = [
         image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop'
     },
     {
-        icon: GraduationCap,
-        title: 'Professional Loans',
-        href: '/services/professional-loans',
-        category: 'FOR YOUR PRACTICE',
-        amount: 'Up to ₹75 L',
-        rate: '9.0% onwards',
-        feature: 'No Collateral',
-        featureClass: 'indigo-text',
-        desc: 'Equipment finance, practice setup, or expansion. Tailored for doctors, CAs, architects.',
-        linkClass: 'indigo-link',
-        wrapperClass: 'solution-icon-wrapper indigo-bg-light',
-        iconClass: 'solution-icon indigo-icon',
-        image: '/hero_professional.png'
-    },
-    {
         icon: BookOpen,
         title: 'Education Loans',
         href: '/services/education-loans',
@@ -135,17 +135,17 @@ const loans = [
         wrapperStyle: { background: '#FFE4E6' },
         iconStyle: { color: '#E11D48' },
         featureStyle: { color: '#E11D48' },
-        image: '/hero_vehicle.png'
+        image: '/car.jpg.jpeg'
     },
 ];
 
 const comparison = [
-    { type: 'Home Loans', amount: 'Up to ₹20 Cr', rate: '7.3% onwards', tenure: 'Up to 30 years', feature: '0% Processing Fee', featureColor: '#3B82F6' },
     { type: 'Business Loans', amount: 'Up to ₹1 Cr', rate: '14% onwards', tenure: 'Up to 7 years', feature: '48-Hour Approval', featureColor: '#F59E0B' },
+    { type: 'Home Loans', amount: 'Up to ₹20 Cr', rate: '7.3% onwards', tenure: 'Up to 30 years', feature: '0% Processing Fee', featureColor: '#3B82F6' },
+    { type: 'Professional Loans', amount: 'Up to ₹75 L', rate: '9.0% onwards', tenure: 'Up to 10 years', feature: 'No Collateral', featureColor: '#6366F1' },
     { type: 'Personal Loans', amount: 'Up to ₹50 L', rate: '10.5% onwards', tenure: 'Up to 5 years', feature: 'Same-Day Disbursal', featureColor: '#10B981' },
     { type: 'Gold Loans', amount: 'Up to ₹1 Cr', rate: '7.5% onwards', tenure: 'Up to 3 years', feature: 'Instant Approval', featureColor: '#F59E0B' },
     { type: 'Mortgage Loans', amount: 'Up to ₹20 Cr', rate: '10% onwards', tenure: 'Up to 20 years', feature: 'Highest LTV', featureColor: '#8B5CF6' },
-    { type: 'Professional Loans', amount: 'Up to ₹75 L', rate: '9.0% onwards', tenure: 'Up to 10 years', feature: 'No Collateral', featureColor: '#6366F1' },
     { type: 'Education Loans', amount: 'Up to ₹1.5 Cr', rate: '8.5% onwards', tenure: 'Up to 15 years', feature: '100% Financing', featureColor: '#0284C7' },
     { type: 'Vehicle Loans', amount: '100% On-Road', rate: '8.75% onwards', tenure: 'Up to 7 years', feature: 'Pre-approved Offers', featureColor: '#E11D48' },
 ];

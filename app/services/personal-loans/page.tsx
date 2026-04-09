@@ -55,7 +55,7 @@ const faqs = [
 export default function PersonalLoansPage() {
     const [loanAmount, setLoanAmount] = useState(500000);
     const [tenure, setTenure] = useState(3);
-    const rate = 10.5;
+    const [rate, setRate] = useState(10.5);
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
     const { emi, totalInterest, totalPayable } = useCallback(() => {
@@ -162,10 +162,15 @@ export default function PersonalLoansPage() {
                                         <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '0.95rem' }}>{formatCurrency(totalPayable)}</div>
                                     </div>
                                 </div>
-                                <div style={{ background: '#ECFDF5', borderRadius: '10px', padding: '0.75rem 1rem', display: 'flex', justifyContent: 'space-between' }}>
-                                    <span style={{ fontSize: '0.85rem', color: '#059669', fontWeight: 600 }}>Interest Rate</span>
-                                    <span style={{ fontWeight: 800, color: '#059669' }}>{rate}% p.a.</span>
+                                <div style={{ background: '#ECFDF5', borderRadius: '10px', padding: '0.75rem 1rem', marginBottom: '0.5rem' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', alignItems: 'center' }}>
+                                        <span style={{ fontSize: '0.85rem', color: '#059669', fontWeight: 600 }}>Interest Rate</span>
+                                        <span style={{ fontWeight: 800, color: '#059669' }}>{rate.toFixed(1)}% p.a.</span>
+                                    </div>
+                                    <input type="range" min={8} max={24} step={0.1} value={rate} onChange={e => setRate(+e.target.value)} className="pl-thumb" style={sliderStyle(((rate - 8) / 16) * 100, '#10B981')} />
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '0.4rem' }}><span style={{ fontSize: '0.72rem', color: '#94A3B8' }}>8%</span><span style={{ fontSize: '0.72rem', color: '#94A3B8' }}>24%</span></div>
                                 </div>
+                                <p style={{ fontSize: '0.72rem', color: '#94A3B8', fontStyle: 'italic', margin: '0 0 0.5rem', textAlign: 'center' }}>* Interest rate depend upon on your profile</p>
                                 <Link href="/apply" style={{ display: 'block', textAlign: 'center', background: '#059669', color: '#fff', fontWeight: 700, padding: '0.9rem', borderRadius: '10px', textDecoration: 'none' }}>Apply for This Loan</Link>
                             </div>
                         </div>

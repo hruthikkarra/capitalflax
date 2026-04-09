@@ -25,7 +25,9 @@ const features = [
 export default function PersonalLoanDetail() {
     const [loanAmount, setLoanAmount] = useState(2500000);
     const [tenure, setTenure] = useState(3);
-    const interestRate = 10.5;
+    const [interestRate, setInterestRate] = useState(10.5);
+
+    const ratePct = ((interestRate - 8) / (24 - 8)) * 100;
 
     const calcEMI = useCallback(() => {
         const r = interestRate / 12 / 100;
@@ -149,10 +151,22 @@ export default function PersonalLoanDetail() {
                             </div>
                         </div>
 
-                        {/* Rate badge */}
-                        <div style={{ background: '#F0FDF4', borderRadius: '8px', padding: '0.75rem 1rem', marginBottom: '2rem', display: 'flex', justifyContent: 'space-between' }}>
-                            <span style={{ fontSize: '0.85rem', color: '#065F46', fontWeight: 600 }}>Interest Rate</span>
-                            <span style={{ fontSize: '0.9rem', fontWeight: 800, color: '#065F46' }}>{interestRate}% p.a.</span>
+                        {/* Interest Rate - Adjustable */}
+                        <div style={{ background: '#F0FDF4', borderRadius: '8px', padding: '0.75rem 1rem', marginBottom: '0.5rem' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                                <span style={{ fontSize: '0.85rem', color: '#065F46', fontWeight: 600 }}>Interest Rate</span>
+                                <span style={{ fontSize: '0.9rem', fontWeight: 800, color: '#065F46' }}>{interestRate.toFixed(1)}% p.a.</span>
+                            </div>
+                            <input type="range" min={8} max={24} step={0.1} value={interestRate}
+                                onChange={e => setInterestRate(Number(e.target.value))}
+                                className="pers-slider" style={sliderStyle(ratePct)} />
+                            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '0.4rem' }}>
+                                <span style={{ fontSize: '0.78rem', color: '#94A3B8' }}>8%</span>
+                                <span style={{ fontSize: '0.78rem', color: '#94A3B8' }}>24%</span>
+                            </div>
+                        </div>
+                        <div style={{ marginBottom: '2rem' }}>
+                            <p style={{ fontSize: '0.75rem', color: '#94A3B8', fontStyle: 'italic', margin: 0, textAlign: 'center' }}>* Interest rate depend upon on your profile</p>
                         </div>
 
                         {/* Results */}

@@ -75,7 +75,7 @@ export default function CareersPage() {
                         ))}
                     </div>
                     <div style={{ textAlign: 'center', marginTop: '3rem', color: '#64748B' }}>
-                        Don't see a fit? Send your resume to <a href="mailto:careers@capitalflax.com" style={{ color: '#1E3A8A', fontWeight: 600 }}>careers@capitalflax.com</a>
+                        Don't see a fit? Send your resume to <a href="mailto:support@capitalflax.in" style={{ color: '#1E3A8A', fontWeight: 600 }}>support@capitalflax.in</a>
                     </div>
                 </div>
             </section>

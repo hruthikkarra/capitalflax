@@ -56,7 +56,7 @@ const faqs = [
 export default function BusinessLoansPage() {
     const [loanAmount, setLoanAmount] = useState(2500000);
     const [tenure, setTenure] = useState(3);
-    const rate = 14;
+    const [rate, setRate] = useState(14);
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
     const { emi, totalInterest, totalPayable } = useCallback(() => {
@@ -76,7 +76,14 @@ export default function BusinessLoansPage() {
             <style>{`.bl-thumb::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#F59E0B;cursor:pointer;border:2px solid #fff;box-shadow:0 0 0 2px #F59E0B;}.bl-thumb::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#F59E0B;cursor:pointer;border:2px solid #fff;}`}</style>
 
             {/* HERO */}
-            <section style={{ background: 'linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 60%, #FFF7ED 100%)', padding: '5rem 1.5rem 4rem', textAlign: 'center' }}>
+            <section style={{
+                position: 'relative',
+                padding: '5rem 1.5rem 4rem',
+                textAlign: 'center',
+                backgroundImage: 'linear-gradient(135deg, rgba(255,251,235,0.94) 0%, rgba(254,243,199,0.92) 60%, rgba(255,247,237,0.94) 100%), url(/bus.jpeg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}>
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#fff', border: '1px solid #FDE68A', borderRadius: '50px', padding: '0.4rem 1.2rem', marginBottom: '1.5rem' }}>
                     <Briefcase size={14} style={{ color: '#F59E0B' }} />
                     <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#D97706', letterSpacing: '1.5px', textTransform: 'uppercase' }}>Fuel Your Growth</span>
@@ -163,10 +170,15 @@ export default function BusinessLoansPage() {
                                         <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '0.95rem' }}>{formatCurrency(totalPayable)}</div>
                                     </div>
                                 </div>
-                                <div style={{ background: '#FFFBEB', borderRadius: '10px', padding: '0.75rem 1rem', display: 'flex', justifyContent: 'space-between' }}>
-                                    <span style={{ fontSize: '0.85rem', color: '#D97706', fontWeight: 600 }}>Interest Rate</span>
-                                    <span style={{ fontWeight: 800, color: '#D97706' }}>{rate}% p.a.</span>
+                                <div style={{ background: '#FFFBEB', borderRadius: '10px', padding: '0.75rem 1rem', marginBottom: '0.5rem' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', alignItems: 'center' }}>
+                                        <span style={{ fontSize: '0.85rem', color: '#D97706', fontWeight: 600 }}>Interest Rate</span>
+                                        <span style={{ fontWeight: 800, color: '#D97706' }}>{rate.toFixed(1)}% p.a.</span>
+                                    </div>
+                                    <input type="range" min={8} max={24} step={0.1} value={rate} onChange={e => setRate(+e.target.value)} className="bl-thumb" style={sliderStyle(((rate - 8) / 16) * 100, '#F59E0B')} />
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '0.4rem' }}><span style={{ fontSize: '0.72rem', color: '#94A3B8' }}>8%</span><span style={{ fontSize: '0.72rem', color: '#94A3B8' }}>24%</span></div>
                                 </div>
+                                <p style={{ fontSize: '0.72rem', color: '#94A3B8', fontStyle: 'italic', margin: '0 0 0.5rem', textAlign: 'center' }}>* Interest rate depend upon on your profile</p>
                                 <Link href="/apply" style={{ display: 'block', textAlign: 'center', background: '#D97706', color: '#fff', fontWeight: 700, padding: '0.9rem', borderRadius: '10px', textDecoration: 'none' }}>Apply for This Loan</Link>
                             </div>
                         </div>
