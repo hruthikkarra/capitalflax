@@ -26,7 +26,7 @@ export default function Navbar() {
             <div className={`navbar${isHome ? ' navbar--home' : ''}`}>
 
                 {/* LOGO */}
-                <Link href="/" className="logo nav-logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                <Link href="/" className="logo nav-logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.1rem' }}>
                     <img src="/capital-logo-Photoroom.png?v=2" alt="CapitalFlax Symbol" className="nav-logo-image" />
                     <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
                         <span style={{ fontWeight: 800, fontSize: '1.1rem', letterSpacing: '-0.3px' }}>
