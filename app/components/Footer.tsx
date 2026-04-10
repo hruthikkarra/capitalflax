@@ -55,8 +55,10 @@ export default function Footer() {
                                 <span className="nav-brand-name" style={{ fontSize: '1.5rem', fontWeight: 800, display: 'block', lineHeight: 1 }}>
                                     <span style={{ color: '#ffffff' }}>Capital</span><span style={{ color: '#3B82F6' }}>Flax</span>
                                 </span>
-                                <span className="nav-brand-sub" style={{ fontSize: '0.65rem', color: '#94A3B8', display: 'block', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '0.2rem' }}>Financial Services</span>
-                                <span className="nav-brand-tag" style={{ fontSize: '0.6rem', color: '#64748B', display: 'block', textTransform: 'uppercase', letterSpacing: '0.5px', marginTop: '0.1rem' }}>Empowering Smart Capital</span>
+                                <span className="nav-brand-sub" style={{ fontSize: '0.65rem', color: '#94A3B8', display: 'block', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '0.2rem' }}>
+                                    — FINANCIAL SERVICES —
+                                </span>
+                                <span className="nav-brand-tag" style={{ fontSize: '0.7rem', color: '#3B82F6', display: 'block', fontWeight: 600, marginTop: '0.1rem' }}>Empowering Smart Capital</span>
                             </div>
                         </Link>
                         <p style={{ color: '#94A3B8', fontSize: '0.9rem', lineHeight: 1.65, margin: '0 0 1.25rem' }}>

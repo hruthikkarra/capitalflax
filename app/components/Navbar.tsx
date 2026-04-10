@@ -29,11 +29,13 @@ export default function Navbar() {
                 <Link href="/" className="logo nav-logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                     <img src="/capital-logo-Photoroom.png?v=2" alt="CapitalFlax Symbol" className="nav-logo-image" />
                     <div className="nav-logo-text">
-                        <span className="nav-brand-name">
+                        <span className="nav-brand-name" style={{ fontWeight: 800 }}>
                             <span style={{ color: '#ffffff' }}>Capital</span><span style={{ color: '#3B82F6' }}>Flax</span>
                         </span>
-                        <span className="nav-brand-sub" style={{ display: 'block' }}>Financial Services</span>
-                        <span className="nav-brand-tag" style={{ display: 'block' }}>Empowering Smart Capital</span>
+                        <span className="nav-brand-sub" style={{ display: 'block', color: '#94A3B8', fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                            <span>—</span> FINANCIAL SERVICES <span>—</span>
+                        </span>
+                        <span className="nav-brand-tag" style={{ display: 'block', color: '#3B82F6', fontSize: '0.7rem', fontWeight: 600 }}>Empowering Smart Capital</span>
                     </div>
                 </Link>
 
