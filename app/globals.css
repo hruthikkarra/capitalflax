@@ -187,19 +187,13 @@ body {
   overflow: visible;
   display: inline-flex;
   align-items: center;
-  line-height: normal;
+  gap: 0.05rem !important;
+  line-height: 0;
 }
 
 @media (max-width: 768px) {
   .nav-logo-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0;
-  }
-  .nav-brand-sub,
-  .nav-brand-tag {
-    display: none !important;
+    display: none;
   }
 }
 

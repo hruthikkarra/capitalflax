@@ -32,8 +32,8 @@ export default function Navbar() {
                         <span className="nav-brand-name">
                             <span style={{ color: '#ffffff' }}>Capital</span><span style={{ color: '#3B82F6' }}>Flax</span>
                         </span>
-                        <span className="nav-brand-sub">Financial Services</span>
-                        <span className="nav-brand-tag">Empowering Smart Capital</span>
+                        <span className="nav-brand-sub" style={{ display: 'block' }}>Financial Services</span>
+                        <span className="nav-brand-tag" style={{ display: 'block' }}>Empowering Smart Capital</span>
                     </div>
                 </Link>
 
