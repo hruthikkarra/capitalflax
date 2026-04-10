@@ -29,7 +29,7 @@ const slides = [
     id: 3,
     title: "Unlock the Value of Your Gold",
     subtitle: "Get up to ₹1 Crore against your gold jewellery at the lowest interest rates. Instant approval.",
-    image: "/hero_gold.png",
+    image: "/hero_gold.png?v=2",
     cta: "Get Gold Loan",
     link: "/services/gold-loans",
     badge: "Gold Loans",
@@ -127,17 +127,7 @@ export default function HeroSlider({ className }: HeroSliderProps) {
       </div>
 
       {/* Side label strip */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: "4.5rem",
-          right: "2rem",
-          display: "flex",
-          flexDirection: "column",
-          gap: "0.5rem",
-          zIndex: 10,
-        }}
-      >
+      <div className="slider-side-labels">
         {slides.map((s, i) => (
           <button
             key={s.id}

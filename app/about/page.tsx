@@ -87,9 +87,9 @@ export default function AboutPage() {
           color: '#64748B', fontSize: '1.1rem', lineHeight: 1.75,
           maxWidth: '600px', margin: '0 auto 2.5rem',
         }}>
-          Founded by Raj Kumar Samudhrala (M.B.A), CapitalFlax was built on one belief — India&apos;s professionals deserve
-          better financial products, faster approvals, and zero runaround.
-          We&apos;re here to make that a reality.
+          Founded by Raj Kumar Samudhrala (M.B.A). CapitalFlax was built on one belief that India&apos;s professionals deserve
+          better financial products with faster approvals and zero runaround.
+          We are officially associated with all leading banks and NBFC&apos;S to make that a reality.
         </p>
 
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
@@ -153,7 +153,7 @@ export default function AboutPage() {
                 'We are partnered with all leading banks and NBFCs',
                 'RBI-registered financial advisory services',
                 'Partnered with 15+ leading banks & NBFCs',
-                'Zero conflict of interest — we work for you',
+                'Zero conflict of interest: we work for you',
                 'Fully digital process, end to end',
               ].map((p, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
