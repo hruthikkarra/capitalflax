@@ -46,12 +46,17 @@ export default function Footer() {
                         <Link href="/" style={{
                             display: 'inline-flex',
                             alignItems: 'center',
-                            gap: '0.4rem',
+                            gap: '0.5rem',
                             textDecoration: 'none',
                             marginBottom: '1rem',
-                            padding: '0.2rem 0',
                         }}>
-                            <img src="/capital-logo-Photoroom.png?v=2" alt="CapitalFlax Symbol" style={{ height: '84px', width: 'auto', objectFit: 'contain' }} />
+                            <img src="/capital-logo-Photoroom.png?v=2" alt="CapitalFlax Symbol" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
+                            <div className="nav-logo-text">
+                                <span className="nav-brand-name" style={{ fontSize: '1.5rem', fontWeight: 800 }}>
+                                    <span style={{ color: '#ffffff' }}>Capital</span><span style={{ color: '#3B82F6' }}>Flax</span>
+                                </span>
+                                <span className="nav-brand-sub" style={{ fontSize: '0.65rem', color: '#94A3B8', display: 'block', textTransform: 'uppercase', letterSpacing: '1px' }}>Financial Services</span>
+                            </div>
                         </Link>
                         <p style={{ color: '#94A3B8', fontSize: '0.9rem', lineHeight: 1.65, margin: '0 0 1.25rem' }}>
                             Premium financial solutions for India's top professionals.
@@ -136,10 +141,15 @@ export default function Footer() {
                     <p style={{ margin: 0, fontSize: '0.85rem', color: '#94A3B8' }}>
                         © 2025 <a href="#" style={{ color: '#60A5FA', textDecoration: 'none' }}>CapitalFlax Financial Services.</a> All rights reserved.
                     </p>
-                    <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>
-                        <a href="#" aria-label="LinkedIn" style={iconStyle}><LinkedinIcon /></a>
-                        <a href="#" aria-label="Twitter" style={iconStyle}><TwitterIcon /></a>
-                        <a href="#" aria-label="Facebook" style={iconStyle}><FacebookIcon /></a>
+                    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                        <a 
+                            href="https://www.worksthal.com/" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            style={{ color: '#60A5FA', fontSize: '0.85rem', textDecoration: 'none', fontWeight: 600 }}
+                        >
+                            Built by Worksthal
+                        </a>
                     </div>
                     <div style={{ display: 'flex', gap: '1.5rem' }}>
                         <Link href="/privacy" style={{ fontSize: '0.85rem', color: '#CBD5E1', textDecoration: 'none', fontWeight: 600 }}>PRIVACY POLICY</Link>
