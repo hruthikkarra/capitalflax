@@ -3464,14 +3464,22 @@ img {
   }
 
   .navbar {
+    width: 1200px !important;
+    min-width: 1200px !important;
+    transform: scale(calc(100vw / 1200)) !important;
+    transform-origin: left top !important;
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 0.5rem 0.75rem !important;
-    gap: 0.4rem !important;
-    overflow: hidden; /* Prevent page-wide scroll */
+    padding: 1.25rem 3rem !important; /* Original desktop padding */
+    gap: 4rem !important; /* Original desktop gap */
+    border-radius: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 1000 !important;
   }
 
   .nav-logo {
@@ -3484,25 +3492,17 @@ img {
     object-fit: contain;
   }
 
-  /* PROFESSIONAL HORIZONTAL SCROLL NAV FOR MOBILE */
+  /* RESTORE EXACT DESKTOP LINKS FOR SCALING */
   .nav-links {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    gap: 1.25rem !important;
-    align-items: center;
-    overflow-x: auto !important;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    padding: 0.25rem 0.5rem;
-    flex: 1; /* Take up remaining space */
-    scrollbar-width: none; /* Hide for Firefox */
-    -ms-overflow-style: none; /* Hide for IE/Edge */
-  }
-
-  /* Hide scrollbar for Chrome/Safari */
-  .nav-links::-webkit-scrollbar {
-    display: none !important;
+    gap: 4rem !important; /* Original desktop gap */
+    align-items: center !important;
+    overflow: visible !important;
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
   /* Hide scrollbar but keep functionality */
@@ -3533,54 +3533,77 @@ img {
     min-height: 22rem;
   }
 
-  /* RESTORE PROFESSIONAL FONT SIZES & LOGO CLARITY */
+  /* RESTORE EXACT DESKTOP ELEMENT DIMENSIONS */
   .nav-logo {
-    flex-shrink: 0;
-    max-width: 140px;
+    gap: 1rem !important;
   }
 
   .nav-logo-image {
-    width: 32px !important;
-    height: 32px !important;
+    width: 60px !important;
+    height: 60px !important;
   }
 
   .logo .nav-logo div span.nav-brand-name {
-    font-size: 0.85rem !important;
+    font-size: 1.5rem !important;
   }
 
   .nav-brand-sub {
-    font-size: 0.48rem !important;
+    font-size: 0.75rem !important;
     display: block !important;
   }
 
   .nav-brand-tag {
-    font-size: 0.45rem !important;
+    font-size: 0.75rem !important;
     display: block !important;
   }
 
   .nav-links a {
-    font-size: 0.8rem !important;
-    padding: 0.4rem 0 !important;
+    font-size: 1rem !important;
+    padding: 0.5rem 0 !important;
     color: #ffffff;
     font-weight: 600;
-    flex-shrink: 0;
     white-space: nowrap;
   }
 
   .nav-phone-link {
-    display: none !important; /* Hide to save horizontal space, already on laptop view */
+    display: flex !important;
+    gap: 1rem !important;
+    align-items: center !important;
+    margin-right: 2rem !important;
+  }
+
+  .nav-phone-link-number {
+    font-size: 0.95rem !important;
+    display: block !important;
+    color: #ffffff;
+    font-weight: 800;
+  }
+
+  .nav-phone-link-icon {
+    width: 16px !important;
+    height: 16px !important;
   }
 
   .nav-right {
-    flex-shrink: 0;
-    margin-left: 0.25rem;
+    display: flex !important;
+    align-items: center !important;
+    margin-left: 0 !important;
   }
 
   .btn-apply {
-    font-size: 0.7rem !important;
-    padding: 0.5rem 0.9rem !important;
-    border-radius: 4px !important;
+    font-size: 1rem !important;
+    padding: 1rem 2rem !important;
+    border-radius: 50px !important;
     white-space: nowrap;
+  }
+
+  .navbar-wrapper {
+    height: calc(100vw / 1200 * 100); /* Adjust height based on scale to preserve flow */
+    overflow: visible !important;
+  }
+
+  :root {
+    --home-fixed-navbar-height: calc(100vw / 1200 * 100);
   }
 }
 
