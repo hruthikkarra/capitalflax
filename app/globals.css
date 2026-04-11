@@ -3473,22 +3473,21 @@ img {
     flex-wrap: nowrap !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 2vw 3vw !important;
-    gap: 1.5vw !important;
+    padding: 1vw 2vw !important;
+    gap: 0.5vw !important;
     z-index: 1000 !important;
     background: linear-gradient(135deg, rgba(2, 6, 23, 0.98), rgba(15, 23, 42, 0.96)) !important;
   }
-
   .nav-logo {
     display: flex !important;
     align-items: center !important;
-    gap: 1.5vw !important;
+    gap: 0.8vw !important;
     flex-shrink: 0 !important;
   }
 
   .nav-logo-image {
-    width: 8vw !important;
-    height: 8vw !important;
+    width: 7vw !important;
+    height: 7vw !important;
     max-width: 40px;
     max-height: 40px;
   }
@@ -3497,11 +3496,12 @@ img {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    gap: 2vw !important;
+    gap: 1.2vw !important;
     align-items: center !important;
     justify-content: center;
     flex: 1;
-    padding: 0 1vw !important;
+    padding: 0 0.5vw !important;
+    letter-spacing: -0.02em !important;
   }
 
   /* Hide scrollbar but keep functionality */
@@ -3527,24 +3527,24 @@ img {
 
   /* NATIVE VW-BASED SCALING FOR MOBILE DENSITY */
   .logo .nav-logo div span.nav-brand-name {
-    font-size: 3.5vw !important;
+    font-size: 3vw !important;
     white-space: nowrap !important;
   }
 
   .nav-brand-sub {
-    font-size: 2vw !important;
+    font-size: 1.6vw !important;
     display: block !important;
     white-space: nowrap !important;
   }
 
   .nav-brand-tag {
-    font-size: 1.8vw !important;
+    font-size: 1.5vw !important;
     display: block !important;
     white-space: nowrap !important;
   }
 
   .nav-links a {
-    font-size: 2.2vw !important;
+    font-size: 1.9vw !important;
     padding: 0 !important;
     color: #ffffff !important;
     font-weight: 600 !important;
@@ -3554,20 +3554,21 @@ img {
   .nav-phone-link {
     display: flex !important;
     align-items: center !important;
-    gap: 1vw !important;
-    margin-right: 1vw !important;
+    gap: 0.5vw !important;
+    margin-right: 0.5vw !important;
+    flex-shrink: 0 !important;
   }
 
   .nav-phone-link-number {
-    font-size: 2vw !important;
+    font-size: 1.8vw !important;
     display: block !important;
     color: #ffffff !important;
     font-weight: 800 !important;
   }
 
   .nav-phone-link-icon {
-    width: 2.5vw !important;
-    height: 2.5vw !important;
+    width: 2vw !important;
+    height: 2vw !important;
   }
 
   .nav-right {
@@ -3577,8 +3578,8 @@ img {
   }
 
   .btn-apply {
-    font-size: 2.2vw !important;
-    padding: 1.5vw 3vw !important;
+    font-size: 1.9vw !important;
+    padding: 1vw 1.5vw !important;
     border-radius: 4px !important;
     white-space: nowrap !important;
   }
