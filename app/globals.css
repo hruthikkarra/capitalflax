@@ -3460,49 +3460,48 @@ img {
 /* ─── NAVBAR – Mobile Hamburger Style ─────────────────────────── */
 @media (max-width: 768px) {
   :root {
-    --home-fixed-navbar-height: 4.5rem;
+    --home-fixed-navbar-height: clamp(3.5rem, 15vw, 4.5rem);
   }
 
   .navbar {
-    width: 1200px !important;
-    min-width: 1200px !important;
-    transform: scale(calc(100vw / 1200)) !important;
-    transform-origin: left top !important;
     display: flex !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 1.25rem 3rem !important; /* Original desktop padding */
-    gap: 4rem !important; /* Original desktop gap */
-    border-radius: 0 !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
+    padding: 2vw 3vw !important;
+    gap: 1.5vw !important;
     z-index: 1000 !important;
+    background: linear-gradient(135deg, rgba(2, 6, 23, 0.98), rgba(15, 23, 42, 0.96)) !important;
   }
 
   .nav-logo {
-    gap: 0.4rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.5vw !important;
+    flex-shrink: 0 !important;
   }
 
   .nav-logo-image {
-    width: 48px !important;
-    height: 48px !important;
-    object-fit: contain;
+    width: 8vw !important;
+    height: 8vw !important;
+    max-width: 40px;
+    max-height: 40px;
   }
 
-  /* RESTORE EXACT DESKTOP LINKS FOR SCALING */
   .nav-links {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    gap: 4rem !important; /* Original desktop gap */
+    gap: 2vw !important;
     align-items: center !important;
-    overflow: visible !important;
-    width: auto !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    justify-content: center;
+    flex: 1;
+    padding: 0 1vw !important;
   }
 
   /* Hide scrollbar but keep functionality */
@@ -3526,84 +3525,66 @@ img {
     display: none;
   }
 
-  /* Hero gets correct top offset */
-  .hero-slider-wrapper.hero-slider--fixed-nav-offset {
-    margin-top: var(--home-fixed-navbar-height) !important;
-    height: calc(100svh - var(--home-fixed-navbar-height)) !important;
-    min-height: 22rem;
-  }
-
-  /* RESTORE EXACT DESKTOP ELEMENT DIMENSIONS */
-  .nav-logo {
-    gap: 1rem !important;
-  }
-
-  .nav-logo-image {
-    width: 60px !important;
-    height: 60px !important;
-  }
-
+  /* NATIVE VW-BASED SCALING FOR MOBILE DENSITY */
   .logo .nav-logo div span.nav-brand-name {
-    font-size: 1.5rem !important;
+    font-size: 3.5vw !important;
+    white-space: nowrap !important;
   }
 
   .nav-brand-sub {
-    font-size: 0.75rem !important;
+    font-size: 2vw !important;
     display: block !important;
+    white-space: nowrap !important;
   }
 
   .nav-brand-tag {
-    font-size: 0.75rem !important;
+    font-size: 1.8vw !important;
     display: block !important;
+    white-space: nowrap !important;
   }
 
   .nav-links a {
-    font-size: 1rem !important;
-    padding: 0.5rem 0 !important;
-    color: #ffffff;
-    font-weight: 600;
-    white-space: nowrap;
+    font-size: 2.2vw !important;
+    padding: 0 !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
   }
 
   .nav-phone-link {
     display: flex !important;
-    gap: 1rem !important;
     align-items: center !important;
-    margin-right: 2rem !important;
+    gap: 1vw !important;
+    margin-right: 1vw !important;
   }
 
   .nav-phone-link-number {
-    font-size: 0.95rem !important;
+    font-size: 2vw !important;
     display: block !important;
-    color: #ffffff;
-    font-weight: 800;
+    color: #ffffff !important;
+    font-weight: 800 !important;
   }
 
   .nav-phone-link-icon {
-    width: 16px !important;
-    height: 16px !important;
+    width: 2.5vw !important;
+    height: 2.5vw !important;
   }
 
   .nav-right {
     display: flex !important;
     align-items: center !important;
-    margin-left: 0 !important;
+    flex-shrink: 0 !important;
   }
 
   .btn-apply {
-    font-size: 1rem !important;
-    padding: 1rem 2rem !important;
-    border-radius: 50px !important;
-    white-space: nowrap;
+    font-size: 2.2vw !important;
+    padding: 1.5vw 3vw !important;
+    border-radius: 4px !important;
+    white-space: nowrap !important;
   }
 
   .navbar-wrapper {
-    height: calc(100vw / 1200 * 100); /* Adjust height based on scale to preserve flow */
-    overflow: visible !important;
-  }
-
-  :root {
-    --home-fixed-navbar-height: calc(100vw / 1200 * 100);
+    height: var(--home-fixed-navbar-height) !important;
   }
 }
 
