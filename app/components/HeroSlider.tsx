@@ -55,6 +55,16 @@ const slides = [
     badge: "Professional Loans",
     accent: "#A78BFA",
   },
+  {
+    id: 6,
+    title: "Empower Your Business Dreams",
+    subtitle: "Low-interest business loans up to ₹1 Cr with minimal documentation. Fast-track your company's growth today.",
+    image: "/hero_business.png",
+    cta: "Get Business Loan",
+    link: "/services/business-loans",
+    badge: "Business Loans",
+    accent: "#EC4899",
+  },
 ];
 
 type HeroSliderProps = {
