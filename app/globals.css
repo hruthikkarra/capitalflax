@@ -3460,14 +3460,16 @@ img {
 /* ─── NAVBAR – Mobile Hamburger Style ─────────────────────────── */
 @media (max-width: 768px) {
   :root {
-    --home-fixed-navbar-height: 7rem;
+    --home-fixed-navbar-height: 4.5rem;
   }
 
   .navbar {
-    flex-direction: column !important;
-    align-items: stretch;
-    gap: 0.5rem !important;
-    padding: 0.6rem 0.75rem 0.5rem !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0.15rem !important;
+    padding: 0.25rem 0.4rem !important;
     position: relative;
     border-radius: 0;
   }
@@ -3482,20 +3484,19 @@ img {
     object-fit: contain;
   }
 
-  /* Professional two-row layout: Top row is Logo + CTA; Bottom row is Nav */
+  /* EXACT SINGLE ROW LAYOUT MATCHING DESKTOP */
   .nav-links {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    justify-content: space-between !important;
-    gap: 0.5rem !important;
+    justify-content: center !important;
+    gap: 0.35rem !important;
     align-items: center;
-    width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 0.5rem;
-    margin-top: 0.25rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    width: auto;
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+    overflow: visible;
   }
 
   /* Hide scrollbar but keep functionality */
@@ -3504,10 +3505,9 @@ img {
   }
 
   .nav-right {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.75rem;
+    position: static;
     display: flex !important;
+    margin-left: auto;
   }
 
   .mobile-menu-btn {
@@ -3527,48 +3527,67 @@ img {
     min-height: 22rem;
   }
 
-  /* LEGIBILITY TUNING FOR TWO-ROW LAYOUT */
+  /* EXTREME MICRO-SIZING FOR DENSE SINGLE-ROW LAYOUT */
   .navbar {
-    padding: 0.6rem 0.75rem !important;
+    padding: 0.3rem 0.4rem !important;
+  }
+
+  .nav-logo-image {
+    width: 32px !important;
+    height: 32px !important;
   }
 
   .logo .nav-logo {
-    max-width: 60%;
+    max-width: none;
+    gap: 0.15rem !important;
   }
 
   .logo .nav-logo div span.nav-brand-name {
-    font-size: 1.1rem !important;
+    font-size: 0.6rem !important;
   }
 
   .nav-brand-sub {
-    font-size: 0.6rem !important;
-    margin-top: 0.1rem;
+    font-size: 0.38rem !important;
+    margin-top: 0px;
+    display: block !important;
   }
 
   .nav-brand-tag {
-    display: none !important; /* Keep it clean on mobile */
+    font-size: 0.35rem !important;
+    display: block !important;
+    margin-top: 0px;
   }
 
   .nav-links a {
-    font-size: 0.82rem !important;
-    padding: 0.4rem 0.2rem !important;
-    color: #CBD5E1;
-    font-weight: 600;
-  }
-
-  .nav-links a.active {
-    color: #3B82F6;
+    font-size: 0.45rem !important;
+    padding: 0.1rem 0 !important;
+    color: #ffffff;
+    font-weight: 500;
   }
 
   .nav-phone-link {
-    display: none !important; /* Already have nav-links and cta */
+    display: flex !important;
+    gap: 0.15rem !important;
+    margin-left: 0.25rem;
+  }
+
+  .nav-phone-link-number {
+    font-size: 0.42rem !important;
+    display: block !important;
+    color: #ffffff;
+  }
+
+  .nav-phone-link-icon {
+    width: 8px !important;
+    height: 8px !important;
   }
 
   .btn-apply {
-    font-size: 0.8rem !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: 6px !important;
+    font-size: 0.5rem !important;
+    padding: 0.3rem 0.5rem !important;
+    border-radius: 2px !important;
     white-space: nowrap;
+    margin-left: 0.2rem;
   }
 
   /* Reduce logo text size */
