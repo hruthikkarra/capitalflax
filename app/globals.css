@@ -3464,14 +3464,14 @@ img {
   }
 
   .navbar {
+    display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     justify-content: space-between !important;
     align-items: center !important;
-    gap: 0.15rem !important;
-    padding: 0.25rem 0.4rem !important;
-    position: relative;
-    border-radius: 0;
+    padding: 0.5rem 0.75rem !important;
+    gap: 0.4rem !important;
+    overflow: hidden; /* Prevent page-wide scroll */
   }
 
   .nav-logo {
@@ -3484,19 +3484,25 @@ img {
     object-fit: contain;
   }
 
-  /* EXACT SINGLE ROW LAYOUT MATCHING DESKTOP */
+  /* PROFESSIONAL HORIZONTAL SCROLL NAV FOR MOBILE */
   .nav-links {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    justify-content: center !important;
-    gap: 0.35rem !important;
+    gap: 1.25rem !important;
     align-items: center;
-    width: auto;
-    border-top: none;
-    padding-top: 0;
-    margin-top: 0;
-    overflow: visible;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.25rem 0.5rem;
+    flex: 1; /* Take up remaining space */
+    scrollbar-width: none; /* Hide for Firefox */
+    -ms-overflow-style: none; /* Hide for IE/Edge */
+  }
+
+  /* Hide scrollbar for Chrome/Safari */
+  .nav-links::-webkit-scrollbar {
+    display: none !important;
   }
 
   /* Hide scrollbar but keep functionality */
@@ -3527,72 +3533,54 @@ img {
     min-height: 22rem;
   }
 
-  /* EXTREME MICRO-SIZING FOR DENSE SINGLE-ROW LAYOUT */
-  .navbar {
-    padding: 0.3rem 0.4rem !important;
+  /* RESTORE PROFESSIONAL FONT SIZES & LOGO CLARITY */
+  .nav-logo {
+    flex-shrink: 0;
+    max-width: 140px;
   }
 
   .nav-logo-image {
-    width: 28px !important;
-    height: 28px !important;
-  }
-
-  .logo .nav-logo {
-    max-width: none;
-    gap: 0.1rem !important;
+    width: 32px !important;
+    height: 32px !important;
   }
 
   .logo .nav-logo div span.nav-brand-name {
-    font-size: 0.52rem !important;
+    font-size: 0.85rem !important;
   }
 
   .nav-brand-sub {
-    font-size: 0.32rem !important;
-    margin-top: 0px;
+    font-size: 0.48rem !important;
     display: block !important;
   }
 
   .nav-brand-tag {
-    font-size: 0.3rem !important;
+    font-size: 0.45rem !important;
     display: block !important;
-    margin-top: 0px;
   }
 
   .nav-links a {
-    font-size: 0.4rem !important;
-    padding: 0.1rem 0 !important;
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0 !important;
     color: #ffffff;
-    font-weight: 500;
+    font-weight: 600;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
   .nav-phone-link {
-    display: flex !important;
-    gap: 0.1rem !important;
-    margin-left: 0.2rem;
+    display: none !important; /* Hide to save horizontal space, already on laptop view */
   }
 
-  .nav-phone-link-number {
-    font-size: 0.38rem !important;
-    display: block !important;
-    color: #ffffff;
-  }
-
-  .nav-phone-link-icon {
-    width: 7px !important;
-    height: 7px !important;
+  .nav-right {
+    flex-shrink: 0;
+    margin-left: 0.25rem;
   }
 
   .btn-apply {
-    font-size: 0.45rem !important;
-    padding: 0.25rem 0.5rem !important;
-    border-radius: 2px !important;
+    font-size: 0.7rem !important;
+    padding: 0.5rem 0.9rem !important;
+    border-radius: 4px !important;
     white-space: nowrap;
-    margin-left: 0.15rem;
-  }
-
-  /* Reduce logo text size */
-  .logo .nav-logo div span:first-child {
-    font-size: 0.9rem !important;
   }
 }
 
