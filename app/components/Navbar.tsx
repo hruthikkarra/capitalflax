@@ -45,7 +45,7 @@ export default function Navbar() {
                         <Link key={l.href} href={l.href} className={`
                             ${l.href === '/' ? (pathname === '/' ? 'active' : '') :
                             pathname.startsWith(l.href) ? 'active' : ''}
-                            ${l.label === 'About Us' ? 'hide-on-mobile' : ''}
+                            hide-on-mobile
                         `}>{l.label}</Link>
                     ))}
                     <a href={`tel:${PHONE_TEL}`} className="nav-phone-link" aria-label={`Call ${PHONE_DISPLAY}`}>
