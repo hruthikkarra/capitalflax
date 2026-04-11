@@ -3460,17 +3460,16 @@ img {
 /* ─── NAVBAR – Mobile Hamburger Style ─────────────────────────── */
 @media (max-width: 768px) {
   :root {
-    --home-fixed-navbar-height: 4.2rem;
+    --home-fixed-navbar-height: 7rem;
   }
 
   .navbar {
-    flex-direction: row !important;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0;
-    padding: 0.5rem 1rem !important;
+    flex-direction: column !important;
+    align-items: stretch;
+    gap: 0.5rem !important;
+    padding: 0.6rem 0.75rem 0.5rem !important;
     position: relative;
+    border-radius: 0;
   }
 
   .nav-logo {
@@ -3483,19 +3482,32 @@ img {
     object-fit: contain;
   }
 
-  /* Force single row layout matching desktop */
+  /* Professional two-row layout: Top row is Logo + CTA; Bottom row is Nav */
   .nav-links {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
+    justify-content: space-between !important;
     gap: 0.5rem !important;
     align-items: center;
-    overflow: visible;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 0.5rem;
+    margin-top: 0.25rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-right {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
     display: flex !important;
-    margin-left: auto;
   }
 
   .mobile-menu-btn {
@@ -3515,41 +3527,48 @@ img {
     min-height: 22rem;
   }
 
-  /* MICRO-SIZING FOR MOBILE HEADER DENSITY */
+  /* LEGIBILITY TUNING FOR TWO-ROW LAYOUT */
   .navbar {
-    padding: 0.35rem 0.5rem !important;
-    gap: 0.25rem !important;
+    padding: 0.6rem 0.75rem !important;
+  }
+
+  .logo .nav-logo {
+    max-width: 60%;
   }
 
   .logo .nav-logo div span.nav-brand-name {
-    font-size: 0.75rem !important;
+    font-size: 1.1rem !important;
   }
 
-  .nav-brand-sub, .nav-brand-tag {
-    font-size: 0.5rem !important;
-    letter-spacing: 0px !important;
+  .nav-brand-sub {
+    font-size: 0.6rem !important;
+    margin-top: 0.1rem;
+  }
+
+  .nav-brand-tag {
+    display: none !important; /* Keep it clean on mobile */
   }
 
   .nav-links a {
-    font-size: 0.58rem !important;
-    padding: 0.2rem 0 !important;
-    white-space: nowrap;
+    font-size: 0.82rem !important;
+    padding: 0.4rem 0.2rem !important;
+    color: #CBD5E1;
+    font-weight: 600;
   }
 
-  .nav-phone-link-number {
-    font-size: 0.55rem !important;
-    display: block !important;
+  .nav-links a.active {
+    color: #3B82F6;
   }
 
-  .nav-phone-link-icon {
-    width: 10px !important;
-    height: 10px !important;
+  .nav-phone-link {
+    display: none !important; /* Already have nav-links and cta */
   }
 
   .btn-apply {
-    font-size: 0.6rem !important;
-    padding: 0.4rem 0.75rem !important;
-    border-radius: 4px !important;
+    font-size: 0.8rem !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 6px !important;
+    white-space: nowrap;
   }
 
   /* Reduce logo text size */
