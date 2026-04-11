@@ -3572,6 +3572,10 @@ img {
     white-space: nowrap !important;
   }
 
+  .hide-on-mobile {
+    display: none !important;
+  }
+
   .navbar-wrapper {
     height: var(--home-fixed-navbar-height) !important;
   }

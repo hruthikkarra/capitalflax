@@ -42,10 +42,11 @@ export default function Navbar() {
                 {/* DESKTOP NAV */}
                 <nav className="nav-links">
                     {NAV_LINKS.map(l => (
-                        <Link key={l.href} href={l.href} className={
-                            l.href === '/' ? (pathname === '/' ? 'active' : '') :
-                            pathname.startsWith(l.href) ? 'active' : ''
-                        }>{l.label}</Link>
+                        <Link key={l.href} href={l.href} className={`
+                            ${l.href === '/' ? (pathname === '/' ? 'active' : '') :
+                            pathname.startsWith(l.href) ? 'active' : ''}
+                            ${l.label === 'About Us' ? 'hide-on-mobile' : ''}
+                        `}>{l.label}</Link>
                     ))}
                     <a href={`tel:${PHONE_TEL}`} className="nav-phone-link" aria-label={`Call ${PHONE_DISPLAY}`}>
                         <Phone className="nav-phone-link-icon" size={15} strokeWidth={2} aria-hidden />
