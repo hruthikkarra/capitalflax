@@ -3460,57 +3460,57 @@ img {
 /* ─── NAVBAR – Mobile Hamburger Style ─────────────────────────── */
 @media (max-width: 768px) {
   :root {
-    --home-fixed-navbar-height: clamp(3.5rem, 15vw, 4.5rem);
+    --home-fixed-navbar-height: 4.5rem;
   }
 
   .navbar {
-    width: 1150px !important;
-    min-width: 1150px !important;
-    max-width: none !important;
-    zoom: 0.32; /* Primary for mobile browsers */
-    transform: scale(0.32); /* Fallback */
-    transform-origin: left top !important;
     display: flex !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: var(--home-fixed-navbar-height) !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 1.25rem 2rem !important; /* Original desktop padding */
-    gap: 3rem !important; /* Original desktop gap */
-    border-radius: 0 !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    z-index: 1000 !important;
+    padding: 0 1rem !important;
+    gap: 0.75rem !important;
+    z-index: 9999 !important;
     background: linear-gradient(135deg, rgba(2, 6, 23, 0.98), rgba(15, 23, 42, 0.96)) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 0 !important;
   }
   .nav-logo {
     display: flex !important;
     align-items: center !important;
-    gap: 1rem !important;
+    gap: 0.5rem !important;
     flex-shrink: 0 !important;
+    max-width: 35% !important;
   }
 
   .nav-logo-image {
-    width: 50px !important;
-    height: 50px !important;
+    width: 40px !important;
+    height: 40px !important;
   }
 
   .nav-links {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    gap: 3rem !important; /* EXACT desktop gap */
+    gap: 1.25rem !important;
     align-items: center !important;
-    flex-shrink: 0 !important;
-    overflow: visible !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 0 0.5rem !important;
+    flex: 1 !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
   }
 
-  /* Hide scrollbar but keep functionality */
   .nav-links::-webkit-scrollbar {
-    display: none;
+    display: none !important;
   }
 
   .nav-right {
@@ -3529,64 +3529,57 @@ img {
     display: none;
   }
 
-  /* EXACT DESKTOP SIZING FOR MOBILE SCALING */
+  /* RESTORE PROFESSIONAL BRANDING & LEGIBILTY */
   .logo .nav-logo div span.nav-brand-name {
-    font-size: 1.4rem !important;
+    font-size: 0.9rem !important;
     white-space: nowrap !important;
   }
 
   .nav-brand-sub {
-    font-size: 0.7rem !important;
+    font-size: 0.48rem !important;
     display: block !important;
+    line-height: 1.2;
   }
 
   .nav-brand-tag {
-    font-size: 0.7rem !important;
+    font-size: 0.45rem !important;
     display: block !important;
+    line-height: 1.2;
   }
 
   .nav-links a {
-    font-size: 0.95rem !important;
+    font-size: 0.82rem !important;
     color: #ffffff !important;
     font-weight: 600 !important;
     white-space: nowrap !important;
+    padding: 0.5rem 0 !important;
   }
 
   .nav-phone-link {
-    display: flex !important;
-    align-items: center !important;
-    gap: 1rem !important;
-    margin-right: 2rem !important;
-  }
-
-  .nav-phone-link-number {
-    font-size: 0.95rem !important;
-    display: block !important;
-    color: #ffffff !important;
-    font-weight: 800 !important;
-  }
-
-  .nav-phone-link-icon {
-    width: 14px !important;
-    height: 14px !important;
+    display: none !important; /* Keep it clean for swipe area */
   }
 
   .nav-right {
     display: flex !important;
     align-items: center !important;
     flex-shrink: 0 !important;
-    margin-left: 0 !important;
   }
 
   .btn-apply {
-    font-size: 0.95rem !important;
-    padding: 0.75rem 1.5rem !important;
-    border-radius: 50px !important;
+    font-size: 0.72rem !important;
+    padding: 0.5rem 0.8rem !important;
+    border-radius: 4px !important;
     white-space: nowrap !important;
   }
 
   .navbar-wrapper {
-    height: 3.5rem !important; /* Scaled box height */
+    height: var(--home-fixed-navbar-height) !important;
+  }
+
+  .hero-slider-wrapper.hero-slider--fixed-nav-offset {
+    margin-top: var(--home-fixed-navbar-height) !important;
+    height: calc(100svh - var(--home-fixed-navbar-height)) !important;
+    min-height: 25rem !important;
   }
 }
 
