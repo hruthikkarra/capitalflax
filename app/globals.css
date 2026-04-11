@@ -3464,44 +3464,48 @@ img {
   }
 
   .navbar {
+    width: 1150px !important;
+    min-width: 1150px !important;
+    max-width: none !important;
+    zoom: 0.32; /* Primary for mobile browsers */
+    transform: scale(0.32); /* Fallback */
+    transform-origin: left top !important;
     display: flex !important;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 1vw 2vw !important;
-    gap: 0.5vw !important;
+    padding: 1.25rem 2rem !important; /* Original desktop padding */
+    gap: 3rem !important; /* Original desktop gap */
+    border-radius: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
     z-index: 1000 !important;
     background: linear-gradient(135deg, rgba(2, 6, 23, 0.98), rgba(15, 23, 42, 0.96)) !important;
   }
   .nav-logo {
     display: flex !important;
     align-items: center !important;
-    gap: 0.8vw !important;
+    gap: 1rem !important;
     flex-shrink: 0 !important;
   }
 
   .nav-logo-image {
-    width: 7vw !important;
-    height: 7vw !important;
-    max-width: 40px;
-    max-height: 40px;
+    width: 50px !important;
+    height: 50px !important;
   }
 
   .nav-links {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    gap: 1.2vw !important;
+    gap: 3rem !important; /* EXACT desktop gap */
     align-items: center !important;
-    justify-content: center;
-    flex: 1;
-    padding: 0 0.5vw !important;
-    letter-spacing: -0.02em !important;
+    flex-shrink: 0 !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
   /* Hide scrollbar but keep functionality */
@@ -3525,27 +3529,24 @@ img {
     display: none;
   }
 
-  /* NATIVE VW-BASED SCALING FOR MOBILE DENSITY */
+  /* EXACT DESKTOP SIZING FOR MOBILE SCALING */
   .logo .nav-logo div span.nav-brand-name {
-    font-size: 3vw !important;
+    font-size: 1.4rem !important;
     white-space: nowrap !important;
   }
 
   .nav-brand-sub {
-    font-size: 1.6vw !important;
+    font-size: 0.7rem !important;
     display: block !important;
-    white-space: nowrap !important;
   }
 
   .nav-brand-tag {
-    font-size: 1.5vw !important;
+    font-size: 0.7rem !important;
     display: block !important;
-    white-space: nowrap !important;
   }
 
   .nav-links a {
-    font-size: 1.9vw !important;
-    padding: 0 !important;
+    font-size: 0.95rem !important;
     color: #ffffff !important;
     font-weight: 600 !important;
     white-space: nowrap !important;
@@ -3554,38 +3555,38 @@ img {
   .nav-phone-link {
     display: flex !important;
     align-items: center !important;
-    gap: 0.5vw !important;
-    margin-right: 0.5vw !important;
-    flex-shrink: 0 !important;
+    gap: 1rem !important;
+    margin-right: 2rem !important;
   }
 
   .nav-phone-link-number {
-    font-size: 1.8vw !important;
+    font-size: 0.95rem !important;
     display: block !important;
     color: #ffffff !important;
     font-weight: 800 !important;
   }
 
   .nav-phone-link-icon {
-    width: 2vw !important;
-    height: 2vw !important;
+    width: 14px !important;
+    height: 14px !important;
   }
 
   .nav-right {
     display: flex !important;
     align-items: center !important;
     flex-shrink: 0 !important;
+    margin-left: 0 !important;
   }
 
   .btn-apply {
-    font-size: 1.9vw !important;
-    padding: 1vw 1.5vw !important;
-    border-radius: 4px !important;
+    font-size: 0.95rem !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 50px !important;
     white-space: nowrap !important;
   }
 
   .navbar-wrapper {
-    height: var(--home-fixed-navbar-height) !important;
+    height: 3.5rem !important; /* Scaled box height */
   }
 }
 
