@@ -4,32 +4,11 @@ import { ArrowRight, TrendingUp, CheckCircle, Clock, Landmark, Heart, Calculator
 import HeroSlider from './components/HeroSlider';
 import ProcessSection from './components/ProcessSection';
 import Testimonials from './components/Testimonials';
-import FAQSection from './components/FAQSection';
 
 export default function Home() {
   return (
     <>
       <HeroSlider className="hero-slider--fixed-nav-offset" />
-
-      {/* SEO Introduction Section */}
-      <section style={{ padding: '4rem 1rem 2rem', background: '#fff' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-          <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 3.5rem)', fontWeight: 800, color: '#0F172A', letterSpacing: '-1.5px', lineHeight: 1.1, marginBottom: '2rem' }}>
-            Get Instant <span style={{ color: '#3B82F6' }}>Business Loans</span> in India
-          </h1>
-          <div style={{ color: '#475569', fontSize: '1.15rem', lineHeight: 1.7, textAlign: 'left' }}>
-            <p style={{ marginBottom: '1.5rem' }}>
-              Growing a business in India requires timely capital. Whether you are an <strong>MSME</strong> looking for working capital, a <strong>startup</strong> seeking seed funding, or an established firm planning expansion, CapitalFlax provides the financial fuel you need. Our business loans are designed to be flexible, transparent, and fast.
-            </p>
-            <p style={{ marginBottom: '1.5rem' }}>
-              We partner with India's leading banks and NBFCs to bring you the best interest rates starting at 14% p.a. With our <strong>48-hour approval process</strong> and minimal documentation requirement, you can focus on what matters most—running your business—while we handle the financing.
-            </p>
-            <p>
-              Our dedication to supporting the Indian business ecosystem extends to specialized <strong>MSME loans</strong> and startup-friendly credit lines. Experience a paperless application process and get expert guidance to choose the right financial product for your growth journey.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <section className="stats-banner-wrapper">
         <div className="stats-banner">
@@ -593,26 +572,6 @@ export default function Home() {
 
       {/* SUCCESS STORIES / TESTIMONIALS */}
       <Testimonials />
-
-      {/* SEO FAQ SECTION */}
-      <FAQSection
-        title="Business Loan FAQs"
-        subtitle="Common questions about MSME loans and startup funding in India"
-        faqs={[
-          {
-            question: "What is a business loan?",
-            answer: "A business loan is a credit facility provided by financial institutions to meet various business needs such as expansion, working capital, or equipment purchase. At CapitalFlax, we offer both secured and unsecured business loans up to ₹1 Crore."
-          },
-          {
-            question: "How to apply for an MSME loan?",
-            answer: "Applying for an MSME loan is easy with CapitalFlax. Simply click on 'Apply Now', fill in your business details, and upload your KYC and financial documents. Our team will verify your eligibility and connect you with the best lender within 48 hours."
-          },
-          {
-            question: "What documents are required for a business loan?",
-            answer: "Standard documents include PAN and Aadhaar of the promoter, last 2 years' ITR, business registration certificate (GST/Udyam), and last 6 months' bank statements. For loans up to ₹50 Lakhs, no collateral is required."
-          }
-        ]}
-      />
     </>
   );
 }

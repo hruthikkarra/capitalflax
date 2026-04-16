@@ -269,6 +269,16 @@ export default function BusinessLoansPage() {
                 </div>
             </section>
 
+            {/* RELATED BLOGS */}
+            <section style={{ padding: '2rem 1.5rem', background: '#F1F5F9', borderTop: '1px solid #E2E8F0' }}>
+                <div style={{ maxWidth: '760px', margin: '0 auto', textAlign: 'center' }}>
+                    <p style={{ fontSize: '0.9rem', color: '#64748B', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                        <span style={{ fontWeight: 700 }}>Pro Tip:</span> Learn the step-by-step process of securing capital in our 
+                        <Link href="/blog/how-to-get-business-loan-india" style={{ color: '#D97706', fontWeight: 700 }}>Ultimate Business Loan Guide →</Link>
+                    </p>
+                </div>
+            </section>
+
             {/* CTA */}
             <section style={{ padding: '5rem 1.5rem', background: 'linear-gradient(135deg, #1E3A8A, #1e40af)', textAlign: 'center' }}>
                 <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 800, color: '#fff', margin: '0 0 1rem', letterSpacing: '-1px' }}>Ready to Grow Your Business?</h2>

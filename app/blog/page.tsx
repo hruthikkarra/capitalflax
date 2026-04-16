@@ -101,7 +101,7 @@ export default function BlogPage() {
             </p>
             <div className="blog-hero-stats" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
               <div className="blog-stat">
-                <span className="blog-stat-value" style={{ display: 'block', fontSize: '2rem', fontWeight: 800, color: '#60A5FA' }}>8</span>
+                <span className="blog-stat-value" style={{ display: 'block', fontSize: '2rem', fontWeight: 800, color: '#60A5FA' }}>11</span>
                 <span className="blog-stat-label" style={{ fontSize: '0.85rem', color: '#94A3B8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>Expert Articles</span>
               </div>
               <div className="blog-stat-divider" style={{ width: '1px', height: '40px', background: 'rgba(255,255,255,0.1)' }} />

@@ -12,11 +12,11 @@ const BASE_URL = "https://capitalflax.in";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Business Loans in India | CapitalFlax",
+    default: "CapitalFlax | Premium Loans for Professionals — Hyderabad & India",
     template: "%s | CapitalFlax",
   },
   description:
-    "Get instant business loans in India with CapitalFlax. We offer MSME loans, startup funding, and professional loans with low interest rates, 72-hour approval, and zero processing fees.",
+    "CapitalFlax offers premium home loans, business loans, personal loans and more for doctors, CAs, and architects across India. Starting at 7.3% p.a. Up to ₹20 Crore. 72-hour approval. 0% processing fee.",
   keywords: [
     "home loan hyderabad",
     "business loan india",
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: BASE_URL,
     siteName: "CapitalFlax",
-    title: "Business Loans in India | Fast MSME & Startup Funding | CapitalFlax",
+    title: "CapitalFlax | Premium Loans for Professionals — Hyderabad & India",
     description:
-      "Looking for a business loan in India? CapitalFlax provides MSME loans and startup funding with rates starting at 14%. 72-hour approval. Trusted by 10,000+ business owners.",
+      "Home Loans from 7.3%. Business, Personal, Gold & Mortgage Loans for Doctors, CAs & Architects. 72-hour approval. Trusted by 10,000+ professionals.",
     images: [
       {
         url: `${BASE_URL}/og-image.png`,
