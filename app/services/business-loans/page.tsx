@@ -46,11 +46,14 @@ const steps = [
 ];
 
 const faqs = [
-    { q: 'Can a startup get a business loan from CapitalFlax?', a: 'Startups with less than 2 years of operation can explore MUDRA loans or CGTMSE-backed loans through CapitalFlax. Established businesses (2+ years) get best rates on unsecured business loans.' },
-    { q: 'What is the maximum business loan amount?', a: 'Unsecured business loans go up to ₹1 Crore. With property or collateral as security, business loans can go up to ₹20 Crore through our partner banks.' },
-    { q: 'Is a GST registration mandatory for a business loan?', a: 'GST registration is preferred but not mandatory for all lenders. Non-GST businesses can provide alternative income proof. However, GST-registered businesses get faster approval and better rates.' },
-    { q: 'Can I get a business loan without collateral?', a: 'Yes. Unsecured business loans up to ₹1 Crore are available without any collateral. These are based purely on your business turnover, profitability, and credit score.' },
-    { q: 'What is the difference between a term loan and an overdraft for businesses?', a: 'A term loan is a fixed amount disbursed upfront with EMI repayment. An overdraft (OD) is a credit limit from which you draw as needed — ideal for managing seasonal cash flow or working capital needs.' },
+    { q: 'What is a business loan?', a: 'A business loan is a credit facility provided to businesses for expenses like expansion, working capital, or equipment purchase. At CapitalFlax, we offer loans up to ₹1 Crore to help your business grow without stress.' },
+    { q: 'What are the interest rates for business loans in India?', a: 'Interest rates for business loans in India typically start at 14% p.a. and can vary based on your business vintage, turnover, and credit score. CapitalFlax partners with 15+ lenders to find you the most competitive rates.' },
+    { q: 'How fast can I get business loan approval?', a: 'At CapitalFlax, we prioritize speed. You can receive a business loan offer within 48 hours of submitting your documents. Once approved, the funds are disbursed directly to your business account within 24 hours.' },
+    { q: 'What documents are required for an unsecured business loan?', a: 'To apply, you typically need your PAN & Aadhaar, the last 2 years of ITR with financials, 6 months of current account bank statements, and 12 months of GST returns. We keep the process minimal and digital.' },
+    { q: 'Who is eligible for a business loan at CapitalFlax?', a: 'Self-employed professionals, proprietors, partners, and directors of private limited companies with a business vintage of at least 2 years and a minimum annual turnover of ₹10 Lakhs are eligible to apply.' },
+    { q: 'Is collateral required for startup or small business loans?', a: 'No, CapitalFlax specializes in unsecured business loans up to ₹1 Crore, meaning you don’t need to pledge property or assets as collateral. For loans above ₹1 Crore, collateral-based options are also available.' },
+    { q: 'How to apply for a business loan online in India?', a: 'Simply visit the CapitalFlax apply page, fill out our 3-minute inquiry form, and upload your basic business documents. Our experts will then match you with the best bank partners for your specific profile.' },
+    { q: 'What is the maximum business loan amount I can get?', a: 'You can secure unsecured business loans up to ₹1 Crore based on your business performance. If you have property to offer as security, we can facilitate mortgage-based business loans up to ₹20 Crore.' },
 ];
 
 export default function BusinessLoansPage() {
@@ -59,11 +62,24 @@ export default function BusinessLoansPage() {
     const [rate, setRate] = useState(14);
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map(faq => ({
+            '@type': 'Question',
+            name: faq.q,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.a
+            }
+        }))
+    };
+
     const { emi, totalInterest, totalPayable } = useCallback(() => {
         const r = rate / 12 / 100, n = tenure * 12;
         const emi = (loanAmount * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
         return { emi, totalInterest: emi * n - loanAmount, totalPayable: emi * n };
-    }, [loanAmount, tenure])();
+    }, [loanAmount, tenure, rate])();
 
     const sliderStyle = (pct: number, color: string) => ({
         width: '100%', height: '4px', appearance: 'none' as const,
@@ -73,6 +89,10 @@ export default function BusinessLoansPage() {
 
     return (
         <div style={{ paddingTop: '5rem', fontFamily: 'Inter, sans-serif' }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             <style>{`.bl-thumb::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#F59E0B;cursor:pointer;border:2px solid #fff;box-shadow:0 0 0 2px #F59E0B;}.bl-thumb::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#F59E0B;cursor:pointer;border:2px solid #fff;}`}</style>
 
             {/* HERO */}
@@ -112,7 +132,7 @@ export default function BusinessLoansPage() {
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#D97706', letterSpacing: '2px', textTransform: 'uppercase' }}>KEY BENEFITS</span>
-                        <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 0', letterSpacing: '-1px' }}>Why Our <span style={{ color: '#D97706' }}>Business Loans</span></h2>
+                        <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 0', letterSpacing: '-1px' }}>What are the Benefits of a <span style={{ color: '#D97706' }}>Business Loan?</span></h2>
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
                         {benefits.map((b, i) => (
@@ -133,7 +153,7 @@ export default function BusinessLoansPage() {
                 <div style={{ maxWidth: '900px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#D97706', letterSpacing: '2px', textTransform: 'uppercase' }}>EMI CALCULATOR</span>
-                        <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 0', letterSpacing: '-1px' }}>Plan Your Business Loan</h2>
+                        <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 0', letterSpacing: '-1px' }}>Plan Your Business Loan Repayment</h2>
                     </div>
                     <div style={{ background: '#fff', borderRadius: '20px', border: '1px solid #E2E8F0', padding: '2.5rem', boxShadow: '0 8px 32px -8px rgba(0,0,0,0.08)' }}>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem' }}>
@@ -191,7 +211,7 @@ export default function BusinessLoansPage() {
                 <div style={{ maxWidth: '900px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#D97706', letterSpacing: '2px', textTransform: 'uppercase' }}>ELIGIBILITY</span>
-                        <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 0', letterSpacing: '-1px' }}>Who Can Apply?</h2>
+                        <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 0', letterSpacing: '-1px' }}>Who is Eligible for a Business Loan?</h2>
                     </div>
                     <div style={{ background: '#F8FAFC', borderRadius: '16px', border: '1px solid #E2E8F0', overflow: 'hidden' }}>
                         {eligibility.map((e, i) => (
@@ -211,7 +231,7 @@ export default function BusinessLoansPage() {
             <section style={{ padding: '4rem 1.5rem', background: '#F8FAFC' }}>
                 <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
                     <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#D97706', letterSpacing: '2px', textTransform: 'uppercase' }}>DOCUMENTS</span>
-                    <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 2.5rem', letterSpacing: '-1px' }}>What You'll Need</h2>
+                    <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 2.5rem', letterSpacing: '-1px' }}>What Documents are Required?</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
                         {documents.map((d, i) => (
                             <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: '#fff', border: '1px solid #E2E8F0', borderRadius: '12px', padding: '1.25rem 1.5rem' }}>
@@ -228,7 +248,7 @@ export default function BusinessLoansPage() {
                 <div style={{ maxWidth: '900px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#D97706', letterSpacing: '2px', textTransform: 'uppercase' }}>HOW IT WORKS</span>
-                        <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 0', letterSpacing: '-1px' }}>5-Step Loan Journey</h2>
+                        <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 0', letterSpacing: '-1px' }}>How to Apply for a Business Loan?</h2>
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                         {steps.map((s, i) => (
@@ -246,7 +266,7 @@ export default function BusinessLoansPage() {
                 <div style={{ maxWidth: '760px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#D97706', letterSpacing: '2px', textTransform: 'uppercase' }}>FAQ</span>
-                        <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.25rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 0.5rem', letterSpacing: '-0.5px' }}>Business Loan FAQs</h2>
+                        <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.25rem)', fontWeight: 800, color: '#0F172A', margin: '0.75rem 0 0.5rem', letterSpacing: '-0.5px' }}>Business Loan Frequently Asked Questions</h2>
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                         {faqs.map((faq, i) => {
@@ -290,3 +310,4 @@ export default function BusinessLoansPage() {
         </div>
     );
 }
+

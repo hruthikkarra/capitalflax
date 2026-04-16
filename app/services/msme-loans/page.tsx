@@ -37,10 +37,14 @@ const steps = [
 ];
 
 const faqs = [
-    { q: 'What is the maximum amount for an MSME loan?', a: 'Under the revised definition, MSMEs can access collateral-free loans up to ₹50 Lakhs. With collateral, loans can go up to ₹50 Crore depending on business size and turnover.' },
-    { q: 'Is Udyam registration mandatory?', a: 'Yes, for most banks to offer MSME-specific interest rates and benefits, a valid Udyam Registration Certificate is required. We can assist you in getting one if needed.' },
-    { q: 'Can I get an MSME loan for a new business?', a: 'Yes, micro-loans (MUDRA) are available for units with less than 1 year of vintage. For larger MSME loans, at least 1-2 years of operation is preferred.' },
-    { q: 'What are the interest rates for MSME loans?', a: 'MSME loan rates generally range from 9% to 16% p.a., depending on the scheme and the credit profile of the business.' },
+    { q: 'What is an MSME loan?', a: 'An MSME loan is a specialized credit product designed for Micro, Small, and Medium Enterprises in India. These loans provide essential capital for business expansion, technology upgrades, and working capital with government-backed benefits.' },
+    { q: 'What is the current interest rate for MSME loans?', a: 'MSME loan interest rates at CapitalFlax typically range from 9% to 16% p.a. The final rate depends on your Udyam registration status, business turnover, and financial stability.' },
+    { q: 'How fast is the MSME loan approval process?', a: 'Our MSME loan approval process is optimized for speed. Once you submit your digital documents, you can receive a sanction letter in as little as 48 hours, ensuring your business operations stay on track.' },
+    { q: 'What documents are required for MSME loan registration?', a: 'Basic documents include your Udyam Registration Certificate, GST returns, last 2 years’ ITR, and 12-month bank statements. This minimal documentation ensures a faster and paperless approval journey.' },
+    { q: 'Who is eligible for an MSME loan in India?', a: 'Any manufacturing or service-based enterprise classified as a Micro, Small, or Medium unit with at least 1 year of active operations and a valid Udyam certificate is eligible to apply for an MSME loan.' },
+    { q: 'Is collateral required for MSME loans under CGTMSE?', a: 'Under the CGTMSE government scheme, MSMEs can access collateral-free loans up to ₹5 crore. At CapitalFlax, we specialize in helping you secure these guarantee-backed loans without pledging personal assets.' },
+    { q: 'How to apply for an MSME loan online?', a: 'Applying is simple: fill out the inquiry form on our website, upload your digital documents, and our experts will match you with 15+ partner banks to secure the best MSME scheme for your business.' },
+    { q: 'What is the maximum amount for micro and small enterprise loans?', a: 'As per the revised MSME definition, you can access micro-loans up to ₹1 Crore and larger small/medium enterprise loans up to ₹50 Crore, depending on your business investment and turnover levels.' },
 ];
 
 export default function MSMELoansPage() {
@@ -48,6 +52,19 @@ export default function MSMELoansPage() {
     const [tenure, setTenure] = useState(5);
     const [rate, setRate] = useState(11.5);
     const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map(faq => ({
+            '@type': 'Question',
+            name: faq.q,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.a
+            }
+        }))
+    };
 
     const { emi, totalInterest, totalPayable } = useCallback(() => {
         const r = rate / 12 / 100, n = tenure * 12;
@@ -63,6 +80,10 @@ export default function MSMELoansPage() {
 
     return (
         <div style={{ paddingTop: '5rem', fontFamily: 'Inter, sans-serif' }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             <style>{`.bl-thumb::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#10B981;cursor:pointer;border:2px solid #fff;box-shadow:0 0 0 2px #10B981;}.bl-thumb::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#10B981;cursor:pointer;border:2px solid #fff;}`}</style>
 
             {/* HERO */}
@@ -98,7 +119,7 @@ export default function MSMELoansPage() {
             {/* CONTENT SECTION */}
             <section style={{ padding: '5rem 1.5rem', background: '#fff' }}>
                 <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '2.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '1.5rem', textAlign: 'center' }}>Empowering India's Backbone</h2>
+                    <h2 style={{ fontSize: '2.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '1.5rem', textAlign: 'center' }}>What is an MSME Loan?</h2>
                     <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '2.5rem' }}>
                         The MSME sector is the engine of the Indian economy. At CapitalFlax, we recognize the unique challenges faced by small business owners. Our <strong>MSME loans</strong> are designed to bridge the credit gap, offering funding for everything from inventory purchase to massive technological upgrades. With <strong>Udyam registration</strong>, your business unlocks exclusive perks including interest subvention and priority sector lending benefits.
                     </p>
@@ -120,7 +141,7 @@ export default function MSMELoansPage() {
                     <div style={{ background: '#fff', borderRadius: '20px', border: '1px solid #E2E8F0', padding: '2.5rem', boxShadow: '0 8px 32px -8px rgba(0,0,0,0.08)' }}>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem' }}>
                             <div>
-                                <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0F172A', marginBottom: '2rem' }}>Plan Your Growth</h2>
+                                <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0F172A', marginBottom: '2rem' }}>Plan Your MSME Growth</h2>
                                 <div style={{ marginBottom: '2rem' }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
                                         <label style={{ fontWeight: 700, fontSize: '0.9rem', color: '#0F172A' }}>Loan Amount</label>
@@ -167,11 +188,11 @@ export default function MSMELoansPage() {
             <section style={{ padding: '5rem 1.5rem', background: '#fff' }}>
                 <div style={{ maxWidth: '900px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#0F172A' }}>MSME Eligibility & FAQs</h2>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#0F172A' }}>MSME Eligibility & Frequently Asked Questions</h2>
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
                         <div>
-                            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '1.5rem' }}>Eligibility Criteria</h3>
+                            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '1.5rem' }}>Who is Eligible for an MSME Loan?</h3>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                                 {eligibility.map((e, i) => (
                                     <div key={i} style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '0.75rem', borderBottom: '1px solid #F1F5F9' }}>
@@ -189,7 +210,7 @@ export default function MSMELoansPage() {
                                             {f.q}
                                             <ChevronDown size={16} style={{ transform: openFaq === i ? 'rotate(180deg)' : 'none', transition: '0.3s' }} />
                                         </button>
-                                        {openFaq === i && <div style={{ padding: '0 1rem 1rem', fontSize: '0.9rem', color: '#64748B', lineHeight: 1.6 }}>{f.a}</div>}
+                                        {openFaq === i && <div style={{ padding: '0 1rem 1rem', fontSize: '0.9rem', color: '#475569', lineHeight: 1.6 }}>{f.a}</div>}
                                     </div>
                                 ))}
                             </div>
@@ -210,3 +231,4 @@ export default function MSMELoansPage() {
         </div>
     );
 }
+

@@ -36,10 +36,14 @@ const steps = [
 ];
 
 const faqs = [
-    { q: 'Is this venture capital (VC) funding?', a: 'No, CapitalFlax specializes in debt-based and non-dilutive startup funding. We provide loans and credit lines, meaning you keep 100% of your equity.' },
-    { q: 'Can pre-revenue startups apply?', a: 'Yes, startups with a strong MVP (Minimum Viable Product) and a clear go-to-market strategy can apply for specialized seed-stage credit lines.' },
-    { q: 'What is the maximum limit for startup funding?', a: 'We facilitate credit lines up to ₹1 Crore for early-stage startups and up to ₹10 Crore for revenue-generating scaling startups.' },
-    { q: 'How is the interest rate determined?', a: 'Rates are based on your risk profile, revenue stability, and the strength of your founding team. They typically range from 12% to 18% p.a.' },
+    { q: 'What is startup funding?', a: 'Startup funding is capital provided to early-stage businesses to fuel growth, product development, and market expansion. CapitalFlax specializing in non-dilutive funding, meaning you get the capital you need without giving up any equity in your company.' },
+    { q: 'What are the interest rates for startup loans in India?', a: 'Interest rates for startup loans in India typically range from 12% to 18% p.a. At CapitalFlax, the final rate is determined by your startup’s traction, revenue stability, and the overall strength of your core founding team.' },
+    { q: 'How fast is the startup funding decision process?', a: 'Time is of the essence for startups. We provide a funding decision within 48 to 72 hours of receiving your pitch deck and financials. Once approved, disbursal to your account happens swiftly to support your growth goals.' },
+    { q: 'What documents are required for startup funding?', a: 'You’ll need to provide your startup’s pitch deck, 6 months of bank statements, a detailed team profile, and your DPIIT registration certificate if applicable. Our digital process ensures a smooth and paperless submission experience.' },
+    { q: 'Who is eligible for startup funding at CapitalFlax?', a: 'We fund seed, early-stage, and scaling startups. While post-revenue startups are preferred, pre-revenue ventures with a strong MVP and clear product-market fit are also eligible for our non-dilutive credit lines.' },
+    { q: 'Is collateral required for early-stage startup loans?', a: 'No, CapitalFlax offers unsecured startup funding based on your business model and traction. We do not require you to pledge personal assets or property for loans up to ₹1 Crore, keeping your risk manageable.' },
+    { q: 'How to apply for startup funding online?', a: 'Simply visit the CapitalFlax apply page, upload your pitch deck and traction report, and complete our brief online inquiry. Our analysts will review your fit and get back to you with a tailored offer in days, not months.' },
+    { q: 'What is the maximum limit for non-dilutive startup capital?', a: 'We facilitate credit lines up to ₹1 Crore for early-stage startups and up to ₹10 Crore for revenue-generating companies that are looking to scale without diluting their equity further before their next VC round.' },
 ];
 
 export default function StartupFundingPage() {
@@ -47,6 +51,19 @@ export default function StartupFundingPage() {
     const [tenure, setTenure] = useState(3);
     const [rate, setRate] = useState(13.5);
     const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map(faq => ({
+            '@type': 'Question',
+            name: faq.q,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.a
+            }
+        }))
+    };
 
     const { emi, totalInterest, totalPayable } = useCallback(() => {
         const r = rate / 12 / 100, n = tenure * 12;
@@ -62,6 +79,10 @@ export default function StartupFundingPage() {
 
     return (
         <div style={{ paddingTop: '5rem', fontFamily: 'Inter, sans-serif' }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             <style>{`.bl-thumb::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#8B5CF6;cursor:pointer;border:2px solid #fff;box-shadow:0 0 0 2px #8B5CF6;}.bl-thumb::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#8B5CF6;cursor:pointer;border:2px solid #fff;}`}</style>
 
             {/* HERO */}
@@ -99,7 +120,7 @@ export default function StartupFundingPage() {
                 <div style={{ maxWidth: '800px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
                         <Sparkles style={{ color: '#7C3AED', marginBottom: '1rem' }} />
-                        <h2 style={{ fontSize: '2.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '1rem' }}>Built for Founders</h2>
+                        <h2 style={{ fontSize: '2.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '1rem' }}>What is Non-Dilutive Startup Funding?</h2>
                         <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: 1.8 }}>
                             Traditional bank loans are often rigid, and Venture Capital requires giving up ownership. At CapitalFlax, we provide a third way—<strong>growth-linked startup funding</strong>. Our credit products are designed for the high-growth, asset-light nature of modern tech startups. Whether you're in SaaS, Fintech, or E-commerce, we offer capital that moves as fast as you do.
                         </p>
@@ -122,7 +143,7 @@ export default function StartupFundingPage() {
                     <div style={{ background: '#fff', borderRadius: '24px', border: '1px solid #E2E8F0', padding: '3rem', boxShadow: '0 10px 40px -10px rgba(124,58,237,0.1)' }}>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
                             <div>
-                                <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0F172A', marginBottom: '2rem' }}>Repayment Estimator</h2>
+                                <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0F172A', marginBottom: '2rem' }}>Startup Repayment Estimator</h2>
                                 <div style={{ marginBottom: '2rem' }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
                                         <label style={{ fontWeight: 700, fontSize: '0.9rem', color: '#0F172A' }}>Capital Required</label>
@@ -159,7 +180,7 @@ export default function StartupFundingPage() {
             {/* PROCESS MAP */}
             <section style={{ padding: '5rem 1.5rem', background: '#fff' }}>
                 <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '2.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '3.5rem', textAlign: 'center' }}>Funding Timeline</h2>
+                    <h2 style={{ fontSize: '2.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '3.5rem', textAlign: 'center' }}>How to Apply for Startup Funding?</h2>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                         {steps.map((s, i) => (
                             <div key={i} style={{ display: 'flex', gap: '2rem', padding: '1.5rem 2.5rem', borderRadius: '16px', background: '#F9FAFB', border: '1px solid #F1F5F9', alignItems: 'center' }}>
@@ -177,7 +198,7 @@ export default function StartupFundingPage() {
             {/* FAQ */}
             <section style={{ padding: '5rem 1.5rem', background: '#F8FAFC' }}>
                 <div style={{ maxWidth: '720px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '2.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '3rem', textAlign: 'center' }}>Startup FAQs</h2>
+                    <h2 style={{ fontSize: '2.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '3rem', textAlign: 'center' }}>Startup Funding Frequently Asked Questions</h2>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                         {faqs.map((f, i) => (
                             <div key={i} style={{ border: '1px solid #E2E8F0', borderRadius: '12px', background: '#fff' }}>
