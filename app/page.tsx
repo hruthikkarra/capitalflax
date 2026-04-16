@@ -1,3 +1,4 @@
+// Fresh deployment to ensure restoration is live
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import HomePageClient from './components/HomePageClient';
@@ -13,7 +14,8 @@ import {
   Building, 
   ArrowRight, 
   Clock, 
-  Shield 
+  Shield,
+  TrendingUp
 } from 'lucide-react';
 
 export const metadata: Metadata = {
