@@ -103,7 +103,7 @@ export default function HeroSlider({ className }: HeroSliderProps) {
                 >
                   {s.badge}
                 </div>
-                <h1 className="slide-title">{s.title}</h1>
+                <h2 className="slide-title">{s.title}</h2>
                 <p className="slide-subtitle">{s.subtitle}</p>
                 <div className="slide-buttons">
                   <Link
