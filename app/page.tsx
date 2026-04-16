@@ -1,352 +1,618 @@
-// Fresh deployment to ensure restoration is live
-import type { Metadata } from 'next';
+"use client";
 import Link from 'next/link';
-import HomePageClient from './components/HomePageClient';
-import { 
-  Rocket, 
-  FileText, 
-  Handshake, 
-  Briefcase, 
-  Zap, 
-  CheckCircle, 
-  ShieldCheck, 
-  Users, 
-  Building, 
-  ArrowRight, 
-  Clock, 
-  Shield,
-  TrendingUp
-} from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: "Business Loans in India | Instant MSME & Startup Funding - CapitalFlax",
-  description: "Get fast business loans in India with low interest rates. MSME, startup & personal loans with quick approval in 48 hours.",
-  keywords: [
-    "business loan India",
-    "MSME loan",
-    "startup funding",
-    "professional business loan",
-    "small business finance",
-    "unsecured business loan",
-  ],
-};
-
-function ApplyCTA() {
-  return (
-    <div style={{ padding: '3rem 1rem', textAlign: 'center' }}>
-      <Link 
-        href="/apply" 
-        style={{ 
-          background: 'linear-gradient(135deg, #2563EB, #3B82F6)',
-          color: '#fff',
-          padding: '1.25rem 3.5rem',
-          borderRadius: '50px',
-          fontSize: '1.2rem',
-          fontWeight: 800,
-          textDecoration: 'none',
-          boxShadow: '0 15px 30px -5px rgba(37, 99, 235, 0.3)',
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '0.75rem',
-          transition: 'all 0.3s ease'
-        }}
-      >
-        Apply Now <ArrowRight size={22} />
-      </Link>
-    </div>
-  );
-}
+import { ArrowRight, TrendingUp, CheckCircle, Clock, Landmark, Heart, Calculator, Building2, Check, Home as HomeIcon, Briefcase, User, CircleDollarSign, GraduationCap, Car, BookOpen } from 'lucide-react';
+import HeroSlider from './components/HeroSlider';
+import ProcessSection from './components/ProcessSection';
+import Testimonials from './components/Testimonials';
+import FAQSection from './components/FAQSection';
 
 export default function Home() {
   return (
-    <main style={{ background: '#fff', overflowX: 'hidden' }}>
-      {/* 1. HERO SECTION */}
-      <section style={{ 
-        padding: '12rem 1.5rem 8rem', 
-        textAlign: 'center', 
-        maxWidth: '1200px', 
-        margin: '0 auto',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
-      }}>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#DBEAFE', color: '#1E40AF', padding: '0.5rem 1.25rem', borderRadius: '50px', fontSize: '0.85rem', fontWeight: 700, marginBottom: '2rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
-          <ShieldCheck size={16} /> Fast, Secure & Trusted
-        </div>
-        <h1 style={{ 
-          fontSize: 'clamp(3rem, 8vw, 5rem)', 
-          fontWeight: 900, 
-          color: '#0F172A', 
-          letterSpacing: '-3px', 
-          lineHeight: 1, 
-          marginBottom: '2rem',
-          maxWidth: '900px'
-        }}>
-          Get Instant <span style={{ color: '#3B82F6' }}>Business Loans</span> in India
-        </h1>
-        
-        <p style={{ 
-          fontSize: 'clamp(1.2rem, 2.5vw, 1.5rem)', 
-          color: '#64748B', 
-          lineHeight: 1.5, 
-          maxWidth: '800px', 
-          margin: '0 auto 3rem',
-          fontWeight: 600
-        }}>
-          Get approved in 48 hours | Minimal documentation | Trusted by 500+ businesses
-        </p>
-        
-        <p style={{ 
-          fontSize: '1.15rem', 
-          color: '#475569', 
-          maxWidth: '650px', 
-          margin: '0 auto 4rem',
-          lineHeight: 1.7,
-          opacity: 0.8
-        }}>
-          CapitalFlax empowers Indian enterprises with low-interest funding solutions. 
-          The preferred partner for MSME manufacturing, high-growth startups, and professionals.
-        </p>
+    <>
+      <HeroSlider className="hero-slider--fixed-nav-offset" />
 
-        <Link 
-          href="/apply" 
-          style={{ 
-            background: 'linear-gradient(135deg, #2563EB, #3B82F6)',
-            color: '#fff',
-            padding: '1.5rem 4rem',
-            borderRadius: '50px',
-            fontSize: '1.35rem',
-            fontWeight: 800,
-            textDecoration: 'none',
-            boxShadow: '0 25px 30px -10px rgba(59, 130, 246, 0.4)',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '1rem',
-            transition: 'all 0.3s ease'
-          }}
-        >
-          Apply for Business Loan Now <ArrowRight size={28} />
-        </Link>
+      {/* SEO Introduction Section */}
+      <section style={{ padding: '4rem 1rem 2rem', background: '#fff' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+          <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 3.5rem)', fontWeight: 800, color: '#0F172A', letterSpacing: '-1.5px', lineHeight: 1.1, marginBottom: '2rem' }}>
+            Get Instant <span style={{ color: '#3B82F6' }}>Business Loans</span> in India
+          </h1>
+          <div style={{ color: '#475569', fontSize: '1.15rem', lineHeight: 1.7, textAlign: 'left' }}>
+            <p style={{ marginBottom: '1.5rem' }}>
+              Growing a business in India requires timely capital. Whether you are an <strong>MSME</strong> looking for working capital, a <strong>startup</strong> seeking seed funding, or an established firm planning expansion, CapitalFlax provides the financial fuel you need. Our business loans are designed to be flexible, transparent, and fast.
+            </p>
+            <p style={{ marginBottom: '1.5rem' }}>
+              We partner with India's leading banks and NBFCs to bring you the best interest rates starting at 14% p.a. With our <strong>48-hour approval process</strong> and minimal documentation requirement, you can focus on what matters most—running your business—while we handle the financing.
+            </p>
+            <p>
+              Our dedication to supporting the Indian business ecosystem extends to specialized <strong>MSME loans</strong> and startup-friendly credit lines. Experience a paperless application process and get expert guidance to choose the right financial product for your growth journey.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* 2. TRUST SECTION [HORIZONTAL BAR] */}
-      <section style={{ padding: '0 1.5rem 5rem' }}>
-        <div style={{ 
-          maxWidth: '1200px', 
-          margin: '0 auto', 
-          background: '#F1F5F9',
-          borderRadius: '40px',
-          padding: '4rem 3rem',
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', 
-          gap: '3rem',
-          border: '1px solid #E2E8F0'
-        }}>
-          {[
-            { icon: <Users size={32} />, value: '500+', label: 'Businesses Served' },
-            { icon: <Building size={32} />, value: '15+', label: 'Banking Partners' },
-            { icon: <Clock size={32} />, value: '48H', label: 'Approval Speed' },
-            { icon: <ShieldCheck size={32} />, value: 'RBI', label: 'Registered Partners' }
-          ].map((item, i) => (
-            <div key={i} style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
-              <div style={{ color: '#2563EB', background: '#fff', borderRadius: '20px', display: 'flex', padding: '16px', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.05)' }}>{item.icon}</div>
-              <div>
-                <div style={{ fontSize: '2.25rem', fontWeight: 900, color: '#0F172A', marginBottom: '0.25rem' }}>{item.value}</div>
-                <div style={{ color: '#64748B', fontWeight: 700, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}>{item.label}</div>
+      <section className="stats-banner-wrapper">
+        <div className="stats-banner">
+          <div className="banner-item">
+            <div className="banner-icon-wrapper">
+              <CheckCircle className="banner-icon green-stroke" />
+            </div>
+            <div className="banner-text">
+              <span className="banner-value">98%</span>
+              <span className="banner-label">APPROVAL RATE</span>
+            </div>
+          </div>
+          <div className="divider"></div>
+          <div className="banner-item">
+            <div className="banner-icon-wrapper">
+              <Clock className="banner-icon orange-stroke" />
+            </div>
+            <div className="banner-text">
+              <span className="banner-value">72 Hours</span>
+              <span className="banner-label">AVG PROCESSING TIME</span>
+            </div>
+          </div>
+          <div className="divider"></div>
+          <div className="banner-item">
+            <div className="banner-icon-wrapper">
+              <Landmark className="banner-icon blue-stroke" />
+            </div>
+            <div className="banner-text">
+              <span className="banner-value">15+</span>
+              <span className="banner-label">BANK PARTNERS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PARTNERS SECTION */}
+      <section className="partners-section" style={{ overflow: 'hidden', width: '100vw', maxWidth: '100%' }}>
+        <div className="partners-header">
+          <span className="section-label">OUR PARTNERS</span>
+          <h2 className="partners-title">
+            Partnered with India's <span className="text-secondary-blue">Leading Banks and NBFCs</span>
+          </h2>
+          <p className="partners-subtitle">
+            Access competitive rates from 15+ premier banking institutions
+          </p>
+        </div>
+
+
+
+        <div className="rbi-badge-container">
+          <div className="rbi-badge">
+            <span className="rbi-dot"></span>
+            <strong>RBI Registered</strong>
+            <span className="rbi-divider">•</span>
+            <span className="rbi-text-light">Trusted by 10,000+ Professionals</span>
+          </div>
+        </div>
+      </section>
+
+      {/* COMPREHENSIVE LOAN SOLUTIONS SECTION */}
+      <section className="solutions-section" id="services">
+        <div className="section-header">
+          <span className="section-label">OUR SERVICES</span>
+          <h2 className="section-title">
+            Comprehensive Loan <span className="text-primary-blue">Solutions</span>
+          </h2>
+          <p className="section-subtitle">
+            From home loans to business financing, we offer a complete range of financial<br />
+            products with preferential rates for professionals.
+          </p>
+        </div>
+
+        <div className="solutions-grid">
+          {/* Business Loans Card */}
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="/bus.jpeg" alt="Business Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <Briefcase className="solution-icon orange-icon-alt" />
               </div>
             </div>
-          ))}
-        </div>
-      </section>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Business Loans</h3>
+              <p className="solution-category">FUEL YOUR GROWTH</p>
 
-      {/* 3. LOAN TYPES [DEDICATED SERVICE CARDS] */}
-      <section id="loan-types" style={{ padding: '8rem 1.5rem' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '3rem', fontWeight: 900, color: '#1E293B', textAlign: 'center', marginBottom: '1.5rem', letterSpacing: '-1.5px' }}>
-            Tailored Loans for <span style={{ color: '#3B82F6' }}>Every Stage</span>
-          </h2>
-          <p style={{ textAlign: 'center', color: '#64748B', fontSize: '1.25rem', marginBottom: '6rem', maxWidth: '800px', margin: '0 auto 6rem' }}>
-             Click a card below to explore dedicated funding details, eligibility, and EMI calculators.
-          </p>
-          
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', 
-            gap: '3rem' 
-          }}>
-            {[
-              { 
-                title: 'Business Loans', 
-                link: '/services/business-loans', 
-                icon: <Briefcase size={40} />, 
-                desc: 'Unsecured funding for working capital, new equipment, and office expansion up to ₹1 Crore. Sanctioned in 48 hours.',
-                color: '#2563EB',
-                bg: '#EFF6FF'
-              },
-              { 
-                title: 'MSME Loans', 
-                link: '/services/msme-loans', 
-                icon: <Building size={40} />, 
-                desc: 'Specialized schemes for SMEs with Udyam registration perks, collateral-free options, and technology fund access.',
-                color: '#0284C7',
-                bg: '#F0F9FF'
-              },
-              { 
-                title: 'Startup Funding', 
-                link: '/services/startup-funding', 
-                icon: <Rocket size={40} />, 
-                desc: 'Growth capital, revenue-based financing, and venture debt for modern Indian startups with zero equity dilution.',
-                color: '#7C3AED',
-                bg: '#F5F3FF'
-              }
-            ].map((loan, idx) => (
-              <Link key={idx} href={loan.link} style={{ textDecoration: 'none' }}>
-                <div style={{ 
-                  padding: '4rem 2.5rem', 
-                  background: loan.bg, 
-                  borderRadius: '40px', 
-                  border: `1px solid ${loan.color}15`,
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '2rem',
-                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                  position: 'relative'
-                }}>
-                  <div style={{ color: loan.color, background: '#fff', width: '80px', height: '80px', borderRadius: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 20px -5px rgba(0,0,0,0.05)' }}>{loan.icon}</div>
-                  <div>
-                    <h3 style={{ fontSize: '1.8rem', fontWeight: 900, color: '#0F172A', marginBottom: '1rem' }}>{loan.title}</h3>
-                    <p style={{ color: '#475569', lineHeight: 1.7, fontSize: '1.1rem', margin: 0 }}>{loan.desc}</p>
-                  </div>
-                  <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 800, color: loan.color, fontSize: '1.1rem' }}>
-                    View Dedicated Details <ArrowRight size={22} />
-                  </div>
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹1 Cr</span>
                 </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">14% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value orange-text-alt fw-700">48-Hour Approval</span>
+                </div>
+              </div>
+
+              <p className="solution-desc">
+                Working capital, equipment finance, and overdraft
+                facilities. Minimal documentation required.
+              </p>
+
+              <Link href="/services/business-loans" className="prof-link orange-link-alt">
+                LEARN MORE <ArrowRight className="link-icon" />
               </Link>
-            ))}
+            </div>
+          </div>
+
+          {/* Home Loans Card */}
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="/home.jpg.jpeg" alt="Home Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <HomeIcon className="solution-icon blue-icon" />
+              </div>
+            </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Home Loans</h3>
+              <p className="solution-category">YOUR DREAM HOME</p>
+
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹20 Cr</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">7.3% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value blue-text fw-700">0% Processing Fee</span>
+                </div>
+              </div>
+
+              <p className="solution-desc">
+                Flexible documentation for private practice income.
+                Balance transfer and top-up options available.
+              </p>
+
+              <Link href="/services/home-loans" className="prof-link blue-link">
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Professional Loans Card */}
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="/prof.jpg" alt="Professional Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper indigo-bg-light" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <GraduationCap className="solution-icon indigo-icon" />
+              </div>
+            </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Professional Loans</h3>
+              <p className="solution-category">FOR YOUR PRACTICE</p>
+
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹75 L</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">9.0% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value indigo-text fw-700">No Collateral</span>
+                </div>
+              </div>
+
+              <p className="solution-desc">
+                Equipment finance, practice setup, or expansion.
+                Tailored for doctors, CAs, architects.
+              </p>
+
+              <Link href="/services/professional-loans" className="prof-link indigo-link">
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Personal Loans Card */}
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop" alt="Personal Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <User className="solution-icon green-icon-alt" />
+              </div>
+            </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Personal Loans</h3>
+              <p className="solution-category">QUICK CASH ACCESS</p>
+
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹50 L</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">10.5% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value green-text-alt fw-700">Same-Day Disbursal</span>
+                </div>
+              </div>
+
+              <p className="solution-desc">
+                No collateral required. Flexible EMI options. Use for
+                any personal need or emergency.
+              </p>
+
+              <Link href="/services/personal-loans" className="prof-link green-link-alt">
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Gold Loans Card */}
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?q=80&w=2070&auto=format&fit=crop" alt="Gold Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper gold-bg-light" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <CircleDollarSign className="solution-icon gold-icon" />
+              </div>
+            </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Gold Loans</h3>
+              <p className="solution-category">AGAINST YOUR GOLD</p>
+
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹1 Cr</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">7.5% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value gold-text fw-700">Instant Approval</span>
+                </div>
+              </div>
+
+              <p className="solution-desc">
+                Secure loans against your gold jewelry. Flexible
+                repayment tenure. Get funds in 30 minutes.
+              </p>
+
+              <Link href="/services/gold-loans" className="prof-link gold-link">
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Mortgage Loans Card */}
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop" alt="Mortgage Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper purple-bg-light" style={{ position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <Landmark className="solution-icon purple-icon" />
+              </div>
+            </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Mortgage Loans</h3>
+              <p className="solution-category">PROPERTY AS COLLATERAL</p>
+
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹20 Cr</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">10% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value purple-text fw-700">Highest LTV</span>
+                </div>
+              </div>
+
+              <p className="solution-desc">
+                Loan against residential or commercial property.
+                Use funds for any purpose. Competitive rates.
+              </p>
+
+              <Link href="/services/mortgage-loans" className="prof-link purple-link">
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Education Loans Card */}
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
+                alt="Education Loans"
+                className="card-img"
+                loading="lazy"
+              />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper" style={{ background: '#E0F2FE', position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <BookOpen className="solution-icon" style={{ color: '#0284C7' }} />
+              </div>
+            </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Education Loans</h3>
+              <p className="solution-category">FUND YOUR FUTURE</p>
+
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">Up to ₹1.5 Cr</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">8.5% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value fw-700" style={{ color: '#0284C7' }}>100% Financing</span>
+                </div>
+              </div>
+
+              <p className="solution-desc">
+                Study abroad or in India with flexible EMI options and high unsecured limits for top institutions.
+              </p>
+
+              <Link href="/services/education-loans" className="prof-link" style={{ color: '#0284C7' }}>
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Vehicle Loans Card */}
+          <div className="solution-card" style={{ padding: 0 }}>
+            <div className="card-image-wrapper">
+              <img src="/car.jpg.jpeg" alt="Vehicle Loans" className="card-img" />
+              <div className="card-img-overlay"></div>
+              <div className="solution-icon-wrapper" style={{ background: '#FFE4E6', position: 'absolute', bottom: '-24px', left: '24px', zIndex: 2 }}>
+                <Car className="solution-icon" style={{ color: '#E11D48' }} />
+              </div>
+            </div>
+            <div style={{ padding: '2.5rem 1.5rem 2rem' }}>
+              <h3 className="solution-title" style={{ marginTop: '0.5rem' }}>Vehicle Loans</h3>
+              <p className="solution-category">DRIVE YOUR DREAM</p>
+
+              <div className="solution-details">
+                <div className="detail-row">
+                  <span className="detail-label">Amount:</span>
+                  <span className="detail-value text-dark fw-700">100% On-Road</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Rate:</span>
+                  <span className="detail-value text-dark fw-700">8.75% onwards</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Key Feature:</span>
+                  <span className="detail-value fw-700" style={{ color: '#E11D48' }}>Pre-approved Offers</span>
+                </div>
+              </div>
+
+              <p className="solution-desc">
+                Get the best rates for new or used cars with instant approval and minimal zero-downpayment options.
+              </p>
+
+              <Link href="/services/vehicle-loans" className="prof-link" style={{ color: '#E11D48' }}>
+                LEARN MORE <ArrowRight className="link-icon" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="section-footer-alt">
+          <Link href="/services" className="btn-view-all">
+            VIEW ALL SERVICES <ArrowRight className="icon-sm" />
+          </Link>
+        </div>
+
+        {/* QUICK COMPARISON TABLE */}
+        <div style={{ width: '100%', maxWidth: '960px', margin: '4rem auto 0' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+            <h2 style={{ fontSize: '2.25rem', fontWeight: 800, color: '#0F172A', letterSpacing: '-0.5px', margin: 0 }}>
+              Quick <span style={{ color: '#3B82F6' }}>Comparison</span>
+            </h2>
+            <p style={{ color: '#64748B', marginTop: '0.75rem', fontSize: '1rem' }}>Compare all our loan products at a glance</p>
+          </div>
+
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
+              <thead>
+                <tr style={{ borderBottom: '2px solid #F1F5F9' }}>
+                  {['LOAN TYPE', 'LOAN AMOUNT', 'INTEREST RATE', 'MAX TENURE', 'KEY FEATURE'].map(h => (
+                    <th key={h} style={{ padding: '1rem 1.25rem', textAlign: 'left', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '1px', color: '#94A3B8', textTransform: 'uppercase' }}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { type: 'Business Loans', amount: 'Up to ₹1 Cr', rate: '14% onwards', tenure: 'Up to 7 years', feature: '48-Hour Approval', featureColor: '#F59E0B' },
+                  { type: 'Home Loans', amount: 'Up to ₹20 Cr', rate: '7.3% onwards', tenure: 'Up to 30 years', feature: '0% Processing Fee', featureColor: '#3B82F6' },
+                  { type: 'Professional Loans', amount: 'Up to ₹75 L', rate: '9.0% onwards', tenure: 'Up to 10 years', feature: 'No Collateral', featureColor: '#6366F1' },
+                  { type: 'Personal Loans', amount: 'Up to ₹50 L', rate: '10.5% onwards', tenure: 'Up to 5 years', feature: 'Same-Day Disbursal', featureColor: '#10B981' },
+                  { type: 'Gold Loans', amount: 'Up to ₹1 Cr', rate: '7.5% onwards', tenure: 'Up to 3 years', feature: 'Instant Approval', featureColor: '#F59E0B' },
+                  { type: 'Mortgage Loans', amount: 'Up to ₹20 Cr', rate: '10% onwards', tenure: 'Up to 20 years', feature: 'Highest LTV', featureColor: '#8B5CF6' },
+                  { type: 'Education Loans', amount: 'Up to ₹1.5 Cr', rate: '8.5% onwards', tenure: 'Up to 15 years', feature: '100% Financing', featureColor: '#0284C7' },
+                  { type: 'Vehicle Loans', amount: '100% On-Road', rate: '8.75% onwards', tenure: 'Up to 7 years', feature: 'Pre-approved Offers', featureColor: '#E11D48' },
+                ].map((row, i) => (
+                  <tr key={i} style={{ borderBottom: '1px solid #F8FAFC', transition: 'background 0.2s' }}
+                    onMouseEnter={e => (e.currentTarget as HTMLTableRowElement).style.background = '#F8FAFC'}
+                    onMouseLeave={e => (e.currentTarget as HTMLTableRowElement).style.background = 'transparent'}>
+                    <td style={{ padding: '1.1rem 1.25rem', fontWeight: 700, color: '#0F172A' }}>{row.type}</td>
+                    <td style={{ padding: '1.1rem 1.25rem', color: '#475569' }}>{row.amount}</td>
+                    <td style={{ padding: '1.1rem 1.25rem', color: '#475569' }}>{row.rate}</td>
+                    <td style={{ padding: '1.1rem 1.25rem', color: '#475569' }}>{row.tenure}</td>
+                    <td style={{ padding: '1.1rem 1.25rem' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: row.featureColor, fontWeight: 700, fontSize: '0.88rem' }}>
+                        <span style={{ width: 7, height: 7, borderRadius: '50%', background: row.featureColor, display: 'inline-block', flexShrink: 0 }} />
+                        {row.feature}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
 
-      <ApplyCTA />
-
-      {/* 4. WHY CHOOSE US [PREMIUM UI] */}
-      <section style={{ padding: '8rem 1.5rem', background: '#0F172A', color: '#fff', borderRadius: '60px', margin: '0 1.5rem' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '3.5rem', fontWeight: 900, textAlign: 'center', marginBottom: '1.5rem', letterSpacing: '-2px' }}>
-            Why <span style={{ color: '#3B82F6' }}>CapitalFlax?</span>
+      {/* PROFESSIONALS SECTION */}
+      <section className="professionals-section" id="professionals">
+        <div className="section-header">
+          <span className="section-label">TAILORED FOR YOUR PROFESSION</span>
+          <h2 className="section-title">
+            Built for <span className="text-primary-blue">Professionals</span>
           </h2>
-          <p style={{ textAlign: 'center', color: '#94A3B8', fontSize: '1.35rem', marginBottom: '6rem', maxWidth: '800px', margin: '0 auto 6rem', opacity: 0.8 }}>
-            India's most trusted partner for growth-focused business financing.
+          <p className="section-subtitle">
+            We understand your unique income patterns and professional requirements. Get<br />
+            loans designed specifically for your profession.
           </p>
-          
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '4rem' }}>
-            {[
-              { icon: <Zap size={48} />, title: '48h Approval', desc: 'Rapid assessment and sanction letter within 2 business days of verification.' },
-              { icon: <FileText size={48} />, title: 'Minimal Docs', desc: '100% digital journey with simple KYC, GST, and bank statement processing.' },
-              { icon: <Handshake size={48} />, title: '15+ Partners', desc: 'Negotiated rates with HDFC, ICICI, Axis, and other leading RBI-registered institutions.' },
-              { icon: <TrendingUp size={48} />, title: 'Transparent', desc: 'No hidden processing fees. Highly competitive rates starting at 14% p.a.' }
-            ].map((p, i) => (
-              <div key={i} style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
-                <div style={{ color: '#3B82F6' }}>{p.icon}</div>
-                <h3 style={{ fontSize: '1.6rem', fontWeight: 800 }}>{p.title}</h3>
-                <p style={{ color: '#94A3B8', lineHeight: 1.7, fontSize: '1.1rem' }}>{p.desc}</p>
-              </div>
-            ))}
+        </div>
+
+        <div className="cards-grid">
+          {/* Doctors Card */}
+          <div className="prof-card">
+            <div className="icon-badge red-badge">
+              <Heart className="prof-icon red-icon" />
+            </div>
+            <h3 className="prof-title">Doctors</h3>
+            <p className="prof-category">HEALTHCARE PROFESSIONALS</p>
+            <ul className="prof-features">
+              <li>
+                <div className="check-circle red-bg"><Check className="check-icon" /></div>
+                <span>Flexible documentation for private practice income</span>
+              </li>
+              <li>
+                <div className="check-circle red-bg"><Check className="check-icon" /></div>
+                <span>Higher loan amounts based on specialization</span>
+              </li>
+              <li>
+                <div className="check-circle red-bg"><Check className="check-icon" /></div>
+                <span>Fast-track approval for medical professionals</span>
+              </li>
+              <li>
+                <div className="check-circle red-bg"><Check className="check-icon" /></div>
+                <span>Special rates for MBBS, MD, MS qualified</span>
+              </li>
+            </ul>
+            <Link href="#apply" className="prof-link red-link">
+              LEARN MORE <ArrowRight className="link-icon" />
+            </Link>
           </div>
+
+          {/* CAs Card */}
+          <div className="prof-card">
+            <div className="icon-badge blue-badge">
+              <Calculator className="prof-icon blue-icon" />
+            </div>
+            <h3 className="prof-title">Chartered Accountants</h3>
+            <p className="prof-category">FINANCIAL EXPERTS</p>
+            <ul className="prof-features">
+              <li>
+                <div className="check-circle blue-bg"><Check className="check-icon" /></div>
+                <span>Loan assessment based on firm revenue</span>
+              </li>
+              <li>
+                <div className="check-circle blue-bg"><Check className="check-icon" /></div>
+                <span>Minimal documentation for established CAs</span>
+              </li>
+              <li>
+                <div className="check-circle blue-bg"><Check className="check-icon" /></div>
+                <span>Overdraft facilities for working capital</span>
+              </li>
+              <li>
+                <div className="check-circle blue-bg"><Check className="check-icon" /></div>
+                <span>Tax benefits consultation included</span>
+              </li>
+            </ul>
+            <Link href="#apply" className="prof-link blue-link">
+              LEARN MORE <ArrowRight className="link-icon" />
+            </Link>
+          </div>
+
+          {/* Architects Card */}
+          <div className="prof-card">
+            <div className="icon-badge green-badge">
+              <Building2 className="prof-icon green-icon" />
+            </div>
+            <h3 className="prof-title">Architects</h3>
+            <p className="prof-category">DESIGN PROFESSIONALS</p>
+            <ul className="prof-features">
+              <li>
+                <div className="check-circle green-bg"><Check className="check-icon" /></div>
+                <span>Project-based income assessment accepted</span>
+              </li>
+              <li>
+                <div className="check-circle green-bg"><Check className="check-icon" /></div>
+                <span>Collateral-free loans up to ₹50L</span>
+              </li>
+              <li>
+                <div className="check-circle green-bg"><Check className="check-icon" /></div>
+                <span>Equipment finance options available</span>
+              </li>
+              <li>
+                <div className="check-circle green-bg"><Check className="check-icon" /></div>
+                <span>Flexible EMI during project gaps</span>
+              </li>
+            </ul>
+            <Link href="#apply" className="prof-link green-link">
+              LEARN MORE <ArrowRight className="link-icon" />
+            </Link>
+          </div>
+        </div>
+
+        <div className="section-footer">
+          <p>Don't see your profession listed? We serve all high-income professionals.</p>
+          <Link href="#apply" className="footer-link">
+            Apply Now <ArrowRight className="link-icon" />
+          </Link>
         </div>
       </section>
 
-      <ApplyCTA />
+      {/* OUR PROCESS SECTION */}
+      <ProcessSection />
 
-      {/* 5. HOW IT WORKS [SIMPLIFIED 3 STEPS] */}
-      <section id="how-it-works" style={{ padding: '10rem 1.5rem' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontSize: '3.5rem', fontWeight: 900, color: '#0F172A', marginBottom: '2rem', letterSpacing: '-2px' }}>
-            Funded in <span style={{ color: '#3B82F6' }}>3 Easy Steps</span>
-          </h2>
-          <p style={{ color: '#64748B', marginBottom: '8rem', fontSize: '1.3rem', maxWidth: '800px', margin: '0 auto 8rem' }}>A streamlined process designed to get you the capital you need without the noise.</p>
-          
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '6rem' }}>
-            {[
-              { num: '01', title: 'Apply Online', text: 'Securely submit your basic profile and business metrics in just 5 minutes.' },
-              { num: '02', title: 'Get Approval', text: 'Our experts negotiate the best terms. Receive your sanction letter within 48-72 hours.' },
-              { num: '03', title: 'Receive Funds', text: 'Funds are disbursed directly into your current account so you can start scaling instantly.' }
-            ].map((item, i) => (
-              <div key={i} style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
-                <div style={{ 
-                  fontSize: '6rem', 
-                  fontWeight: 900, 
-                  lineHeight: 1,
-                  color: '#fff',
-                  WebkitTextStroke: '2px #3B82F6',
-                  opacity: 0.3,
-                  fontFamily: 'Inter, sans-serif'
-                }}>{item.num}</div>
-                <h3 style={{ fontSize: '2rem', fontWeight: 900, color: '#0F172A' }}>{item.title}</h3>
-                <p style={{ color: '#64748B', lineHeight: 1.7, fontSize: '1.15rem' }}>{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* SUCCESS STORIES / TESTIMONIALS */}
+      <Testimonials />
 
-      <ApplyCTA />
-
-      {/* 6. INTERACTIVE COMPONENTS (Slider/Stats/Partners) */}
-      <HomePageClient />
-
-      {/* 7. FAQ SECTION [ENHANCED UI] */}
-      <section className="faq-section" style={{ padding: '12rem 1.5rem', background: '#F8FAFC' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '4rem', fontWeight: 900, color: '#0F172A', textAlign: 'center', marginBottom: '2rem', letterSpacing: '-3px' }}>
-            Common <span style={{ color: '#3B82F6' }}>Questions</span>
-          </h2>
-          <p style={{ textAlign: 'center', color: '#64748B', marginBottom: '6rem', fontSize: '1.3rem' }}>Everything you need to know about scaling your enterprise.</p>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-            {[
-              {
-                q: "What is a business loan?",
-                a: "A business loan is a targeted credit facility provided to entrepreneurs and entities for operational growth, expansion, or inventory purchase. At CapitalFlax, we optimize this process by matching you with the best rates from 15+ banking partners."
-              },
-              {
-                q: "How to apply for an MSME loan in India?",
-                a: "Applying for an MSME loan is seamless with CapitalFlax. Using your Udyam and GST details, we process your application digitally to ensure priority sector lending benefits and fast-track approvals from RBI-registered banks."
-              },
-              {
-                q: "What documents are required for a business loan?",
-                a: "The core requirements include: 1. KYC of owners and business. 2. Last 6 months' bank statements. 3. Last 2 years' ITR. 4. Business registration certificate (GST/Udyam). Our process is 100% digital and paperless."
-              },
-              {
-                q: "How long does approval take?",
-                a: "Our industry-leading turnaround time ensures that most business and MSME loan applications are sanctioned within 48 to 72 hours of successful document verification."
-              }
-            ].map((faq, i) => (
-              <div key={i} style={{ 
-                background: '#fff', 
-                padding: '3rem', 
-                borderRadius: '40px', 
-                border: '1px solid #E2E8F0',
-                textAlign: 'left',
-                boxShadow: '0 10px 15px -10px rgba(0,0,0,0.05)'
-              }}>
-                <h3 style={{ fontSize: '1.5rem', fontWeight: 900, color: '#1E293B', marginBottom: '1.5rem' }}>{faq.q}</h3>
-                <p style={{ color: '#64748B', lineHeight: 1.8, fontSize: '1.15rem', margin: 0 }}>{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL GLOBAL FOOTER CTA */}
-      <section style={{ padding: '10rem 1.5rem', textAlign: 'center', background: '#0F172A', color: '#fff' }}>
-        <h2 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '2rem', letterSpacing: '-2px' }}>Secure Your Future <span style={{ color: '#3B82F6' }}>Today</span></h2>
-        <p style={{ fontSize: '1.4rem', color: '#94A3B8', marginBottom: '5rem', maxWidth: '800px', margin: '0 auto 5rem' }}>Join the thousands of India's most successful entrepreneurs who scale with CapitalFlax.</p>
-        <Link href="/apply" style={{ background: '#3B82F6', color: '#fff', fontWeight: 900, padding: '1.5rem 5rem', borderRadius: '50px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '1rem', fontSize: '1.4rem', boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.5)' }}>
-          Get Started Now <ArrowRight size={32} />
-        </Link>
-      </section>
-    </main>
+      {/* SEO FAQ SECTION */}
+      <FAQSection
+        title="Business Loan FAQs"
+        subtitle="Common questions about MSME loans and startup funding in India"
+        faqs={[
+          {
+            question: "What is a business loan?",
+            answer: "A business loan is a credit facility provided by financial institutions to meet various business needs such as expansion, working capital, or equipment purchase. At CapitalFlax, we offer both secured and unsecured business loans up to ₹1 Crore."
+          },
+          {
+            question: "How to apply for an MSME loan?",
+            answer: "Applying for an MSME loan is easy with CapitalFlax. Simply click on 'Apply Now', fill in your business details, and upload your KYC and financial documents. Our team will verify your eligibility and connect you with the best lender within 48 hours."
+          },
+          {
+            question: "What documents are required for a business loan?",
+            answer: "Standard documents include PAN and Aadhaar of the promoter, last 2 years' ITR, business registration certificate (GST/Udyam), and last 6 months' bank statements. For loans up to ₹50 Lakhs, no collateral is required."
+          }
+        ]}
+      />
+    </>
   );
 }
