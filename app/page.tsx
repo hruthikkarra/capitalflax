@@ -1,12 +1,24 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import HomePageClient from './components/HomePageClient';
-import { Rocket, FileText, Handshake, Briefcase, Zap, CheckCircle, ShieldCheck, Users, Building, ArrowRight, Clock } from 'lucide-react';
+import { 
+  Rocket, 
+  FileText, 
+  Handshake, 
+  Briefcase, 
+  Zap, 
+  CheckCircle, 
+  ShieldCheck, 
+  Users, 
+  Building, 
+  ArrowRight, 
+  Clock, 
+  Shield 
+} from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Business Loans in India | CapitalFlax",
-  description:
-    "Get instant business loans in India. CapitalFlax provides MSME loans, startup funding, and professional loans starting at 14% p.a. with 48-hour approval and minimal documentation.",
+  title: "Business Loans in India | Instant MSME & Startup Funding - CapitalFlax",
+  description: "Get fast business loans in India with low interest rates. MSME, startup & personal loans with quick approval in 48 hours.",
   keywords: [
     "business loan India",
     "MSME loan",
@@ -17,290 +29,321 @@ export const metadata: Metadata = {
   ],
 };
 
+function ApplyCTA() {
+  return (
+    <div style={{ padding: '3rem 1rem', textAlign: 'center' }}>
+      <Link 
+        href="/apply" 
+        style={{ 
+          background: 'linear-gradient(135deg, #2563EB, #3B82F6)',
+          color: '#fff',
+          padding: '1.25rem 3.5rem',
+          borderRadius: '50px',
+          fontSize: '1.2rem',
+          fontWeight: 800,
+          textDecoration: 'none',
+          boxShadow: '0 15px 30px -5px rgba(37, 99, 235, 0.3)',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '0.75rem',
+          transition: 'all 0.3s ease'
+        }}
+      >
+        Apply Now <ArrowRight size={22} />
+      </Link>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
-    <main style={{ background: '#fff' }}>
+    <main style={{ background: '#fff', overflowX: 'hidden' }}>
       {/* 1. HERO SECTION */}
       <section style={{ 
-        padding: '10rem 1rem 6rem', 
+        padding: '12rem 1.5rem 8rem', 
         textAlign: 'center', 
         maxWidth: '1200px', 
         margin: '0 auto',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
-        gap: '2rem'
+        alignItems: 'center'
       }}>
-        <div style={{ maxWidth: '850px' }}>
-          <h1 style={{ 
-            fontSize: 'clamp(3rem, 7vw, 4.5rem)', 
-            fontWeight: 900, 
-            color: '#0F172A', 
-            letterSpacing: '-2px', 
-            lineHeight: 1.05, 
-            marginBottom: '1.5rem',
-            textTransform: 'capitalize'
-          }}>
-            Get Instant <span style={{ color: '#3B82F6' }}>Business Loans</span> in India
-          </h1>
-          <p style={{ 
-            fontSize: '1.35rem', 
-            color: '#64748B', 
-            lineHeight: 1.6, 
-            maxWidth: '700px', 
-            margin: '0 auto 2.5rem',
-            fontWeight: 500
-          }}>
-            Get approval within 48 hours with minimal documentation. India's fastest growing 
-            financial partner for MSMEs and Startups.
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#DBEAFE', color: '#1E40AF', padding: '0.5rem 1.25rem', borderRadius: '50px', fontSize: '0.85rem', fontWeight: 700, marginBottom: '2rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
+          <ShieldCheck size={16} /> Fast, Secure & Trusted
+        </div>
+        <h1 style={{ 
+          fontSize: 'clamp(3rem, 8vw, 5rem)', 
+          fontWeight: 900, 
+          color: '#0F172A', 
+          letterSpacing: '-3px', 
+          lineHeight: 1, 
+          marginBottom: '2rem',
+          maxWidth: '900px'
+        }}>
+          Get Instant <span style={{ color: '#3B82F6' }}>Business Loans</span> in India
+        </h1>
+        
+        <p style={{ 
+          fontSize: 'clamp(1.2rem, 2.5vw, 1.5rem)', 
+          color: '#64748B', 
+          lineHeight: 1.5, 
+          maxWidth: '800px', 
+          margin: '0 auto 3rem',
+          fontWeight: 600
+        }}>
+          Get approved in 48 hours | Minimal documentation | Trusted by 500+ businesses
+        </p>
+        
+        <p style={{ 
+          fontSize: '1.15rem', 
+          color: '#475569', 
+          maxWidth: '650px', 
+          margin: '0 auto 4rem',
+          lineHeight: 1.7,
+          opacity: 0.8
+        }}>
+          CapitalFlax empowers Indian enterprises with low-interest funding solutions. 
+          The preferred partner for MSME manufacturing, high-growth startups, and professionals.
+        </p>
+
+        <Link 
+          href="/apply" 
+          style={{ 
+            background: 'linear-gradient(135deg, #2563EB, #3B82F6)',
+            color: '#fff',
+            padding: '1.5rem 4rem',
+            borderRadius: '50px',
+            fontSize: '1.35rem',
+            fontWeight: 800,
+            textDecoration: 'none',
+            boxShadow: '0 25px 30px -10px rgba(59, 130, 246, 0.4)',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '1rem',
+            transition: 'all 0.3s ease'
+          }}
+        >
+          Apply for Business Loan Now <ArrowRight size={28} />
+        </Link>
+      </section>
+
+      {/* 2. TRUST SECTION [HORIZONTAL BAR] */}
+      <section style={{ padding: '0 1.5rem 5rem' }}>
+        <div style={{ 
+          maxWidth: '1200px', 
+          margin: '0 auto', 
+          background: '#F1F5F9',
+          borderRadius: '40px',
+          padding: '4rem 3rem',
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', 
+          gap: '3rem',
+          border: '1px solid #E2E8F0'
+        }}>
+          {[
+            { icon: <Users size={32} />, value: '500+', label: 'Businesses Served' },
+            { icon: <Building size={32} />, value: '15+', label: 'Banking Partners' },
+            { icon: <Clock size={32} />, value: '48H', label: 'Approval Speed' },
+            { icon: <ShieldCheck size={32} />, value: 'RBI', label: 'Registered Partners' }
+          ].map((item, i) => (
+            <div key={i} style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+              <div style={{ color: '#2563EB', background: '#fff', borderRadius: '20px', display: 'flex', padding: '16px', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.05)' }}>{item.icon}</div>
+              <div>
+                <div style={{ fontSize: '2.25rem', fontWeight: 900, color: '#0F172A', marginBottom: '0.25rem' }}>{item.value}</div>
+                <div style={{ color: '#64748B', fontWeight: 700, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}>{item.label}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 3. LOAN TYPES [DEDICATED SERVICE CARDS] */}
+      <section id="loan-types" style={{ padding: '8rem 1.5rem' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '3rem', fontWeight: 900, color: '#1E293B', textAlign: 'center', marginBottom: '1.5rem', letterSpacing: '-1.5px' }}>
+            Tailored Loans for <span style={{ color: '#3B82F6' }}>Every Stage</span>
+          </h2>
+          <p style={{ textAlign: 'center', color: '#64748B', fontSize: '1.25rem', marginBottom: '6rem', maxWidth: '800px', margin: '0 auto 6rem' }}>
+             Click a card below to explore dedicated funding details, eligibility, and EMI calculators.
           </p>
           
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
-            <Link 
-              href="/apply" 
-              style={{ 
-                background: 'linear-gradient(135deg, #2563EB, #3B82F6)',
-                color: '#fff',
-                padding: '1.25rem 3rem',
-                borderRadius: '50px',
-                fontSize: '1.25rem',
-                fontWeight: 800,
-                textDecoration: 'none',
-                boxShadow: '0 20px 25px -5px rgba(59, 130, 246, 0.3)',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.75rem',
-                transition: 'all 0.3s ease'
-              }}
-            >
-              Apply for Business Loan Now <ArrowRight size={24} />
-            </Link>
-            <p style={{ color: '#94A3B8', fontSize: '0.95rem', fontWeight: 600 }}>
-              <Zap size={16} fill="currentColor" style={{ display: 'inline', marginRight: '4px' }} /> 
-              No hidden charges • Secure digital process
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. TRUST SECTION [NEW] */}
-      <section style={{ padding: '0 1rem 6rem' }}>
-        <div style={{ 
-          maxWidth: '1100px', 
-          margin: '0 auto', 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
-          gap: '2rem' 
-        }}>
           <div style={{ 
-            padding: '2rem', 
-            borderRadius: '24px', 
-            background: '#F8FAFC', 
-            border: '1px solid #E2E8F0',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '1.5rem'
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', 
+            gap: '3rem' 
           }}>
-            <div style={{ color: '#2563EB', background: '#DBEAFE', p: 3, borderRadius: '16px', display: 'flex', padding: '12px' }}>
-              <Users size={32} />
-            </div>
-            <div>
-              <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#0F172A' }}>500+</div>
-              <div style={{ color: '#64748B', fontWeight: 600 }}>Businesses Trusted</div>
-            </div>
-          </div>
-
-          <div style={{ 
-            padding: '2rem', 
-            borderRadius: '24px', 
-            background: '#F8FAFC', 
-            border: '1px solid #E2E8F0',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '1.5rem'
-          }}>
-            <div style={{ color: '#16A34A', background: '#DCFCE7', p: 3, borderRadius: '16px', display: 'flex', padding: '12px' }}>
-              <Building size={32} />
-            </div>
-            <div>
-              <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#0F172A' }}>15+</div>
-              <div style={{ color: '#64748B', fontWeight: 600 }}>Banking Partners</div>
-            </div>
-          </div>
-
-          <div style={{ 
-            padding: '2rem', 
-            borderRadius: '24px', 
-            background: '#F8FAFC', 
-            border: '1px solid #E2E8F0',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '1.5rem'
-          }}>
-            <div style={{ color: '#D97706', background: '#FEF3C7', p: 3, borderRadius: '16px', display: 'flex', padding: '12px' }}>
-              <Clock size={32} />
-            </div>
-            <div>
-              <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#0F172A' }}>48 Hours</div>
-              <div style={{ color: '#64748B', fontWeight: 600 }}>Fast Approval</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. WHY CHOOSE SECTION [REFINED] */}
-      <section id="why-capitalflax" style={{ padding: '6rem 1rem', background: 'linear-gradient(to bottom, #fff, #F8FAFC)' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 900, color: '#1E293B', marginBottom: '1rem' }}>Ready to Scale? <span style={{ color: '#3B82F6' }}>Why CapitalFlax?</span></h2>
-          <p style={{ color: '#64748B', fontSize: '1.1rem', marginBottom: '4rem' }}>The preferred choice for business loan India and startup funding.</p>
-          
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}><Zap size={40} color="#2563EB" /></div>
-              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, marginBottom: '0.75rem', color: '#0F172A' }}>Unmatched Speed</h3>
-              <p style={{ color: '#64748B', lineHeight: 1.6 }}>Get your business funding sanctioned within 48–72 hours of complete documentation.</p>
-            </div>
-
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}><FileText size={40} color="#2563EB" /></div>
-              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, marginBottom: '0.75rem', color: '#0F172A' }}>Easy Paperwork</h3>
-              <p style={{ color: '#64748B', lineHeight: 1.6 }}>Simplified digital process with minimal physical documentation for busy entrepreneurs.</p>
-            </div>
-
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}><ShieldCheck size={40} color="#2563EB" /></div>
-              <h3 style={{ fontSize: '1.35rem', fontWeight: 800, marginBottom: '0.75rem', color: '#0F172A' }}>Secure & Trusted</h3>
-              <p style={{ color: '#64748B', lineHeight: 1.6 }}>Direct partnership with 15+ RBI-registered banks and NBFCs for your peace of mind.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. TYPES OF LOANS [CLICKABLE] */}
-      <section id="loan-types" style={{ padding: '8rem 1rem' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 900, color: '#1E293B', marginBottom: '1rem' }}>Loans Designed for <span style={{ color: '#3B82F6' }}>Growth</span></h2>
-          <p style={{ color: '#64748B', marginBottom: '4rem' }}>Comprehensive solutions for Business, MSME, and Startup funding.</p>
-          
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem' }}>
-            <Link href="/services/business-loans" style={{ textDecoration: 'none' }}>
-              <div style={{ padding: '1.25rem 2.5rem', border: '2px solid #E2E8F0', borderRadius: '50px', display: 'flex', alignItems: 'center', gap: '1rem', fontWeight: 800, color: '#1E293B', transition: '0.2s', background: '#fff' }}>
-                <Briefcase size={20} color="#3B82F6" />
-                Business Loans
-                <ArrowRight size={16} />
-              </div>
-            </Link>
-            <Link href="/services/business-loans" style={{ textDecoration: 'none' }}>
-              <div style={{ padding: '1.25rem 2.5rem', border: '2px solid #E2E8F0', borderRadius: '50px', display: 'flex', alignItems: 'center', gap: '1rem', fontWeight: 800, color: '#1E293B', transition: '0.2s', background: '#fff' }}>
-                <CheckCircle size={20} color="#3B82F6" />
-                MSME Loans
-                <ArrowRight size={16} />
-              </div>
-            </Link>
-            <Link href="/services/business-loans" style={{ textDecoration: 'none' }}>
-              <div style={{ padding: '1.25rem 2.5rem', border: '2px solid #E2E8F0', borderRadius: '50px', display: 'flex', alignItems: 'center', gap: '1rem', fontWeight: 800, color: '#1E293B', transition: '0.2s', background: '#fff' }}>
-                <Rocket size={20} color="#3B82F6" />
-                Startup Funding
-                <ArrowRight size={16} />
-              </div>
-            </Link>
-          </div>
-          
-          <div style={{ marginTop: '4rem' }}>
-            <Link href="/services" style={{ color: '#3B82F6', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-              Compare all services <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. HOW IT WORKS [REFINED] */}
-      <section id="how-it-works" style={{ padding: '8rem 1rem', background: '#0F172A', color: '#fff' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1.5rem' }}>Get Funded in <span style={{ color: '#3B82F6' }}>3 Easy Steps</span></h2>
-          <p style={{ color: '#94A3B8', marginBottom: '5rem', fontSize: '1.1rem' }}>Simplified process for modern Indian businesses.</p>
-          
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem' }}>
             {[
-              { step: '01', title: 'Apply Online', text: 'Fill our 5-minute digital form with basic business details.' },
-              { step: '02', title: 'Get Approval', text: 'Secure sanction from the best lender within 48–72 hours.' },
-              { step: '03', title: 'Receive Funds', text: 'Direct credit to your bank account with zero hassle.' }
-            ].map((item, i) => (
-              <div key={i} style={{ textAlign: 'center', position: 'relative' }}>
+              { 
+                title: 'Business Loans', 
+                link: '/services/business-loans', 
+                icon: <Briefcase size={40} />, 
+                desc: 'Unsecured funding for working capital, new equipment, and office expansion up to ₹1 Crore. Sanctioned in 48 hours.',
+                color: '#2563EB',
+                bg: '#EFF6FF'
+              },
+              { 
+                title: 'MSME Loans', 
+                link: '/services/msme-loans', 
+                icon: <Building size={40} />, 
+                desc: 'Specialized schemes for SMEs with Udyam registration perks, collateral-free options, and technology fund access.',
+                color: '#0284C7',
+                bg: '#F0F9FF'
+              },
+              { 
+                title: 'Startup Funding', 
+                link: '/services/startup-funding', 
+                icon: <Rocket size={40} />, 
+                desc: 'Growth capital, revenue-based financing, and venture debt for modern Indian startups with zero equity dilution.',
+                color: '#7C3AED',
+                bg: '#F5F3FF'
+              }
+            ].map((loan, idx) => (
+              <Link key={idx} href={loan.link} style={{ textDecoration: 'none' }}>
                 <div style={{ 
-                  fontSize: '5rem', 
-                  fontWeight: 900, 
-                  color: 'rgba(59, 130, 246, 0.1)', 
-                  position: 'absolute', 
-                  top: '-30px', 
-                  left: '50%', 
-                  transform: 'translateX(-50%)',
-                  zIndex: 0,
-                  WebkitTextStroke: '1px rgba(59, 130, 246, 0.2)',
-                  fontFamily: 'sans-serif'
-                }}>{item.step}</div>
-                <div style={{ position: 'relative', zIndex: 1 }}>
-                  <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '1rem' }}>{item.title}</h3>
-                  <p style={{ color: '#94A3B8', lineHeight: 1.6 }}>{item.text}</p>
+                  padding: '4rem 2.5rem', 
+                  background: loan.bg, 
+                  borderRadius: '40px', 
+                  border: `1px solid ${loan.color}15`,
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '2rem',
+                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                  position: 'relative'
+                }}>
+                  <div style={{ color: loan.color, background: '#fff', width: '80px', height: '80px', borderRadius: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 20px -5px rgba(0,0,0,0.05)' }}>{loan.icon}</div>
+                  <div>
+                    <h3 style={{ fontSize: '1.8rem', fontWeight: 900, color: '#0F172A', marginBottom: '1rem' }}>{loan.title}</h3>
+                    <p style={{ color: '#475569', lineHeight: 1.7, fontSize: '1.1rem', margin: 0 }}>{loan.desc}</p>
+                  </div>
+                  <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '0.8rem', fontWeight: 800, color: loan.color, fontSize: '1.1rem' }}>
+                    View Dedicated Details <ArrowRight size={22} />
+                  </div>
                 </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <ApplyCTA />
+
+      {/* 4. WHY CHOOSE US [PREMIUM UI] */}
+      <section style={{ padding: '8rem 1.5rem', background: '#0F172A', color: '#fff', borderRadius: '60px', margin: '0 1.5rem' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '3.5rem', fontWeight: 900, textAlign: 'center', marginBottom: '1.5rem', letterSpacing: '-2px' }}>
+            Why <span style={{ color: '#3B82F6' }}>CapitalFlax?</span>
+          </h2>
+          <p style={{ textAlign: 'center', color: '#94A3B8', fontSize: '1.35rem', marginBottom: '6rem', maxWidth: '800px', margin: '0 auto 6rem', opacity: 0.8 }}>
+            India's most trusted partner for growth-focused business financing.
+          </p>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '4rem' }}>
+            {[
+              { icon: <Zap size={48} />, title: '48h Approval', desc: 'Rapid assessment and sanction letter within 2 business days of verification.' },
+              { icon: <FileText size={48} />, title: 'Minimal Docs', desc: '100% digital journey with simple KYC, GST, and bank statement processing.' },
+              { icon: <Handshake size={48} />, title: '15+ Partners', desc: 'Negotiated rates with HDFC, ICICI, Axis, and other leading RBI-registered institutions.' },
+              { icon: <TrendingUp size={48} />, title: 'Transparent', desc: 'No hidden processing fees. Highly competitive rates starting at 14% p.a.' }
+            ].map((p, i) => (
+              <div key={i} style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
+                <div style={{ color: '#3B82F6' }}>{p.icon}</div>
+                <h3 style={{ fontSize: '1.6rem', fontWeight: 800 }}>{p.title}</h3>
+                <p style={{ color: '#94A3B8', lineHeight: 1.7, fontSize: '1.1rem' }}>{p.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Rest of the original content via Client Component */}
-      <HomePageClient />
+      <ApplyCTA />
 
-      <section style={{ padding: '6rem 1rem', background: '#fff', textAlign: 'center' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1.5rem' }}>Want more insights?</h2>
-          <p style={{ marginBottom: '2rem', color: '#64748B' }}>Read our latest guides on business financing, MSME success, and financial planning.</p>
-          <Link href="/blog" style={{ color: '#2563EB', fontWeight: 700, textDecoration: 'underline' }}>Visit the CapitalFlax Blog</Link>
+      {/* 5. HOW IT WORKS [SIMPLIFIED 3 STEPS] */}
+      <section id="how-it-works" style={{ padding: '10rem 1.5rem' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontSize: '3.5rem', fontWeight: 900, color: '#0F172A', marginBottom: '2rem', letterSpacing: '-2px' }}>
+            Funded in <span style={{ color: '#3B82F6' }}>3 Easy Steps</span>
+          </h2>
+          <p style={{ color: '#64748B', marginBottom: '8rem', fontSize: '1.3rem', maxWidth: '800px', margin: '0 auto 8rem' }}>A streamlined process designed to get you the capital you need without the noise.</p>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '6rem' }}>
+            {[
+              { num: '01', title: 'Apply Online', text: 'Securely submit your basic profile and business metrics in just 5 minutes.' },
+              { num: '02', title: 'Get Approval', text: 'Our experts negotiate the best terms. Receive your sanction letter within 48-72 hours.' },
+              { num: '03', title: 'Receive Funds', text: 'Funds are disbursed directly into your current account so you can start scaling instantly.' }
+            ].map((item, i) => (
+              <div key={i} style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
+                <div style={{ 
+                  fontSize: '6rem', 
+                  fontWeight: 900, 
+                  lineHeight: 1,
+                  color: '#fff',
+                  WebkitTextStroke: '2px #3B82F6',
+                  opacity: 0.3,
+                  fontFamily: 'Inter, sans-serif'
+                }}>{item.num}</div>
+                <h3 style={{ fontSize: '2rem', fontWeight: 900, color: '#0F172A' }}>{item.title}</h3>
+                <p style={{ color: '#64748B', lineHeight: 1.7, fontSize: '1.15rem' }}>{item.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* 6. FAQ SECTION [EXPANDED] */}
-      <section className="faq-section" style={{ padding: '10rem 1rem', background: '#F8FAFC' }}>
-        <div style={{ maxWidth: '850px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '3rem', fontWeight: 900, color: '#0F172A', textAlign: 'center', marginBottom: '1.5rem' }}>
-            Everything You Need <span style={{ color: '#3B82F6' }}>to Know</span>
-          </h2>
-          <p style={{ textAlign: 'center', color: '#64748B', marginBottom: '5rem', fontSize: '1.1rem' }}>Get answers to the most common questions about business loan India.</p>
+      <ApplyCTA />
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+      {/* 6. INTERACTIVE COMPONENTS (Slider/Stats/Partners) */}
+      <HomePageClient />
+
+      {/* 7. FAQ SECTION [ENHANCED UI] */}
+      <section className="faq-section" style={{ padding: '12rem 1.5rem', background: '#F8FAFC' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '4rem', fontWeight: 900, color: '#0F172A', textAlign: 'center', marginBottom: '2rem', letterSpacing: '-3px' }}>
+            Common <span style={{ color: '#3B82F6' }}>Questions</span>
+          </h2>
+          <p style={{ textAlign: 'center', color: '#64748B', marginBottom: '6rem', fontSize: '1.3rem' }}>Everything you need to know about scaling your enterprise.</p>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
             {[
               {
                 q: "What is a business loan?",
-                a: "A business loan is a targeted credit facility for entrepreneurs to fund operations, expansion, or inventory. At CapitalFlax, we specialize in helping businesses access these funds with minimal hassle."
+                a: "A business loan is a targeted credit facility provided to entrepreneurs and entities for operational growth, expansion, or inventory purchase. At CapitalFlax, we optimize this process by matching you with the best rates from 15+ banking partners."
               },
               {
                 q: "How to apply for an MSME loan in India?",
-                a: "You can apply digitally via the CapitalFlax portal. Just provide your business details, and our experts will coordinate with 15+ banking partners to find the best MSME loan fit for your turnover and industry."
+                a: "Applying for an MSME loan is seamless with CapitalFlax. Using your Udyam and GST details, we process your application digitally to ensure priority sector lending benefits and fast-track approvals from RBI-registered banks."
               },
               {
                 q: "What documents are required for a business loan?",
-                a: "Typically, you need KYC (PAN, Aadhaar), 6 months' bank statements, and 2-3 years of ITR. For MSMEs, GST registration or Udyam certification is also required."
+                a: "The core requirements include: 1. KYC of owners and business. 2. Last 6 months' bank statements. 3. Last 2 years' ITR. 4. Business registration certificate (GST/Udyam). Our process is 100% digital and paperless."
               },
               {
                 q: "How long does approval take?",
-                a: "Our core advantage is speed. Most business loan India applications are approved within 48 to 72 hours once all required documents are successfully processed by our team."
+                a: "Our industry-leading turnaround time ensures that most business and MSME loan applications are sanctioned within 48 to 72 hours of successful document verification."
               }
             ].map((faq, i) => (
               <div key={i} style={{ 
                 background: '#fff', 
-                padding: '2rem', 
-                borderRadius: '24px', 
+                padding: '3rem', 
+                borderRadius: '40px', 
                 border: '1px solid #E2E8F0',
-                transition: '0.3s ease',
-                textAlign: 'left'
+                textAlign: 'left',
+                boxShadow: '0 10px 15px -10px rgba(0,0,0,0.05)'
               }}>
-                <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: '#1E293B', marginBottom: '1rem' }}>{faq.q}</h3>
-                <p style={{ color: '#64748B', lineHeight: 1.7, fontSize: '1.05rem' }}>{faq.a}</p>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 900, color: '#1E293B', marginBottom: '1.5rem' }}>{faq.q}</h3>
+                <p style={{ color: '#64748B', lineHeight: 1.8, fontSize: '1.15rem', margin: 0 }}>{faq.a}</p>
               </div>
             ))}
           </div>
         </div>
+      </section>
+
+      {/* FINAL GLOBAL FOOTER CTA */}
+      <section style={{ padding: '10rem 1.5rem', textAlign: 'center', background: '#0F172A', color: '#fff' }}>
+        <h2 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '2rem', letterSpacing: '-2px' }}>Secure Your Future <span style={{ color: '#3B82F6' }}>Today</span></h2>
+        <p style={{ fontSize: '1.4rem', color: '#94A3B8', marginBottom: '5rem', maxWidth: '800px', margin: '0 auto 5rem' }}>Join the thousands of India's most successful entrepreneurs who scale with CapitalFlax.</p>
+        <Link href="/apply" style={{ background: '#3B82F6', color: '#fff', fontWeight: 900, padding: '1.5rem 5rem', borderRadius: '50px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '1rem', fontSize: '1.4rem', boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.5)' }}>
+          Get Started Now <ArrowRight size={32} />
+        </Link>
       </section>
     </main>
   );
