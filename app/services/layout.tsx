@@ -15,12 +15,12 @@ export const metadata: Metadata = {
         'best loan rates 2025',
         'zero processing fee home loan',
     ],
-    alternates: { canonical: 'https://www.capitalflax.com/services' },
+    alternates: { canonical: 'https://capitalflax.in/services' },
     openGraph: {
         title: 'Comprehensive Loan Solutions | CapitalFlax',
         description:
             'Home Loans, Business Loans, Personal Loans, Gold Loans, Mortgage Loans — all starting at competitive rates. Apply in minutes. Approval in 72 hours.',
-        url: 'https://www.capitalflax.com/services',
+        url: 'https://capitalflax.in/services',
         type: 'website',
     },
 };
@@ -33,14 +33,14 @@ export default function ServicesLayout({ children }: { children: ReactNode }) {
         name: 'CapitalFlax Loan Products',
         description: 'Full range of loan products offered by CapitalFlax Financial Services',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home Loan', url: 'https://www.capitalflax.com/services#home-loan', description: 'Up to ₹20 Crore at 7.3% p.a.' },
-            { '@type': 'ListItem', position: 2, name: 'Business Loan', url: 'https://www.capitalflax.com/services#business-loan', description: 'Up to ₹1 Crore at 14% p.a.' },
-            { '@type': 'ListItem', position: 3, name: 'Personal Loan', url: 'https://www.capitalflax.com/services#personal-loan', description: 'Up to ₹50 Lakh at 10.5% p.a.' },
-            { '@type': 'ListItem', position: 4, name: 'Gold Loan', url: 'https://www.capitalflax.com/services#gold-loan', description: 'Up to ₹1 Crore at 7.5% p.a.' },
-            { '@type': 'ListItem', position: 5, name: 'Mortgage Loan', url: 'https://www.capitalflax.com/services#mortgage-loan', description: 'Up to ₹20 Crore at 10% p.a.' },
-            { '@type': 'ListItem', position: 6, name: 'Professional Loan', url: 'https://www.capitalflax.com/services#professional-loan', description: 'Up to ₹75 Lakh at 9% p.a.' },
-            { '@type': 'ListItem', position: 7, name: 'Education Loan', url: 'https://www.capitalflax.com/services#education-loan', description: 'Up to ₹1.5 Crore at 8.5% p.a.' },
-            { '@type': 'ListItem', position: 8, name: 'Vehicle Loan', url: 'https://www.capitalflax.com/services#vehicle-loan', description: '100% On-Road Financing at 8.75% p.a.' },
+            { '@type': 'ListItem', position: 1, name: 'Home Loan', url: 'https://capitalflax.in/services#home-loan', description: 'Up to ₹20 Crore at 7.3% p.a.' },
+            { '@type': 'ListItem', position: 2, name: 'Business Loan', url: 'https://capitalflax.in/services#business-loan', description: 'Up to ₹1 Crore at 14% p.a.' },
+            { '@type': 'ListItem', position: 3, name: 'Personal Loan', url: 'https://capitalflax.in/services#personal-loan', description: 'Up to ₹50 Lakh at 10.5% p.a.' },
+            { '@type': 'ListItem', position: 4, name: 'Gold Loan', url: 'https://capitalflax.in/services#gold-loan', description: 'Up to ₹1 Crore at 7.5% p.a.' },
+            { '@type': 'ListItem', position: 5, name: 'Mortgage Loan', url: 'https://capitalflax.in/services#mortgage-loan', description: 'Up to ₹20 Crore at 10% p.a.' },
+            { '@type': 'ListItem', position: 6, name: 'Professional Loan', url: 'https://capitalflax.in/services#professional-loan', description: 'Up to ₹75 Lakh at 9% p.a.' },
+            { '@type': 'ListItem', position: 7, name: 'Education Loan', url: 'https://capitalflax.in/services#education-loan', description: 'Up to ₹1.5 Crore at 8.5% p.a.' },
+            { '@type': 'ListItem', position: 8, name: 'Vehicle Loan', url: 'https://capitalflax.in/services#vehicle-loan', description: '100% On-Road Financing at 8.75% p.a.' },
         ],
     };
 

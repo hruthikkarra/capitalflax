@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ['/apply', '/api/'],
             },
         ],
-        sitemap: 'https://www.capitalflax.com/sitemap.xml',
-        host: 'https://www.capitalflax.com',
+        sitemap: 'https://capitalflax.in/sitemap.xml',
+        host: 'https://capitalflax.in',
     };
 }

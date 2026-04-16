@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     'professional loan company',
     'about us capitalflax',
   ],
-  alternates: { canonical: 'https://www.capitalflax.com/about' },
+  alternates: { canonical: 'https://capitalflax.in/about' },
   openGraph: {
     title: 'About CapitalFlax | Trusted by 10,000+ Professionals',
     description:
       'CapitalFlax is India\'s premium financial services company built for doctors, CAs, architects and professionals. Learn our story and mission.',
-    url: 'https://www.capitalflax.com/about',
+    url: 'https://capitalflax.in/about',
     type: 'website',
   },
 };
@@ -29,7 +29,7 @@ export default function AboutLayout({ children }: { children: ReactNode }) {
     name: 'About CapitalFlax Financial Services',
     description:
       'CapitalFlax is a premium financial services company specializing in professional loans across India, headquartered in Hyderabad.',
-    url: 'https://www.capitalflax.com/about',
+    url: 'https://capitalflax.in/about',
     mainEntity: {
       '@type': 'FinancialService',
       name: 'CapitalFlax Financial Services',

@@ -190,11 +190,11 @@ export async function generateMetadata({
             `${loanInfo.label.toLowerCase()} india`,
             'CapitalFlax',
         ],
-        alternates: { canonical: `https://www.capitalflax.com/loans/${city}/${type}` },
+        alternates: { canonical: `https://capitalflax.in/loans/${city}/${type}` },
         openGraph: {
             title,
             description,
-            url: `https://www.capitalflax.com/loans/${city}/${type}`,
+            url: `https://capitalflax.in/loans/${city}/${type}`,
             type: 'website' as const,
         },
     };
@@ -239,16 +239,16 @@ export default async function CityLoanPage({
                 addressCountry: 'IN',
             },
             telephone: cityInfo.phone,
-            url: `https://www.capitalflax.com/loans/${city}/${type}`,
+            url: `https://capitalflax.in/loans/${city}/${type}`,
         },
         {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.capitalflax.com' },
-                { '@type': 'ListItem', position: 2, name: 'Loans', item: 'https://www.capitalflax.com/services' },
-                { '@type': 'ListItem', position: 3, name: cityInfo.label, item: `https://www.capitalflax.com/loans/${city}` },
-                { '@type': 'ListItem', position: 4, name: loanInfo.label, item: `https://www.capitalflax.com/loans/${city}/${type}` },
+                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://capitalflax.in' },
+                { '@type': 'ListItem', position: 2, name: 'Loans', item: 'https://capitalflax.in/services' },
+                { '@type': 'ListItem', position: 3, name: cityInfo.label, item: `https://capitalflax.in/loans/${city}` },
+                { '@type': 'ListItem', position: 4, name: loanInfo.label, item: `https://capitalflax.in/loans/${city}/${type}` },
             ],
         },
     ];

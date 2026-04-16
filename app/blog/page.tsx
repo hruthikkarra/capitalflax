@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     'loan for professionals india',
     'personal loan eligibility',
   ],
-  alternates: { canonical: 'https://www.capitalflax.com/blog' },
+  alternates: { canonical: 'https://capitalflax.in/blog' },
   openGraph: {
     type: 'website',
     title: 'Financial Insights Blog | CapitalFlax',
     description:
       'Expert financial articles for India\'s top professionals — home loans, business loans, CIBIL, and more.',
-    url: 'https://www.capitalflax.com/blog',
+    url: 'https://capitalflax.in/blog',
     siteName: 'CapitalFlax',
   },
   twitter: {
@@ -34,19 +34,19 @@ const blogListingSchema = {
   '@context': 'https://schema.org',
   '@type': 'Blog',
   name: 'CapitalFlax Financial Insights Blog',
-  url: 'https://www.capitalflax.com/blog',
+  url: 'https://capitalflax.in/blog',
   description:
     'Expert articles on home loans, business loans, personal loans, and financial planning for professionals in India.',
   publisher: {
     '@type': 'Organization',
     name: 'CapitalFlax Financial Services',
-    logo: 'https://www.capitalflax.com/logo.png',
+    logo: 'https://capitalflax.in/logo.png',
   },
   blogPost: blogPosts.map((p) => ({
     '@type': 'BlogPosting',
     headline: p.title,
     description: p.metaDescription,
-    url: `https://www.capitalflax.com/blog/${p.slug}`,
+    url: `https://capitalflax.in/blog/${p.slug}`,
     datePublished: p.publishedDate,
     author: { '@type': 'Organization', name: p.author },
   })),

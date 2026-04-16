@@ -15,12 +15,12 @@ export const metadata: Metadata = {
         'doctor home loan',
         'architect business loan',
     ],
-    alternates: { canonical: 'https://www.capitalflax.com/professionals' },
+    alternates: { canonical: 'https://capitalflax.in/professionals' },
     openGraph: {
         title: 'Loans Built for Professionals | CapitalFlax',
         description:
             'Doctors, CAs, Architects — get loans tailored to your profession. Flexible income assessment, higher eligibility, and preferential rates.',
-        url: 'https://www.capitalflax.com/professionals',
+        url: 'https://capitalflax.in/professionals',
         type: 'website',
     },
 };

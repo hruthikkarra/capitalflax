@@ -7,7 +7,7 @@ import SocialFixedBar from "./components/SocialFixedBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const BASE_URL = "https://www.capitalflax.com";
+const BASE_URL = "https://capitalflax.in";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

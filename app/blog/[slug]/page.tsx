@@ -20,12 +20,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.metaTitle,
     description: post.metaDescription,
     keywords: post.tags,
-    alternates: { canonical: `https://www.capitalflax.com/blog/${post.slug}` },
+    alternates: { canonical: `https://capitalflax.in/blog/${post.slug}` },
     openGraph: {
       type: 'article',
       title: post.metaTitle,
       description: post.metaDescription,
-      url: `https://www.capitalflax.com/blog/${post.slug}`,
+      url: `https://capitalflax.in/blog/${post.slug}`,
       siteName: 'CapitalFlax',
       publishedTime: post.publishedDate,
       authors: [post.author],
@@ -86,12 +86,12 @@ export default async function BlogPostPage({ params }: Props) {
     publisher: {
       '@type': 'Organization',
       name: 'CapitalFlax Financial Services',
-      logo: 'https://www.capitalflax.com/logo.png',
+      logo: 'https://capitalflax.in/logo.png',
     },
     datePublished: post.publishedDate,
-    url: `https://www.capitalflax.com/blog/${post.slug}`,
+    url: `https://capitalflax.in/blog/${post.slug}`,
     keywords: post.tags.join(', '),
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.capitalflax.com/blog/${post.slug}` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://capitalflax.in/blog/${post.slug}` },
   };
 
   return (
